@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+  <title>Why Your Chainsaw Won't Start: 5 Common Causes and Fixes | Tool & Engine Pro</title>
+  <meta name="description" content="Step-by-step chainsaw troubleshooting guide. Fix no-start issues with bad fuel, spark plug, carburetor, spark arrestor, or kill switch problems. Get your saw running fast.">
+  <style>
+    /* ----- Global Reset & Variables (identical to all site pages) ----- */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+      background-color: #FFFFFF;
+      color: #333333;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    :root {
+      --white: #FFFFFF;
+      --charcoal: #333333;
+      --accent: #2c3e50;
+      --light-gray: #f8f9fa;
+      --border-light: #e9ecef;
+      --text-muted: #4a5568;
+    }
+
+    a {
+      text-decoration: none;
+      color: var(--accent);
+      transition: opacity 0.2s ease, color 0.2s;
+    }
+
+    a:hover {
+      opacity: 0.8;
+      text-decoration: underline;
+    }
+
+    ul, ol {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0,0,0,0);
+      white-space: nowrap;
+      border-width: 0;
+    }
+
+    /* ----- Header & Navigation (identical structure) ----- */
+    .site-header {
+      background-color: var(--white);
+      border-bottom: 1px solid var(--border-light);
+      padding: 1rem 0;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    .header-inner {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .site-title {
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: var(--accent);
+      letter-spacing: -0.5px;
+      line-height: 1.2;
+    }
+
+    .nav-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.8rem;
+      align-items: center;
+    }
+
+    .nav-links a {
+      color: var(--charcoal);
+      font-weight: 500;
+      font-size: 1rem;
+      padding: 0.25rem 0;
+      border-bottom: 2px solid transparent;
+      transition: border-color 0.2s, color 0.2s;
+    }
+
+    .nav-links a:hover {
+      color: var(--accent);
+      border-bottom-color: var(--accent);
+      text-decoration: none;
+      opacity: 1;
+    }
+
+    @media (max-width: 700px) {
+      .header-inner {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.8rem;
+      }
+      .nav-links {
+        gap: 1.2rem;
+        flex-wrap: wrap;
+      }
+      .site-title {
+        font-size: 1.6rem;
+      }
+    }
+
+    /* ----- Article Readability Container (max-width 800px, centered) ----- */
+    .article-container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 2rem 1rem 2rem;
+    }
+
+    /* Breadcrumbs */
+    .breadcrumbs {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      margin-bottom: 1.5rem;
+    }
+    .breadcrumbs a {
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 500;
+    }
+    .breadcrumbs a:hover {
+      text-decoration: underline;
+    }
+    .breadcrumbs span {
+      color: var(--charcoal);
+    }
+
+    /* Typography (matching guidelines) */
+    .article-container h1 {
+      font-size: 2.4rem;
+      font-weight: 700;
+      color: var(--accent);
+      line-height: 1.3;
+      margin-bottom: 0.5rem;
+    }
+    .byline {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      margin-bottom: 2rem;
+      border-bottom: 1px solid var(--border-light);
+      padding-bottom: 1rem;
+      display: inline-block;
+    }
+    .article-container h2 {
+      font-size: 1.7rem;
+      font-weight: 700;
+      color: var(--accent);
+      margin: 2.2rem 0 1rem;
+      line-height: 1.35;
+    }
+    .article-container h3 {
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: var(--charcoal);
+      margin: 1.8rem 0 0.8rem;
+      line-height: 1.4;
+    }
+    .article-container p {
+      font-size: 1.05rem;
+      line-height: 1.7;
+      margin-bottom: 1.5rem;
+      color: var(--charcoal);
+    }
+    .article-container ul, 
+    .article-container ol {
+      margin-bottom: 1.5rem;
+      padding-left: 1.8rem;
+    }
+    .article-container ul li, 
+    .article-container ol li {
+      font-size: 1.05rem;
+      line-height: 1.7;
+      margin-bottom: 0.5rem;
+      color: var(--charcoal);
+    }
+    .article-container ul {
+      list-style: disc;
+    }
+    .article-container ol {
+      list-style: decimal;
+    }
+    .article-container strong {
+      color: var(--accent);
+      font-weight: 700;
+    }
+
+    /* Table styles: responsive, header #2c3e50, white text, light borders */
+    .responsive-table-wrapper {
+      overflow-x: auto;
+      margin: 2rem 0 1.8rem;
+    }
+    .diagnostic-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.95rem;
+      line-height: 1.5;
+      background-color: var(--white);
+    }
+    .diagnostic-table th {
+      background-color: var(--accent);
+      color: var(--white);
+      font-weight: 600;
+      padding: 12px 12px;
+      border: 1px solid #d4dce2;
+      text-align: left;
+    }
+    .diagnostic-table td {
+      border: 1px solid var(--border-light);
+      padding: 10px 12px;
+      color: var(--charcoal);
+      background-color: var(--white);
+    }
+    .diagnostic-table tr:nth-child(even) td {
+      background-color: #fdfdfd;
+    }
+    @media (max-width: 550px) {
+      .diagnostic-table th, .diagnostic-table td {
+        padding: 8px 6px;
+        font-size: 0.85rem;
+      }
+    }
+
+    /* Blockquote styling for safety notices */
+    .article-container blockquote {
+      margin: 1.8rem 0;
+      padding: 1.2rem 1.5rem;
+      background-color: var(--light-gray);
+      border-left: 4px solid var(--accent);
+      font-style: italic;
+      color: #2c3e50;
+      border-radius: 0 8px 8px 0;
+    }
+    .article-container blockquote p {
+      margin-bottom: 0;
+      font-style: italic;
+    }
+
+    /* E-E-A-T About the Author box */
+    .author-box {
+      margin: 3rem 0 1rem;
+      background-color: var(--light-gray);
+      border: 1px solid var(--border-light);
+      border-radius: 8px;
+      padding: 1.8rem 2rem;
+    }
+    .author-box h4 {
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: var(--accent);
+      margin-bottom: 0.75rem;
+    }
+    .author-box p {
+      font-size: 0.98rem;
+      line-height: 1.6;
+      color: var(--charcoal);
+      margin-bottom: 0;
+    }
+
+    /* Footer (identical to homepage) */
+    .site-footer {
+      background-color: var(--white);
+      padding: 2rem 1rem;
+      text-align: center;
+      border-top: 1px solid var(--border-light);
+      margin-top: 2rem;
+    }
+    .footer-copyright {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      margin-bottom: 1.2rem;
+    }
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+      list-style: none;
+    }
+    .footer-links a {
+      color: var(--charcoal);
+      font-weight: 500;
+      font-size: 0.95rem;
+    }
+    .footer-links a:hover {
+      color: var(--accent);
+      text-decoration: underline;
+    }
+    @media (max-width: 600px) {
+      .article-container {
+        padding: 1.5rem 1rem 2rem;
+      }
+      .article-container h1 {
+        font-size: 2rem;
+      }
+      .article-container h2 {
+        font-size: 1.5rem;
+      }
+      .footer-links {
+        gap: 1.2rem;
+        flex-direction: column;
+        align-items: center;
+      }
+      .author-box {
+        padding: 1.2rem 1.2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- HEADER & NAVIGATION (identical across site) -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="site-title">Tool & Engine Pro</div>
+      <nav aria-label="Main navigation">
+        <ul class="nav-links">
+          <li><a href="/">Home</a></li>
+          <li><a href="/small-engine-troubleshooting">Small Engine Troubleshooting</a></li>
+          <li><a href="/tool-maintenance">Tool Maintenance</a></li>
+          <li><a href="/contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- READABILITY CONTAINER (max-width 800px, centered) -->
+    <div class="article-container">
+      <!-- Breadcrumbs -->
+      <div class="breadcrumbs">
+        <a href="/">Home</a> &gt; 
+        <a href="/small-engine-troubleshooting">Small Engine Troubleshooting</a> &gt; 
+        <span>Why Your Chainsaw Won't Start: 5 Common Causes and Fixes</span>
+      </div>
+
+      <h1>Why Your Chainsaw Won't Start: 5 Common Causes and Fixes</h1>
+      <div class="byline">Written by: Tool & Engine Pro Team | Updated: June 2026</div>
+
+      <p>You walk out to the woodpile, coffee in hand, ready to make progress. You prime the bulb, set the choke, and give the starter cord a sharp tug. Nothing. Another pull. A weak sputter that dies instantly. By the tenth pull, your arm aches and the saw still sits there, silent as a brick. It's infuriating.</p>
+      <p>Most homeowners immediately assume the worst—a seized engine or a blown piston. But here's the truth: a non-starting chainsaw is almost always a simple fuel or spark issue. I've revived hundreds of saws over the years, and 90% of the time, the fix costs less than a trip to the dealer. You just need a methodical approach.</p>
+      <p>This guide strips away the guesswork. We'll walk through the five most common culprits, in the exact order you should check them, so you can get that saw screaming again without wasting time or money.</p>
+
+      <h2>What You're Dealing With</h2>
+      <p>A two-stroke engine needs three things in precise balance: fuel (mixed correctly), compression, and spark at the right time. It's a brutal, high-RPM environment. Carbon builds up. Fuel evaporates and leaves behind gummy deposits. Spark arrestors clog. Rubber fuel lines crack and suck air.</p>
+      <p>Skipping seasonal maintenance cascades into hard-start problems fast. Fresh fuel today doesn't compensate for varnished fuel that sat in the carburetor for six months. Understanding this chain reaction helps you fix the root cause, not just the symptom.</p>
+
+      <h2>Before You Touch Anything: Material Checklist</h2>
+      <p>Lay everything out on a clean workbench. Hunting for a spark plug wrench mid-job kills momentum. Here's exactly what you need:</p>
+      <ul>
+        <li><strong>Fresh, ethanol-free fuel mix</strong> – 50:1 or 40:1 ratio with a quality synthetic 2-stroke oil. Ethanol is a carburetor killer; avoid pump gas with more than 10% ethanol if possible.</li>
+        <li><strong>Aerosol carburetor cleaner</strong> – Not brake cleaner. The dedicated carb stuff has lubricants that protect rubber diaphragms.</li>
+        <li><strong>Spark plug wrench</strong> – Usually 19mm or 13/16". Most modern saws include a slotted combination wrench in the tool kit.</li>
+        <li><strong>Spare spark plug</strong> – Grab an NGK BPMR7A or whatever spec matches your saw. Champions work, but NGK is industry gold standard.</li>
+        <li><strong>Starter fluid</strong> – A tiny spritz. Not half the can.</li>
+        <li><strong>Safety glasses and nitrile gloves</strong> – Carb cleaner in the eye ruins your whole day. Fuel on skin isn't great either.</li>
+        <li><strong>Compression tester (optional)</strong> – For the doom-and-gloom diagnosis later.</li>
+        <li><strong>Small diameter wire or a torch tip cleaner</strong> – For the spark arrestor.</li>
+        <li><strong>Screwdriver set</strong> – Flathead and Torx (T-25 and T-27 cover most saws from Husqvarna and Stihl).</li>
+      </ul>
+
+      <h2>Step 1: Drain the Crap Fuel and Inspect the Tank</h2>
+      <p>Old, spoiled fuel is the number one reason a saw refuses to start after winter storage. Pump gas degrades rapidly. Ethanol absorbs moisture from the air, phase-separates, and creates a corrosive, watery sludge that blocks the fine mesh filter inside the tank.</p>
+      <p><strong>The Fix:</strong> Remove the fuel cap and take a whiff. Good gas smells sharp and pungent. Varnished fuel smells stale, sour, or like turpentine. If it smells even slightly off, tip the tank contents into a certified disposal container. Don't dump it in the dirt.</p>
+      <p>Look inside with a flashlight. If the fuel line crumbled into black specks or you see floating debris, the tank needs a thorough rinse. Swish a small amount of fresh mixed fuel around and dump that too. Replace the in-tank fuel filter. It's a three-dollar part. Pull it out through the filler neck with a hooked wire or bent-nose pliers, snap a new one on, and ensure it sits at the lowest corner of the tank so it can pick up every last drop.</p>
+      <p>Refill with fresh, high-quality mix. Try starting the saw now. If it pops, run it hard for a few minutes to clear the residual garbage out. If the saw still refuses to fire, move on.</p>
+
+      <h2>Step 2: Examine and Replace the Spark Plug</h2>
+      <p>Next in line: ignition. A fouled plug provides a weak, yellow spark—or no spark at all—under compression. Carbon buildup from a rich fuel mixture or excessive idling creates a conductive path down the porcelain insulator, shorting the spark away from the gap.</p>
+      <p><strong>The Fix:</strong> Pull the plug boot off. Use your spark plug wrench and back the plug out. Look at the electrode and insulator tip.</p>
+      <ul>
+        <li><strong>Dry and dark brown/tan:</strong> The mixture is correct, but fuel may not be reaching the cylinder. Keep diagnosing.</li>
+        <li><strong>Wet and shiny:</strong> The engine is flooded. The plug might still be usable once dried, but excess fuel is drowning the spark.</li>
+        <li><strong>Black, sooty, or oily crust:</strong> The plug is fouled. It's dead.</li>
+      </ul>
+      <p>Wire-brushing a severely fouled plug rarely brings it back to spec tolerances for a hot, blue spark. Replace it. A new NGK costs about five bucks. Gap the new plug correctly—0.020 inches (0.5mm) covers most saws, but check your manual.</p>
+      <p>Before installing the new plug, perform a quick spark test. Connect the plug wire, ground the threaded metal body firmly against the cylinder head (away from the plug hole to avoid igniting fuel vapor), and yank the cord sharply in low light. Look for a fat, blue spark. A weak orange spark indicates a failing ignition coil—a bigger job, but start simple first. Install the new plug finger-tight, then a quarter turn with the wrench to crush the crush washer.</p>
+
+      <h2>Step 3: Flush a Gummed-Up Carburetor</h2>
+      <p>Fuel left inside a carburetor evaporates. The volatile components vanish, leaving behind a thick, sticky varnish that plugs the tiny, precision-drilled jets and needle valve passages. A saw with a varnished carb might sputter on choke but immediately die when you drop to run/idle, because the idle circuit is plugged solid.</p>
+      <p><strong>The Fix (Without a Full Rebuild):</strong> Don't reach for a rebuild kit just yet. Remove the air filter cover and the filter itself. A clogged air filter chokes the engine, but we're checking for fuel entry. Locate the air intake throat and the choke plate.</p>
+      <p>Squirt a one-second blast of aerosol carb cleaner directly into the carb throat. Re-install the air filter (never start a saw without it; a backfire through the carb can light fumes without a flame arrestor), set the choke to full, and pull. If it barks and runs for two seconds on the chemical fumes, you have confirmed a fuel starvation problem inside the carb.</p>
+      <p>Sometimes, a concentrated cleaner shot dissolves a minor blockage, and the saw recovers. More often, you need to access the metering diaphragm side. Remove the carburetor (usually two bolts on the manifold). Remove the single cover plate held by four small screws. Underneath lies a rubber diaphragm. If the diaphragm is stiff, wrinkled, or cupped instead of laying perfectly flat, it's seen too much ethanol and won't pump fuel. The needle valve underneath could also be glued shut. A thorough spray-down of all orifices with carb cleaner and a new diaphragm kit (typically $12) solves this.</p>
+
+      <h2>Chainsaw Troubleshooting Matrix</h2>
+      <div class="responsive-table-wrapper">
+        <table class="diagnostic-table">
+          <thead>
+            <tr><th>Symptom</th><th>Potential Cause</th><th>Immediate Fix</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Saw starts on choke, dies immediately when throttle is pressed</td>
+            <td>Idle circuit jet plugged; carb fuel starvation</td>
+            <td>Clean carb throat; inspect/replace metering diaphragm</td>
+          </tr>
+          <tr><td>Saw runs only with partial choke engaged</td>
+            <td>Massive air leak from a crack in the fuel line or a loose carb boot</td>
+            <td>Visually trace the fuel line for cracks; pressure test the boot seal</td>
+          </tr>
+          <tr><td>Strong spark, fresh plug, won't fire even on starter fluid</td>
+            <td>Low compression (rings stuck or worn)</td>
+            <td>Test with compression gauge (spec below)</td>
+          </tr>
+          <tr><td>Saw runs fine for 5 minutes, then bogs and dies</td>
+            <td>Tank vent malfunction (vapor lock)</td>
+            <td>Crack the fuel cap open to test; replace one-way vent valve</td>
+          </tr>
+          <tr><td>Gas dripping from muffler continuously</td>
+            <td>Severely flooded or a stuck-open needle valve inside carb</td>
+            <td>Rebuild carb; check float height or needle spring tension</td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h2>Step 4: Clear a Clogged Spark Arrestor</h2>
+      <p>A spark arrestor is a small metal screen inside the muffler. It traps hot carbon particles to prevent forest fires. Over a season of running rich or burning cheap oil, this screen cokes up solid with hard carbon. A choked exhaust suffocates the engine, preventing it from expelling spent gases. The saw becomes impossible to start because the cylinder fills with back-pressure.</p>
+      <p><strong>The Fix:</strong> This is the simplest repair. Let the muffler cool completely. Locate the single screw or tab that retains the spark arrestor screen, usually exiting on the clutch side. Slide the screen out. It'll likely resemble a black, crunchy tile.</p>
+      <p>Hold it with pliers and heat it with a propane torch until the carbon glows red and burns to ash. If you don't have a torch, a stiff wire brush and a lot of elbow grease works. Better yet, use a torch tip cleaning file to poke each individual mesh hole open if it's severely clogged. Slide the clean, translucent screen back in and secure it. The engine can now breathe.</p>
+
+      <h2>Step 5: Check the Kill Switch and Wiring</h2>
+      <p>A wire that has chafed against the engine cylinder fins or a kill switch that's grounding out due to dirt will permanently shunt spark to ground. It mimics a dead coil perfectly.</p>
+      <p><strong>The Fix:</strong> Trace the thin wire from the ignition coil to the toggle switch or the combination choke/stop lever. Look for bare copper touching metal. Disconnect the kill wire spade connector at the coil. With the wire disconnected, test for spark again. If spark returns strong, the switch or the wire harness is shorted internally. Clean the switch contacts with electrical contact cleaner. In an emergency, you can run the saw with the wire disconnected and shut it off via the choke—this is a valid trailside fix, but repair the switch properly for safety.</p>
+      <p>If you have spark, fresh fuel, a clean arrestor, and a dry cylinder, but the cord pulls over with almost no resistance and compression feels like pulling a toy—you've got an internal mechanical fault. A healthy small engine should yank the cord back with significant bite. Test with a screw-in compression gauge. Minimum spec for starting is around 90-100 PSI. A new saw pushes 140-150. Anything below 90 means worn rings or a scored cylinder.</p>
+
+      <h2>Frequently Asked Questions (FAQ)</h2>
+      <h3>Why does my chainsaw start perfectly when cold but will not restart after it gets hot?</h3>
+      <p>This is almost always a classic vapor lock scenario. Heat from the engine soaks into the fuel line and carburetor after shutdown, turning the liquid fuel into vapor that the carburetor cannot effectively pump. Try starting with the throttle wide open (no choke) to purge the hot vapor, and check that the fuel tank vent is working properly; a faulty vent prevents pressure equalization and makes the problem far worse.</p>
+      
+      <h3>How often should I replace my chainsaw's fuel lines?</h3>
+      <p>You should inspect them every season, and proactively replace them every two to three years regardless of appearance. Modern fuel lines exposed to ethanol turn brittle, lose their flex, and crack at the grommet entry points, sucking tiny air bubbles that lean out the fuel mixture and burn up your piston long before the line fails visibly.</p>
+      
+      <h3>Can I use carb cleaner instead of rebuilding the entire carb?</h3>
+      <p>An external spray-down of the throat can clear a flooded condition or dislodge a minor clog from the main nozzle, so it's always worth a two-second try. However, it will never dissolve hardened varnish inside the idle passages or restore a stiff metering diaphragm; if the saw only runs on a chemical blast and then dies, a full disassembly with a rebuild kit is the only lasting repair.</p>
+
+      <!-- Safety blockquote -->
+      <blockquote>
+        <p><strong>⚠️ Chainsaw Kickback Hazard:</strong> Never test a chainsaw's starting condition without the guide bar and chain properly installed and tensioned. A saw that fires unexpectedly with the chain removed can spin the clutch drum at lethal speeds, potentially throwing fragments or catching loose clothing. Always wear chaps, gloves, eye protection, and hearing protection when operating or testing a chainsaw. Keep the chain brake engaged until you're ready to cut.</p>
+      </blockquote>
+
+      <!-- E-E-A-T About the Author Box -->
+      <div class="author-box">
+        <h4>About the Author</h4>
+        <p>Tool & Engine Pro is dedicated to providing high-quality, practical small engine repair and tool maintenance guidance. Every article is written by our team of hands-on mechanical enthusiasts to help you troubleshoot your equipment safely and efficiently at home.</p>
+      </div>
+    </div>
+  </main>
+
+  <!-- FOOTER (identical to homepage) -->
+  <footer class="site-footer">
+    <div class="container">
+      <p class="footer-copyright">© 2026 Tool & Engine Pro. All rights reserved.</p>
+      <ul class="footer-links">
+        <li><a href="/about-us">About Us</a></li>
+        <li><a href="/contact">Contact Us</a></li>
+        <li><a href="/privacy-policy">Privacy Policy</a></li>
+        <li><a href="/term-of-service">Terms of Service</a></li>
+      </ul>
+    </div>
+  </footer>
+</body>
+</html>
