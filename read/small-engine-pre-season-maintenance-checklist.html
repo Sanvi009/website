@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+  <title>Small Engine Maintenance Checklist: Pre-Season Preparation Guide | Tool & Engine Pro</title>
+  <meta name="description" content="Step-by-step pre-season small engine maintenance checklist. Diagnose fuel, oil, spark, and compression before the first mow. Includes detailed table and FAQs.">
+  <style>
+    /* ----- Global Reset & Variables (identical to all site pages) ----- */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+      background-color: #FFFFFF;
+      color: #333333;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    :root {
+      --white: #FFFFFF;
+      --charcoal: #333333;
+      --accent: #2c3e50;
+      --light-gray: #f8f9fa;
+      --border-light: #e9ecef;
+      --text-muted: #4a5568;
+    }
+
+    a {
+      text-decoration: none;
+      color: var(--accent);
+      transition: opacity 0.2s ease, color 0.2s;
+    }
+
+    a:hover {
+      opacity: 0.8;
+      text-decoration: underline;
+    }
+
+    ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0,0,0,0);
+      white-space: nowrap;
+      border-width: 0;
+    }
+
+    /* ----- Header & Navigation (identical structure) ----- */
+    .site-header {
+      background-color: var(--white);
+      border-bottom: 1px solid var(--border-light);
+      padding: 1rem 0;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    .header-inner {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .site-title {
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: var(--accent);
+      letter-spacing: -0.5px;
+      line-height: 1.2;
+    }
+
+    .nav-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.8rem;
+      align-items: center;
+    }
+
+    .nav-links a {
+      color: var(--charcoal);
+      font-weight: 500;
+      font-size: 1rem;
+      padding: 0.25rem 0;
+      border-bottom: 2px solid transparent;
+      transition: border-color 0.2s, color 0.2s;
+    }
+
+    .nav-links a:hover {
+      color: var(--accent);
+      border-bottom-color: var(--accent);
+      text-decoration: none;
+      opacity: 1;
+    }
+
+    @media (max-width: 700px) {
+      .header-inner {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.8rem;
+      }
+      .nav-links {
+        gap: 1.2rem;
+        flex-wrap: wrap;
+      }
+      .site-title {
+        font-size: 1.6rem;
+      }
+    }
+
+    /* ----- Article Readability Container (max-width 800px, centered) ----- */
+    .article-container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 2rem 1rem 2rem;
+    }
+
+    /* Breadcrumbs */
+    .breadcrumbs {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      margin-bottom: 1.5rem;
+    }
+    .breadcrumbs a {
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 500;
+    }
+    .breadcrumbs a:hover {
+      text-decoration: underline;
+    }
+    .breadcrumbs span {
+      color: var(--charcoal);
+    }
+
+    /* Typography (matching guidelines) */
+    .article-container h1 {
+      font-size: 2.4rem;
+      font-weight: 700;
+      color: var(--accent);
+      line-height: 1.3;
+      margin-bottom: 0.5rem;
+    }
+    .byline {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      margin-bottom: 2rem;
+      border-bottom: 1px solid var(--border-light);
+      padding-bottom: 1rem;
+      display: inline-block;
+    }
+    .article-container h2 {
+      font-size: 1.7rem;
+      font-weight: 700;
+      color: var(--accent);
+      margin: 2.2rem 0 1rem;
+      line-height: 1.35;
+    }
+    .article-container h3 {
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: var(--charcoal);
+      margin: 1.8rem 0 0.8rem;
+      line-height: 1.4;
+    }
+    .article-container p {
+      font-size: 1.05rem;
+      line-height: 1.7;
+      margin-bottom: 1.5rem;
+      color: var(--charcoal);
+    }
+    .article-container ul, 
+    .article-container ol {
+      margin-bottom: 1.5rem;
+      padding-left: 1.8rem;
+    }
+    .article-container ul li, 
+    .article-container ol li {
+      font-size: 1.05rem;
+      line-height: 1.7;
+      margin-bottom: 0.5rem;
+      color: var(--charcoal);
+    }
+    .article-container ul {
+      list-style: disc;
+    }
+    .article-container ol {
+      list-style: decimal;
+    }
+
+    /* Table styles: responsive, header #2c3e50, white text, light borders */
+    .responsive-table-wrapper {
+      overflow-x: auto;
+      margin: 2rem 0 1.8rem;
+    }
+    .maintenance-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.95rem;
+      line-height: 1.5;
+      background-color: var(--white);
+    }
+    .maintenance-table th {
+      background-color: var(--accent);
+      color: var(--white);
+      font-weight: 600;
+      padding: 12px 12px;
+      border: 1px solid #d4dce2;
+      text-align: left;
+    }
+    .maintenance-table td {
+      border: 1px solid var(--border-light);
+      padding: 10px 12px;
+      color: var(--charcoal);
+      background-color: var(--white);
+    }
+    .maintenance-table tr:nth-child(even) td {
+      background-color: #fdfdfd;
+    }
+    @media (max-width: 550px) {
+      .maintenance-table th, .maintenance-table td {
+        padding: 8px 6px;
+        font-size: 0.85rem;
+      }
+    }
+
+    /* Blockquote styling */
+    .article-container blockquote {
+      margin: 1.8rem 0;
+      padding: 1.2rem 1.5rem;
+      background-color: var(--light-gray);
+      border-left: 4px solid var(--accent);
+      font-style: italic;
+      color: #2c3e50;
+      border-radius: 0 8px 8px 0;
+    }
+    .article-container blockquote p {
+      margin-bottom: 0;
+      font-style: italic;
+    }
+
+    /* E-E-A-T About the Author box */
+    .author-box {
+      margin: 3rem 0 1rem;
+      background-color: var(--light-gray);
+      border: 1px solid var(--border-light);
+      border-radius: 8px;
+      padding: 1.8rem 2rem;
+    }
+    .author-box h4 {
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: var(--accent);
+      margin-bottom: 0.75rem;
+    }
+    .author-box p {
+      font-size: 0.98rem;
+      line-height: 1.6;
+      color: var(--charcoal);
+      margin-bottom: 0;
+    }
+
+    /* Footer (identical to homepage) */
+    .site-footer {
+      background-color: var(--white);
+      padding: 2rem 1rem;
+      text-align: center;
+      border-top: 1px solid var(--border-light);
+      margin-top: 2rem;
+    }
+    .footer-copyright {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      margin-bottom: 1.2rem;
+    }
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+      list-style: none;
+    }
+    .footer-links a {
+      color: var(--charcoal);
+      font-weight: 500;
+      font-size: 0.95rem;
+    }
+    .footer-links a:hover {
+      color: var(--accent);
+      text-decoration: underline;
+    }
+    @media (max-width: 600px) {
+      .article-container {
+        padding: 1.5rem 1rem 2rem;
+      }
+      .article-container h1 {
+        font-size: 2rem;
+      }
+      .article-container h2 {
+        font-size: 1.5rem;
+      }
+      .footer-links {
+        gap: 1.2rem;
+        flex-direction: column;
+        align-items: center;
+      }
+      .author-box {
+        padding: 1.2rem 1.2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- HEADER & NAVIGATION (identical across site) -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="site-title">Tool & Engine Pro</div>
+      <nav aria-label="Main navigation">
+        <ul class="nav-links">
+          <li><a href="/">Home</a></li>
+          <li><a href="/small-engine-troubleshooting">Small Engine Troubleshooting</a></li>
+          <li><a href="/tool-maintenance">Tool Maintenance</a></li>
+          <li><a href="/contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- READABILITY CONTAINER (max-width 800px, centered) -->
+    <div class="article-container">
+      <!-- Breadcrumbs: Home > Small Engine Troubleshooting > Article Title -->
+      <div class="breadcrumbs">
+        <a href="/">Home</a> &gt; 
+        <a href="/small-engine-troubleshooting">Small Engine Troubleshooting</a> &gt; 
+        <span>Small Engine Maintenance Checklist: Pre-Season Preparation Guide</span>
+      </div>
+
+      <h1>Small Engine Maintenance Checklist: Pre-Season Preparation Guide</h1>
+      <div class="byline">Written by: Tool & Engine Pro Team | Updated: June 2026</div>
+
+      <!-- ARTICLE BODY (full content from brief, with semantic HTML) -->
+      <p>The first warm Saturday of spring arrives. You wheel the mower out of the shed, prime the bulb, and yank the cord. Nothing. You pull again. A weak sputter, then silence. The grass is already six inches tall, and your machine is a paperweight. That annual frustration is almost entirely preventable. Small engines don’t die over winter—they die from neglect during the off-season. Fuel turns to varnish. Moisture pits bearings. Rodents nest in shrouds. This guide is your pre-season battle plan. Run through this checklist before the growing season kicks in, and your equipment will start on the first or second pull, every time. No heroic measures. Just methodical, preventative triage.</p>
+
+      <h2>The Component Overview</h2>
+      <p>This checklist applies broadly to walk-behind mowers, riding mowers, pressure washers, tillers, generators, and handheld two-stroke equipment. The enemy is always the same: time. Over months of sitting, ethanol-blended fuel absorbs water, then separates into distinct layers of stale gas, water, and a gummy residue that clogs jets and needle valves. Engine oil accumulates moisture and acidic combustion byproducts, turning into a corrosive sludge that etches bearing surfaces. Air filters become mouse condominiums. Batteries sulfate and die. Rubber fuel lines harden and crack.</p>
+      <p>Pre-season preparation isn’t about fixing one thing. It’s a system audit. You’re confirming that fuel flows cleanly, spark ignites it strongly, compression contains it, and lubrication protects the rotating assembly. A machine that passes these checks will handle the entire season with only routine oil changes and air filter cleanings. Skip one category, and you’ll be troubleshooting in the middle of July with a half-mowed lawn and a storm rolling in.</p>
+
+      <h2>The Material/Tool Checklist</h2>
+      <p>Don’t walk out to the shed empty-handed. Load up a five-gallon bucket with these items and carry it to each machine.</p>
+      <ul>
+        <li><strong>Fresh Fuel (Ethanol-Free If Available):</strong> Pump gas with ethanol has a 30-day shelf life. For pre-season, buy the good stuff or treat it.</li>
+        <li><strong>Fuel Stabilizer (Marine-Grade):</strong> Treat every drop of fuel you buy. Marine formulas combat ethanol water absorption.</li>
+        <li><strong>Engine Oil:</strong> SAE 30 for warm-weather mowers. 10W-30 for variable climates. Two-stroke oil for trimmers and blowers.</li>
+        <li><strong>Oil Drain Pan and Funnel:</strong> A clean pan lets you inspect the drained oil for metal or water.</li>
+        <li><strong>Spark Plug Socket, Ratchet, and Feeler Gauge:</strong> You’ll be pulling, inspecting, gapping, and possibly replacing plugs.</li>
+        <li><strong>Replacement Spark Plugs:</strong> Have at least one spare per engine family on hand.</li>
+        <li><strong>New Air Filters and Pre-Filters:</strong> Paper elements are not cleanable. Have replacements ready.</li>
+        <li><strong>Carburetor Cleaner Spray:</strong> The aerosol with the straw. Not brake cleaner. Not starting fluid.</li>
+        <li><strong>Screwdriver Set (Flathead and Phillips):</strong> For air filter covers, carb adjustments, and shroud removal.</li>
+        <li><strong>Battery Charger or Maintainer:</strong> For riding mower batteries. A sulfated battery is a dead battery.</li>
+        <li><strong>Grease Gun with Lithium Grease:</strong> For spindle zerks and pivot points on riding equipment.</li>
+        <li><strong>Compressed Air or Leaf Blower:</strong> Dry cleaning the exterior before opening any systems.</li>
+        <li><strong>Sharpening File or Blade Balancer:</strong> Dull blades tear grass. Sharp blades cut it.</li>
+        <li><strong>Nitrile Gloves and Safety Glasses:</strong> Fuel and carb cleaner are aggressive. Protect yourself.</li>
+      </ul>
+
+      <h2>The Step-by-Step Pre-Season Guide</h2>
+      <p>Work through these steps in order. Don’t skip around. The sequence is designed to catch the most common failure points first, minimizing wasted labor.</p>
+
+      <h3>Step 1: The External Blow-Down and Visual Sweep</h3>
+      <p>Start by blowing the entire machine clean. Use compressed air or a leaf blower at close range. Get the top of the deck, around the carb linkage, the cooling fins on the cylinder head, and the recoil starter housing. Wet, caked grass clippings hold moisture against metal and promote rust. With the engine clean, look for signs of rodent infestation. Shine a flashlight into the recoil housing and between the cylinder cooling fins. A packed nest of shredded seat foam and grass will cause the engine to overheat and seize within minutes under load. Pick out any nests with a hooked wire. Check all visible wiring. Rodents chew insulation. Bare copper against the engine block creates an intermittent no-spark condition that will drive you insane.</p>
+
+      <h3>Step 2: The Oil Audit (The Tale in the Drain Pan)</h3>
+      <p>Old oil is a chemical weapon. It contains acids, water, and suspended abrasive particles. Drain the oil while the engine is cold but not freezing. Better yet, roll the machine into the sun for twenty minutes to let any settled sludge mix slightly. Remove the dipstick, place the pan under the drain plug, and pull the plug. Watch the oil as it streams out. What do you see?</p>
+      <ul>
+        <li><strong>Dark brown or black and flowing smoothly:</strong> Normal. Change it.</li>
+        <li><strong>Milky, tan, or opaque like chocolate milk:</strong> Water contamination. There’s moisture in the crankcase. Change the oil, run the engine for ten minutes, and change it again.</li>
+        <li><strong>Glittery or metallic particles:</strong> Bearing or cylinder wall wear. The clock is ticking. Run thicker oil and start shopping for a replacement engine.</li>
+        <li><strong>Thin, reeks of gasoline:</strong> The carb needle leaked raw fuel past the rings into the sump over winter. Fix the carb before running. Refill with fresh oil to the exact full mark on the dipstick. Not above.</li>
+      </ul>
+
+      <h3>Step 3: The Fuel System Purge</h3>
+      <p>Do not attempt to start an engine on last year’s gas. It will not end well. Drain every drop of old fuel from the tank. Use a siphon pump or simply disconnect the fuel line at the carb and let it drain into a container. Dispose of the old fuel properly. Remove the fuel line from the carb inlet and direct it into a catch can. Open the tank valve. Fresh fuel should flow freely. A dribble means a clogged tank screen or a collapsed line. Replace the fuel line if it’s stiff, yellowed, or cracked. If the carb has a bowl, drop it now. A single drop of water or a fleck of varnished fuel in the bottom of the bowl will stall the engine repeatedly. Spray the bowl, float, and needle seat area with carb cleaner. Reassemble. Fill the tank with fresh, stabilized fuel.</p>
+
+      <h3>Step 4: The Air Filter Inspection</h3>
+      <p>Pop the air filter cover. Remove the element. If it’s paper and looks like it’s been soaked in oil and then rolled in dirt, replace it. A restricted air filter creates a rich condition, fouling the spark plug and washing the cylinder walls with fuel. If it’s a foam element, wash it in warm soapy water, let it dry completely, and re-oil it with dedicated foam filter oil. Wipe the inside of the airbox housing with a lightly oiled rag. The thin film of oil traps fine dust that passes the filter. Reinstall the filter and ensure the cover seals tightly. A warped cover is an air leak.</p>
+
+      <h3>Step 5: The Spark Plug Ceremony</h3>
+      <p>Remove the spark plug. The electrode tells you the engine’s entire history.</p>
+      <ul>
+        <li><strong>Light tan or grayish-brown:</strong> Perfect combustion. The carb is tuned.</li>
+        <li><strong>Dry, black, sooty:</strong> Rich mixture. Possibly a dirty air filter or choke left partially on.</li>
+        <li><strong>Wet, oily, glazed black:</strong> Oil burning. Worn rings or valve guides.</li>
+        <li><strong>White or blistered:</strong> Lean mixture. Dangerously hot. Check for vacuum leaks.</li>
+      </ul>
+      <p>Clean the threads with a wire brush. Gap the plug with a feeler gauge. Most small engines call for 0.030 inches. Check your manual. If the plug has been in there for more than two seasons, replace it. Thread it in by hand. Cross-threading an aluminum cylinder head is a tragedy. Snug it with the socket, then give it a gentle extra nudge. Overtightening strips threads.</p>
+
+      <h3>Step 6: Battery Resurrection (Riding Equipment)</h3>
+      <p>A lead-acid battery that sat unmaintained all winter is likely sulfated. Crystals of lead sulfate have hardened on the plates, reducing capacity permanently. Check the voltage with a multimeter. Below 12.4 volts means it needs charging. Below 11.8 volts, it may be unrecoverable. Connect a smart charger with a desulfation mode and let it run for a full cycle. Clean the battery terminals to bright metal with a wire brush or terminal cleaner. Coat the terminals with dielectric grease. Corroded terminals cause voltage drop that mimics a dead battery. If the battery is bulging, cracked, or more than three years old, replace it proactively.</p>
+
+      <h3>Step 7: The Blade and Deck Check</h3>
+      <p>Tilt the mower carefully. Spark plug side up. Always. Tilting with the carb side down sends oil into the intake and air filter. Inspect the blade. A dull blade hammers grass, leaving ragged brown tips vulnerable to disease. A bent blade vibrates, destroying crankshaft bearings. Remove the blade with the appropriate socket. Sharpen it with a file or angle grinder, maintaining the factory angle. Don’t razor-sharpen; a butter-knife edge with a visible flat works best. Balance the blade on a cone balancer or a nail in the wall. A heavy side indicates more material removal needed. Scrape the underside of the deck with a putty knife. Caked grass holds moisture, rusts decks, and impedes airflow that creates the lift needed for a clean cut. Spray the clean deck underside with a silicone lubricant or even cooking spray. Grass won’t stick.</p>
+
+      <h2>Pre-Season Maintenance Quick-Reference Matrix</h2>
+      <div class="responsive-table-wrapper">
+        <table class="maintenance-table">
+          <thead>
+            <tr><th>Maintenance Task</th><th>Mower</th><th>Pressure Washer</th><th>Trimmer/Blower</th><th>What to Look For</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Drain & Replace Fuel</td><td>✓</td><td>✓</td><td>✓</td><td>Ethanol separation, varnish, water. Treat fresh fuel.</td></tr>
+            <tr><td>Change Engine Oil</td><td>✓</td><td>✓</td><td>—</td><td>Milky, glittery, or fuel-saturated oil.</td></tr>
+            <tr><td>Replace Air Filter</td><td>✓</td><td>✓</td><td>✓</td><td>Clogged paper, deteriorated foam, rodent debris.</td></tr>
+            <tr><td>Inspect Spark Plug</td><td>✓</td><td>✓</td><td>✓</td><td>Color, gap, electrode erosion. Replace every 2 seasons.</td></tr>
+            <tr><td>Check Battery</td><td>(Rider)</td><td>—</td><td>—</td><td>Voltage, sulfation, terminal corrosion.</td></tr>
+            <tr><td>Sharpen & Balance Blade</td><td>✓</td><td>—</td><td>—</td><td>Nicks, bends, balance. Scrape deck underside.</td></tr>
+            <tr><td>Grease Fittings</td><td>(Rider)</td><td>—</td><td>—</td><td>Spindle zerks, steering pivot points.</td></tr>
+            <tr><td>Inspect Fuel Lines</td><td>✓</td><td>✓</td><td>✓</td><td>Cracks, stiffness, internal delamination. Replace if suspect.</td></tr>
+            <tr><td>Clean Cooling Fins</td><td>✓</td><td>✓</td><td>✓</td><td>Packed debris preventing airflow. Overheating risk.</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>Step 8: The First Start Protocol</h3>
+      <p>With all systems refreshed, you’re ready for the first start. Don’t just rip the cord. Place the machine on a flat surface. Set the throttle to half. Prime the bulb if equipped, but don’t flood it. Set the choke to full. Pull the cord gently until you feel resistance, then give it one sharp, committed pull. The engine should cough. Move the choke to half and pull again. It should fire and run. Let it idle for thirty seconds, then gradually reduce choke to off. Let the engine warm up fully. Listen. A rhythmic tap that quiets as it warms is normal piston slap. A sharp knock that doesn’t go away is a rod. A whistle or hiss is a vacuum leak. Shut it down and investigate odd noises before loading the engine with work.</p>
+
+      <h2>Frequently Asked Questions (FAQ)</h2>
+      <h3>Can I use old gas if I add a fuel stabilizer to it now?</h3>
+      <p>No. Stabilizer prevents fresh fuel from degrading. It does not reverse the chemical breakdown of old, varnished fuel. Once gasoline has oxidized and formed gums, the damage is done. Drain it. Use it in a bonfire pile or take it to hazardous waste disposal. Do not run it through your carburetor.</p>
+      <h3>How often should I do this full pre-season ritual?</h3>
+      <p>Once per season, ideally in early spring before the first mow. However, engines stored longer than 90 days without running should receive at least a fresh fuel flush and an oil inspection. For generators that sit in standby mode, run them under load for 20 minutes every three months and treat the fuel with stabilizer year-round.</p>
+      <h3>I skipped pre-season maintenance and my engine is running rough. Is it too late?</h3>
+      <p>It’s not too late, but you may need a deeper carb cleaning now. Rough running after storage almost always means a partially clogged pilot jet or main jet. Drain the old fuel, fill with fresh treated gas, and add a dose of carburetor cleaner to the tank. If it doesn’t clear up within 15 minutes of running, you’ll need to remove the carb and physically clean the jets with a wire and compressed air. The pre-season checklist still applies—just add a carb teardown to Step 3.</p>
+      
+      <!-- Safety blockquote example (inline with our design) -->
+      <blockquote>
+        <p><strong>⚠️ Safety Note:</strong> Always disconnect the spark plug wire before performing any inspection or maintenance. Fuel and cleaning chemicals are highly flammable. Work in a well-ventilated area away from open flames.</p>
+      </blockquote>
+
+      <!-- E-E-A-T About the Author Box -->
+      <div class="author-box">
+        <h4>About the Author</h4>
+        <p>Tool & Engine Pro is dedicated to providing high-quality, practical small engine repair and tool maintenance guidance. Every article is written by our team of hands-on mechanical enthusiasts to help you troubleshoot your equipment safely and efficiently at home.</p>
+      </div>
+    </div>
+  </main>
+
+  <!-- FOOTER (identical to homepage) -->
+  <footer class="site-footer">
+    <div class="container">
+      <p class="footer-copyright">© 2026 Tool & Engine Pro. All rights reserved.</p>
+      <ul class="footer-links">
+        <li><a href="/about-us">About Us</a></li>
+        <li><a href="/contact">Contact Us</a></li>
+        <li><a href="/privacy-policy">Privacy Policy</a></li>
+        <li><a href="/term-of-service">Terms of Service</a></li>
+      </ul>
+    </div>
+  </footer>
+</body>
+</html>
