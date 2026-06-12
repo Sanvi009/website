@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+  <title>About Tool & Engine Pro | Our Mission & Editorial Standards</title>
+  <meta name="description" content="Learn about Tool & Engine Pro's mission to provide clear, safe, and actionable DIY repair guides for small engines and workshop tools. Written by hands-on mechanical enthusiasts.">
+  <style>
+    /* ----- Global Reset & Variables (identical to all site pages) ----- */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+      background-color: #FFFFFF;
+      color: #333333;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    :root {
+      --white: #FFFFFF;
+      --charcoal: #333333;
+      --accent: #2c3e50;
+      --light-gray: #f8f9fa;
+      --border-light: #e9ecef;
+      --text-muted: #4a5568;
+    }
+
+    a {
+      text-decoration: none;
+      color: var(--accent);
+      transition: opacity 0.2s ease, color 0.2s;
+    }
+
+    a:hover {
+      opacity: 0.8;
+      text-decoration: underline;
+    }
+
+    ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0,0,0,0);
+      white-space: nowrap;
+      border-width: 0;
+    }
+
+    /* ----- Header & Navigation (identical structure) ----- */
+    .site-header {
+      background-color: var(--white);
+      border-bottom: 1px solid var(--border-light);
+      padding: 1rem 0;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    .header-inner {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .site-title {
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: var(--accent);
+      letter-spacing: -0.5px;
+      line-height: 1.2;
+    }
+
+    .nav-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.8rem;
+      align-items: center;
+    }
+
+    .nav-links a {
+      color: var(--charcoal);
+      font-weight: 500;
+      font-size: 1rem;
+      padding: 0.25rem 0;
+      border-bottom: 2px solid transparent;
+      transition: border-color 0.2s, color 0.2s;
+    }
+
+    .nav-links a:hover {
+      color: var(--accent);
+      border-bottom-color: var(--accent);
+      text-decoration: none;
+      opacity: 1;
+    }
+
+    /* Active page indicator (About Us could be in footer, but keeping nav consistent) */
+    .nav-links a.active-link {
+      color: var(--accent);
+      border-bottom: 2px solid var(--accent);
+      font-weight: 700;
+      opacity: 1;
+    }
+
+    @media (max-width: 700px) {
+      .header-inner {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.8rem;
+      }
+      .nav-links {
+        gap: 1.2rem;
+        flex-wrap: wrap;
+      }
+      .site-title {
+        font-size: 1.6rem;
+      }
+    }
+
+    /* ----- Page Content Wrapper (Single Column, matching article width) ----- */
+    .page-content {
+      padding: 3rem 1rem 3rem;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .page-content h1 {
+      font-size: 2.4rem;
+      font-weight: 700;
+      color: var(--accent);
+      margin-bottom: 2rem;
+      line-height: 1.3;
+      border-bottom: 2px solid var(--border-light);
+      padding-bottom: 0.75rem;
+    }
+
+    .page-content h2 {
+      font-size: 1.7rem;
+      font-weight: 700;
+      color: var(--accent);
+      margin: 2.5rem 0 1rem;
+      line-height: 1.35;
+    }
+
+    .page-content h2:first-of-type {
+      margin-top: 0.5rem;
+    }
+
+    .page-content p {
+      font-size: 1.05rem;
+      line-height: 1.7;
+      margin-bottom: 1.5rem;
+      color: var(--charcoal);
+    }
+
+    /* ----- Core Values Grid / Visual Checklist ----- */
+    .values-section {
+      margin: 2.5rem 0 1.5rem;
+      background-color: var(--light-gray);
+      border: 1px solid var(--border-light);
+      border-radius: 8px;
+      padding: 2rem 2rem 1.2rem;
+    }
+
+    .values-section h2 {
+      margin-top: 0;
+      margin-bottom: 1.5rem;
+      font-size: 1.6rem;
+      border-bottom: none;
+      padding-bottom: 0;
+      color: var(--accent);
+    }
+
+    .values-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 1.2rem;
+    }
+
+    .values-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.8rem;
+      font-size: 1.05rem;
+      line-height: 1.6;
+      color: var(--charcoal);
+    }
+
+    .value-icon {
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: var(--accent);
+      min-width: 1.8rem;
+      text-align: center;
+      line-height: 1.4;
+    }
+
+    .value-text strong {
+      color: var(--accent);
+      font-weight: 700;
+    }
+
+    /* ----- Footer (identical across site) ----- */
+    .site-footer {
+      background-color: var(--white);
+      padding: 2rem 1rem;
+      text-align: center;
+      border-top: 1px solid var(--border-light);
+      margin-top: 1rem;
+    }
+
+    .footer-copyright {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      margin-bottom: 1.2rem;
+    }
+
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+      list-style: none;
+    }
+
+    .footer-links a {
+      color: var(--charcoal);
+      font-weight: 500;
+      font-size: 0.95rem;
+    }
+
+    .footer-links a:hover {
+      color: var(--accent);
+      text-decoration: underline;
+    }
+
+    @media (max-width: 600px) {
+      .page-content {
+        padding: 2rem 1rem 2rem;
+      }
+      .page-content h1 {
+        font-size: 2rem;
+      }
+      .page-content h2 {
+        font-size: 1.5rem;
+      }
+      .values-section {
+        padding: 1.5rem;
+      }
+      .footer-links {
+        gap: 1.2rem;
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- HEADER & NAVIGATION (identical across site) -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="site-title">Tool & Engine Pro</div>
+      <nav aria-label="Main navigation">
+        <ul class="nav-links">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Small Engine Troubleshooting</a></li>
+          <li><a href="#">Tool Maintenance</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- MAIN CONTENT CONTAINER (800px max-width) -->
+    <article class="page-content">
+      <h1>About Tool & Engine Pro</h1>
+
+      <h2>Our Mission</h2>
+      <p>
+        We believe that a sputtering lawnmower, a seized chainsaw, or a rusted table saw top shouldn't mean an automatic trip to the expensive repair shop. Our mission is to break down the frustration barrier that stops homeowners from confidently maintaining their own equipment. Every guide we publish is built on the philosophy that mechanical work isn't magic — it's a sequence of logical, safe steps that anyone can follow with the right instruction.
+      </p>
+      <p>
+        We focus relentlessly on safety, precision, and clarity. Whether you're mixing two-stroke fuel for the first time or diagnosing why your pressure washer has lost its punch, we provide the exact specifications, torque values, and visual references you need. There's no vague advice here: only actionable, step-by-step workflows that respect both your intelligence and your time.
+      </p>
+
+      <h2>Who We Are</h2>
+      <p>
+        Tool & Engine Pro is powered by a collective of hands-on mechanical enthusiasts, small engine hobbyists, and seasoned DIY veterans. We come from backgrounds in small engine repair, workshop fabrication, and home improvement — and we've all made the same mistakes you're trying to avoid. That experience is what drives our content: we don't just tell you what to do, we explain why it works and what happens if you skip a step.
+      </p>
+      <p>
+        Our team spends weekends tearing down carburetors, testing spark plug gaps, and sharpening mower blades in real garages. We firmly believe that with a clear diagram, a well-organized parts list, and a little patience, anyone can keep their garage gear running like new. You don't need a mechanic's certification — you just need accurate information presented without ego or unnecessary complexity.
+      </p>
+
+      <h2>Our Editorial Standard</h2>
+      <p>
+        Authority in the DIY repair space doesn't come from flashy branding — it comes from consistently reliable information. Every troubleshooting guide, maintenance schedule, and diagnostic table published on this site undergoes rigorous research. We cross-reference factory service manuals, consult technical specifications from equipment manufacturers, and test procedures on real machines whenever possible. Our content is structured to prioritize safety warnings, torque specs, and correct fluid capacities above all else.
+      </p>
+      <p>
+        When you read a guide on Tool & Engine Pro, you're getting more than a blog post. You're getting a procedure that has been fact-checked against engineering principles, formatted for clarity, and written with the understanding that a missed step could mean a damaged engine or a personal injury. We take that responsibility seriously, and it shows in every article we publish.
+      </p>
+
+      <!-- CORE VALUES GRID (Visual Checklist) -->
+      <section class="values-section">
+        <h2>Our Core Pillars</h2>
+        <ul class="values-list">
+          <li>
+            <span class="value-icon">✓</span>
+            <span class="value-text"><strong>Absolute Clarity:</strong> No useless fluff, no confusing jargon. We use plain language, logical sequencing, and clear headings so you can follow along without second-guessing.</span>
+          </li>
+          <li>
+            <span class="value-icon">✓</span>
+            <span class="value-text"><strong>Safety First:</strong> Explicit warnings on fuel handling, electrical disconnection, blade sharpness, and proper ventilation. We flag every critical precaution before you pick up a tool.</span>
+          </li>
+          <li>
+            <span class="value-icon">✓</span>
+            <span class="value-text"><strong>Actionable Data:</strong> Real fuel-to-oil ratios, spark plug gap specifications, belt part numbers, and troubleshooting matrices — not just theory. You get the numbers you need to finish the job.</span>
+          </li>
+        </ul>
+      </section>
+    </article>
+  </main>
+
+  <!-- FOOTER (identical across site) -->
+  <footer class="site-footer">
+    <div class="container">
+      <p class="footer-copyright">© 2026 Tool & Engine Pro. All rights reserved.</p>
+      <ul class="footer-links">
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Contact Us</a></li>
+        <li><a href="#">Privacy Policy</a></li>
+        <li><a href="#">Terms of Service</a></li>
+      </ul>
+    </div>
+  </footer>
+</body>
+</html>
