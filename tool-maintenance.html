@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+  <title>Workshop Tool Maintenance & Repair Guides | Tool & Engine Pro</title>
+  <meta name="description" content="Step-by-step tool maintenance and repair guides. Keep power tools, hand tools, and garage equipment running smoothly. Covers cleaning, lubrication, and hardware adjustments.">
+  <style>
+    /* ----- Global Reset & Variables (consistent across all pages) ----- */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+      background-color: #FFFFFF;
+      color: #333333;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    :root {
+      --white: #FFFFFF;
+      --charcoal: #333333;
+      --accent: #2c3e50;
+      --light-gray: #f8f9fa;
+      --border-light: #e9ecef;
+      --text-muted: #4a5568;
+    }
+
+    a {
+      text-decoration: none;
+      color: var(--accent);
+      transition: opacity 0.2s ease, color 0.2s;
+    }
+
+    a:hover {
+      opacity: 0.8;
+      text-decoration: underline;
+    }
+
+    ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0,0,0,0);
+      white-space: nowrap;
+      border-width: 0;
+    }
+
+    /* ----- Header & Navigation (identical structure) ----- */
+    .site-header {
+      background-color: var(--white);
+      border-bottom: 1px solid var(--border-light);
+      padding: 1rem 0;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    .header-inner {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .site-title {
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: var(--accent);
+      letter-spacing: -0.5px;
+      line-height: 1.2;
+    }
+
+    .nav-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.8rem;
+      align-items: center;
+    }
+
+    .nav-links a {
+      color: var(--charcoal);
+      font-weight: 500;
+      font-size: 1rem;
+      padding: 0.25rem 0;
+      border-bottom: 2px solid transparent;
+      transition: border-color 0.2s, color 0.2s;
+    }
+
+    .nav-links a:hover {
+      color: var(--accent);
+      border-bottom-color: var(--accent);
+      text-decoration: none;
+      opacity: 1;
+    }
+
+    /* Active page indicator */
+    .nav-links a.active-link {
+      color: var(--accent);
+      border-bottom: 2px solid var(--accent);
+      font-weight: 700;
+      opacity: 1;
+    }
+
+    .nav-links a.active-link:hover {
+      opacity: 0.9;
+    }
+
+    @media (max-width: 700px) {
+      .header-inner {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.8rem;
+      }
+      .nav-links {
+        gap: 1.2rem;
+        flex-wrap: wrap;
+      }
+      .site-title {
+        font-size: 1.6rem;
+      }
+    }
+
+    /* ----- Category Hero Section ----- */
+    .category-hero {
+      background-color: var(--light-gray);
+      padding: 3rem 1rem;
+      text-align: center;
+      border-bottom: 1px solid var(--border-light);
+    }
+
+    .category-hero h1 {
+      font-size: 2.4rem;
+      font-weight: 700;
+      color: var(--accent);
+      margin-bottom: 1rem;
+      line-height: 1.3;
+      max-width: 850px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .category-hero .hero-description {
+      font-size: 1.15rem;
+      color: var(--text-muted);
+      max-width: 750px;
+      margin: 0 auto;
+      font-weight: 400;
+      line-height: 1.6;
+    }
+
+    @media (max-width: 600px) {
+      .category-hero h1 {
+        font-size: 2rem;
+      }
+      .category-hero .hero-description {
+        font-size: 1rem;
+      }
+    }
+
+    /* ----- Core Guide Grid (identical to first category page) ----- */
+    .guide-grid-section {
+      padding: 3rem 0 2.5rem;
+    }
+
+    .guide-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+    }
+
+    /* Card styling */
+    .guide-card {
+      background: var(--white);
+      border: 1px solid var(--border-light);
+      border-radius: 8px;
+      padding: 1.8rem 1.5rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.02);
+      display: flex;
+      flex-direction: column;
+      transition: border-color 0.2s;
+    }
+
+    .guide-card:hover {
+      border-color: #b0bec5;
+    }
+
+    .guide-card h3 {
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: var(--accent);
+      margin-bottom: 0.7rem;
+      line-height: 1.35;
+    }
+
+    .guide-card h3 a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    .guide-card h3 a:hover {
+      text-decoration: underline;
+      opacity: 0.9;
+    }
+
+    .guide-excerpt {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      line-height: 1.6;
+      margin-bottom: 1.5rem;
+      flex: 1;
+    }
+
+    .read-more {
+      font-weight: 600;
+      font-size: 0.95rem;
+      color: var(--accent);
+      align-self: flex-start;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.2s, opacity 0.2s;
+      display: inline-block;
+    }
+
+    .read-more:hover {
+      border-bottom: 1px solid var(--accent);
+      text-decoration: none;
+      opacity: 0.85;
+    }
+
+    /* Responsive grid adjustments */
+    @media (max-width: 950px) {
+      .guide-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.8rem;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .guide-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+      }
+      .guide-card {
+        padding: 1.5rem;
+      }
+    }
+
+    /* ----- Footer (identical across site) ----- */
+    .site-footer {
+      background-color: var(--white);
+      padding: 2rem 1rem;
+      text-align: center;
+      border-top: 1px solid var(--border-light);
+    }
+
+    .footer-copyright {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      margin-bottom: 1.2rem;
+    }
+
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+      list-style: none;
+    }
+
+    .footer-links a {
+      color: var(--charcoal);
+      font-weight: 500;
+      font-size: 0.95rem;
+    }
+
+    .footer-links a:hover {
+      color: var(--accent);
+      text-decoration: underline;
+    }
+
+    @media (max-width: 500px) {
+      .footer-links {
+        gap: 1.2rem;
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- HEADER & NAVIGATION (active on Tool Maintenance) -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="site-title">Tool & Engine Pro</div>
+      <nav aria-label="Main navigation">
+        <ul class="nav-links">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Small Engine Troubleshooting</a></li>
+          <li><a href="#" class="active-link" aria-current="page">Tool Maintenance</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- CATEGORY HERO SECTION -->
+    <section class="category-hero">
+      <div class="container">
+        <h1>Workshop Tool Maintenance & Repair Guides</h1>
+        <p class="hero-description">
+          Keep your power tools, hand tools, and garage equipment running smoothly and rust-free. 
+          Step-by-step cleaning tutorials, battery calibration steps, and hardware adjustment workflows.
+        </p>
+      </div>
+    </section>
+
+    <!-- THE CORE GUIDE GRID (12 Articles for Tool Maintenance) -->
+    <section class="guide-grid-section">
+      <div class="container">
+        <div class="guide-grid">
+          
+          <!-- Card 1 -->
+          <article class="guide-card">
+            <h3><a href="#">How to Sharpen Lawnmower Blades Safely at Home</a></h3>
+            <p class="guide-excerpt">Learn the correct angle and technique for sharpening mower blades. Achieve a clean cut without damaging the blade balance.</p>
+            <a href="#" class="read-more">Read Full Guide →</a>
+          </article>
+
+          <!-- Card 2 -->
+          <article class="guide-card">
+            <h3><a href="#">Step-by-Step Guide to Cleaning a Rusty Table Saw Top</a></h3>
+            <p class="guide-excerpt">Remove surface rust and protect your cast iron table. We cover abrasive pads, chemical rust removers, and protective waxes.</p>
+            <a href="#" class="read-more">Read Full Guide →</a>
+          </article>
+
+          <!-- Card 3 -->
+          <article class="guide-card">
+            <h3><a href="#">How to Lubricate and Maintain Air Compressor Pumps</a></h3>
+            <p class="guide-excerpt">Extend the life of your compressor with proper oil checks and pump lubrication. Avoid overheating and premature wear.</p>
+            <a href="#" class="read-more">Read Full Guide →</a>
+          </article>
+
+          <!-- Card 4 -->
+          <article class="guide-card">
+            <h3><a href="#">Why Your Pressure Washer Pressure Drops: Diagnosis and Fixes</a></h3>
+            <p class="guide-excerpt">From clogged nozzles to unloader valve issues, learn to troubleshoot low pressure and restore full cleaning power.</p>
+            <a href="#" class="read-more">Read Full Guide →</a>
+          </article>
+
+          <!-- Card 5 -->
+          <article class="guide-card">
+            <h3><a href="#">How to Properly Store Power Tools for the Winter</a></h3>
+            <p class="guide-excerpt">Prevent rust and battery damage during off-season storage. Moisture control, battery charge levels, and case organization.</p>
+            <a href="#" class="read-more">Read Full Guide →</a>
+          </article>
+
+          <!-- Card 6 -->
+          <article class="guide-card">
+            <h3><a href="#">The Ultimate Guide to Cleaning Battery Terminals on Cordless Tools</a></h3>
+            <p class="guide-excerpt">Corroded terminals cause poor connectivity. Step-by-step cleaning with baking soda, contact cleaner, and protective sprays.</p>
+            <a href="#" class="read-more">Read Full Guide →</a>
+          </article>
+
+          <!-- Card 7 -->
+          <article class="guide-card">
+            <h3><a href="#">How to Replace a Worn Belt on a Riding Mower Deck</a></h3>
+            <p class="guide-excerpt">A slipping or cracked deck belt reduces cutting performance. Follow our routing diagram and tensioning guide.</p>
+            <a href="#" class="read-more">Read Full Guide →</a>
+          </article>
+
+          <!-- Card 8 -->
+          <article class="guide-card">
+            <h3><a href="#">Why Your Cordless Tool Battery Won't Hold a Charge</a></h3>
+            <p class="guide-excerpt">Understand battery memory, cell degradation, and charger faults. Decide whether to recondition or replace the pack.</p>
+            <a href="#" class="read-more">Read Full Guide →</a>
+          </article>
+
+          <!-- Card 9 -->
+          <article class="guide-card">
+            <h3><a href="#">How to Adjust the Chain Tension on a Chainsaw Bar</a></h3>
+            <p class="guide-excerpt">Proper chain tension prevents derailment and bar wear. Quick adjustment steps for both tooled and tool-less systems.</p>
+            <a href="#" class="read-more">Read Full Guide →</a>
+          </article>
+
+          <!-- Card 10 -->
+          <article class="guide-card">
+            <h3><a href="#">Step-by-Step Guide to Changing Oil in a Walk-Behind Mower</a></h3>
+            <p class="guide-excerpt">Regular oil changes are critical for engine longevity. Learn the drain, fill, and disposal process the right way.</p>
+            <a href="#" class="read-more">Read Full Guide →</a>
+          </article>
+
+          <!-- Card 11 -->
+          <article class="guide-card">
+            <h3><a href="#">How to Fix a Stuck or Binding Miter Saw Blade Guard</a></h3>
+            <p class="guide-excerpt">A sluggish blade guard is a safety hazard. Clean debris, lubricate pivot points, and restore smooth operation.</p>
+            <a href="#" class="read-more">Read Full Guide →</a>
+          </article>
+
+          <!-- Card 12 -->
+          <article class="guide-card">
+            <h3><a href="#">7 Hand Tool Maintenance Habits to Prevent Rust and Decay</a></h3>
+            <p class="guide-excerpt">Simple daily and weekly routines to protect wrenches, screwdrivers, and pliers. Keep your toolbox in top condition.</p>
+            <a href="#" class="read-more">Read Full Guide →</a>
+          </article>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER (identical across site) -->
+  <footer class="site-footer">
+    <div class="container">
+      <p class="footer-copyright">© 2026 Tool & Engine Pro. All rights reserved.</p>
+      <ul class="footer-links">
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Contact Us</a></li>
+        <li><a href="#">Privacy Policy</a></li>
+        <li><a href="#">Terms of Service</a></li>
+      </ul>
+    </div>
+  </footer>
+</body>
+</html>
