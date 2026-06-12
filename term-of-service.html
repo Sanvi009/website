@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+  <title>Terms of Service | Tool & Engine Pro</title>
+  <meta name="description" content="Tool & Engine Pro Terms of Service. Read our terms of use, intellectual property guidelines, safety disclaimers, and limitations of liability before using our DIY repair guides.">
+  <style>
+    /* ----- Global Reset & Variables (identical to all site pages) ----- */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+      background-color: #FFFFFF;
+      color: #333333;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    :root {
+      --white: #FFFFFF;
+      --charcoal: #333333;
+      --accent: #2c3e50;
+      --light-gray: #f8f9fa;
+      --border-light: #e9ecef;
+      --text-muted: #4a5568;
+    }
+
+    a {
+      text-decoration: none;
+      color: var(--accent);
+      transition: opacity 0.2s ease, color 0.2s;
+    }
+
+    a:hover {
+      opacity: 0.8;
+      text-decoration: underline;
+    }
+
+    ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0,0,0,0);
+      white-space: nowrap;
+      border-width: 0;
+    }
+
+    /* ----- Header & Navigation (identical structure) ----- */
+    .site-header {
+      background-color: var(--white);
+      border-bottom: 1px solid var(--border-light);
+      padding: 1rem 0;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    .header-inner {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .site-title {
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: var(--accent);
+      letter-spacing: -0.5px;
+      line-height: 1.2;
+    }
+
+    .nav-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.8rem;
+      align-items: center;
+    }
+
+    .nav-links a {
+      color: var(--charcoal);
+      font-weight: 500;
+      font-size: 1rem;
+      padding: 0.25rem 0;
+      border-bottom: 2px solid transparent;
+      transition: border-color 0.2s, color 0.2s;
+    }
+
+    .nav-links a:hover {
+      color: var(--accent);
+      border-bottom-color: var(--accent);
+      text-decoration: none;
+      opacity: 1;
+    }
+
+    @media (max-width: 700px) {
+      .header-inner {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.8rem;
+      }
+      .nav-links {
+        gap: 1.2rem;
+        flex-wrap: wrap;
+      }
+      .site-title {
+        font-size: 1.6rem;
+      }
+    }
+
+    /* ----- Page Content Wrapper (Single Column, matching all other pages) ----- */
+    .page-content {
+      padding: 3rem 1rem 3rem;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .page-content h1 {
+      font-size: 2.4rem;
+      font-weight: 700;
+      color: var(--accent);
+      margin-bottom: 0.5rem;
+      line-height: 1.3;
+    }
+
+    .last-updated {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      margin-bottom: 2.5rem;
+      font-style: italic;
+      border-bottom: 1px solid var(--border-light);
+      padding-bottom: 1.2rem;
+    }
+
+    .page-content h2 {
+      font-size: 1.7rem;
+      font-weight: 700;
+      color: var(--accent);
+      margin: 2.5rem 0 1rem;
+      line-height: 1.35;
+    }
+
+    .page-content h2:first-of-type {
+      margin-top: 0.5rem;
+    }
+
+    .page-content h3 {
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: var(--charcoal);
+      margin: 1.8rem 0 0.7rem;
+      line-height: 1.4;
+    }
+
+    .page-content p {
+      font-size: 1.05rem;
+      line-height: 1.7;
+      margin-bottom: 1.5rem;
+      color: var(--charcoal);
+    }
+
+    .page-content ul,
+    .page-content ol {
+      margin-bottom: 1.5rem;
+      padding-left: 1.8rem;
+      list-style: disc;
+    }
+
+    .page-content ul li,
+    .page-content ol li {
+      font-size: 1.05rem;
+      line-height: 1.7;
+      margin-bottom: 0.5rem;
+      color: var(--charcoal);
+    }
+
+    .page-content strong {
+      color: var(--accent);
+      font-weight: 700;
+    }
+
+    .page-content a {
+      color: var(--accent);
+      text-decoration: underline;
+      font-weight: 500;
+    }
+
+    .page-content a:hover {
+      opacity: 0.8;
+    }
+
+    /* Safety warning block special styling */
+    .safety-warning {
+      background-color: #fdf8f0;
+      border-left: 4px solid var(--accent);
+      padding: 1.2rem 1.5rem;
+      margin: 1.5rem 0;
+      border-radius: 4px;
+    }
+
+    .safety-warning p {
+      margin-bottom: 0.5rem;
+    }
+
+    .safety-warning p:last-child {
+      margin-bottom: 0;
+    }
+
+    /* ----- Footer (identical across site) ----- */
+    .site-footer {
+      background-color: var(--white);
+      padding: 2rem 1rem;
+      text-align: center;
+      border-top: 1px solid var(--border-light);
+      margin-top: 1rem;
+    }
+
+    .footer-copyright {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      margin-bottom: 1.2rem;
+    }
+
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .footer-links a {
+      color: var(--charcoal);
+      font-weight: 500;
+      font-size: 0.95rem;
+      text-decoration: none;
+    }
+
+    .footer-links a:hover {
+      color: var(--accent);
+      text-decoration: underline;
+    }
+
+    @media (max-width: 600px) {
+      .page-content {
+        padding: 2rem 1rem 2rem;
+      }
+      .page-content h1 {
+        font-size: 2rem;
+      }
+      .page-content h2 {
+        font-size: 1.5rem;
+      }
+      .safety-warning {
+        padding: 1rem;
+      }
+      .footer-links {
+        gap: 1.2rem;
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- HEADER & NAVIGATION (identical across site) -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="site-title">Tool & Engine Pro</div>
+      <nav aria-label="Main navigation">
+        <ul class="nav-links">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Small Engine Troubleshooting</a></li>
+          <li><a href="#">Tool Maintenance</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- MAIN CONTENT CONTAINER (800px max-width) -->
+    <article class="page-content">
+      <h1>Terms of Service</h1>
+      <p class="last-updated">Last Updated: June 12, 2026</p>
+
+      <h2>1. Terms of Use</h2>
+      <p>
+        By accessing the website at toolandenginepro.com, you are agreeing to be bound by these terms of service, all applicable laws and regulations, and agree that you are responsible for compliance with any applicable local laws. If you do not agree with any of these terms, you are prohibited from using or accessing this site.
+      </p>
+
+      <h2>2. Intellectual Property & Use License</h2>
+      <p>
+        The content, original text, formatting, charts, tables, and graphics displayed on Tool & Engine Pro are the intellectual property of the site owners.
+      </p>
+      <ul>
+        <li>You may temporarily download one copy of the materials (information or software) on Tool & Engine Pro's website for personal, non-commercial transitory viewing only.</li>
+        <li>This is the grant of a license, not a transfer of title, and under this license, you may not modify or copy the materials, use the materials for any commercial purpose, or attempt to decompile or reverse engineer any software contained on the website.</li>
+        <li>Automated scraping, copying, or duplicating of our step-by-step repair guides and mechanical matrices without express written consent is strictly prohibited.</li>
+      </ul>
+
+      <h2>3. Disclaimer (Mechanical & Safety Warning)</h2>
+      <p>
+        The materials on Tool & Engine Pro's website are provided on an 'as is' basis. Tool & Engine Pro makes no warranties, expressed or implied, and hereby disclaims and negates all other warranties including, without limitation, implied warranties or conditions of merchantability or fitness for a particular purpose.
+      </p>
+      <div class="safety-warning">
+        <p><strong>⚠ Safety First:</strong> Small engine repair, tool maintenance, and handling fuel involve inherent physical risks. The troubleshooting steps and guides on this website are for educational and informational purposes only.</p>
+        <p>You assume full responsibility for your own physical safety, tool usage, and mechanical outcomes. Tool & Engine Pro shall not be held liable for any physical injuries, property damage, or equipment failures resulting from the use of information found on this website.</p>
+      </div>
+
+      <h2>4. Limitations of Liability</h2>
+      <p>
+        In no event shall Tool & Engine Pro or its suppliers be liable for any damages (including, without limitation, damages for loss of data or profit, or due to business interruption) arising out of the use or inability to use the materials on Tool & Engine Pro's website, even if Tool & Engine Pro or an authorized representative has been notified orally or in writing of the possibility of such damage.
+      </p>
+
+      <h2>5. Accuracy of Materials</h2>
+      <p>
+        The materials appearing on Tool & Engine Pro's website could include technical, typographical, or photographic errors. Tool & Engine Pro does not warrant that any of the materials on its website are accurate, complete, or current. We may make changes to the materials contained on our website at any time without notice, but we do not make any commitment to update the materials.
+      </p>
+
+      <h2>6. Links to Third Parties</h2>
+      <p>
+        Tool & Engine Pro has not reviewed all of the sites linked to its website and is not responsible for the contents of any such linked site. The inclusion of any link does not imply endorsement by Tool & Engine Pro of the site. Use of any such linked website is at the user's own risk.
+      </p>
+
+      <h2>7. Modifications</h2>
+      <p>
+        Tool & Engine Pro may revise these terms of service for its website at any time without notice. By using this website, you are agreeing to be bound by the then-current version of these terms of service.
+      </p>
+
+      <h2>8. Governing Law</h2>
+      <p>
+        These terms and conditions are governed by and construed in accordance with local regulations, and you irrevocably submit to the exclusive jurisdiction of the courts in that State or location.
+      </p>
+    </article>
+  </main>
+
+  <!-- FOOTER (identical across site) -->
+  <footer class="site-footer">
+    <div class="container">
+      <p class="footer-copyright">© 2026 Tool & Engine Pro. All rights reserved.</p>
+      <ul class="footer-links">
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Contact Us</a></li>
+        <li><a href="#">Privacy Policy</a></li>
+        <li><a href="#">Terms of Service</a></li>
+      </ul>
+    </div>
+  </footer>
+</body>
+</html>
