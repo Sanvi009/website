@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+  <title>Privacy Policy | Tool & Engine Pro</title>
+  <meta name="description" content="Tool & Engine Pro Privacy Policy. Learn how we collect, use, and protect your information, including details about Google AdSense cookies and third-party advertising.">
+  <style>
+    /* ----- Global Reset & Variables (identical to all site pages) ----- */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+      background-color: #FFFFFF;
+      color: #333333;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    :root {
+      --white: #FFFFFF;
+      --charcoal: #333333;
+      --accent: #2c3e50;
+      --light-gray: #f8f9fa;
+      --border-light: #e9ecef;
+      --text-muted: #4a5568;
+    }
+
+    a {
+      text-decoration: none;
+      color: var(--accent);
+      transition: opacity 0.2s ease, color 0.2s;
+    }
+
+    a:hover {
+      opacity: 0.8;
+      text-decoration: underline;
+    }
+
+    ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0,0,0,0);
+      white-space: nowrap;
+      border-width: 0;
+    }
+
+    /* ----- Header & Navigation (identical structure) ----- */
+    .site-header {
+      background-color: var(--white);
+      border-bottom: 1px solid var(--border-light);
+      padding: 1rem 0;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    .header-inner {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .site-title {
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: var(--accent);
+      letter-spacing: -0.5px;
+      line-height: 1.2;
+    }
+
+    .nav-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.8rem;
+      align-items: center;
+    }
+
+    .nav-links a {
+      color: var(--charcoal);
+      font-weight: 500;
+      font-size: 1rem;
+      padding: 0.25rem 0;
+      border-bottom: 2px solid transparent;
+      transition: border-color 0.2s, color 0.2s;
+    }
+
+    .nav-links a:hover {
+      color: var(--accent);
+      border-bottom-color: var(--accent);
+      text-decoration: none;
+      opacity: 1;
+    }
+
+    @media (max-width: 700px) {
+      .header-inner {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.8rem;
+      }
+      .nav-links {
+        gap: 1.2rem;
+        flex-wrap: wrap;
+      }
+      .site-title {
+        font-size: 1.6rem;
+      }
+    }
+
+    /* ----- Page Content Wrapper (Single Column, matching article/about/contact width) ----- */
+    .page-content {
+      padding: 3rem 1rem 3rem;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .page-content h1 {
+      font-size: 2.4rem;
+      font-weight: 700;
+      color: var(--accent);
+      margin-bottom: 0.5rem;
+      line-height: 1.3;
+    }
+
+    .last-updated {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      margin-bottom: 2.5rem;
+      font-style: italic;
+      border-bottom: 1px solid var(--border-light);
+      padding-bottom: 1.2rem;
+    }
+
+    .page-content h2 {
+      font-size: 1.7rem;
+      font-weight: 700;
+      color: var(--accent);
+      margin: 2.5rem 0 1rem;
+      line-height: 1.35;
+    }
+
+    .page-content h2:first-of-type {
+      margin-top: 0.5rem;
+    }
+
+    .page-content h3 {
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: var(--charcoal);
+      margin: 1.8rem 0 0.7rem;
+      line-height: 1.4;
+    }
+
+    .page-content p {
+      font-size: 1.05rem;
+      line-height: 1.7;
+      margin-bottom: 1.5rem;
+      color: var(--charcoal);
+    }
+
+    .page-content ul,
+    .page-content ol {
+      margin-bottom: 1.5rem;
+      padding-left: 1.8rem;
+      list-style: disc;
+    }
+
+    .page-content ul li,
+    .page-content ol li {
+      font-size: 1.05rem;
+      line-height: 1.7;
+      margin-bottom: 0.5rem;
+      color: var(--charcoal);
+    }
+
+    .page-content strong {
+      color: var(--accent);
+      font-weight: 700;
+    }
+
+    .page-content a {
+      color: var(--accent);
+      text-decoration: underline;
+      font-weight: 500;
+    }
+
+    .page-content a:hover {
+      opacity: 0.8;
+    }
+
+    /* ----- Footer (identical across site) ----- */
+    .site-footer {
+      background-color: var(--white);
+      padding: 2rem 1rem;
+      text-align: center;
+      border-top: 1px solid var(--border-light);
+      margin-top: 1rem;
+    }
+
+    .footer-copyright {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      margin-bottom: 1.2rem;
+    }
+
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .footer-links a {
+      color: var(--charcoal);
+      font-weight: 500;
+      font-size: 0.95rem;
+      text-decoration: none;
+    }
+
+    .footer-links a:hover {
+      color: var(--accent);
+      text-decoration: underline;
+    }
+
+    @media (max-width: 600px) {
+      .page-content {
+        padding: 2rem 1rem 2rem;
+      }
+      .page-content h1 {
+        font-size: 2rem;
+      }
+      .page-content h2 {
+        font-size: 1.5rem;
+      }
+      .footer-links {
+        gap: 1.2rem;
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- HEADER & NAVIGATION (identical across site) -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="site-title">Tool & Engine Pro</div>
+      <nav aria-label="Main navigation">
+        <ul class="nav-links">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Small Engine Troubleshooting</a></li>
+          <li><a href="#">Tool Maintenance</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- MAIN CONTENT CONTAINER (800px max-width) -->
+    <article class="page-content">
+      <h1>Privacy Policy</h1>
+      <p class="last-updated">Last Updated: June 12, 2026</p>
+
+      <h2>1. Introduction</h2>
+      <p>
+        Welcome to Tool & Engine Pro ("we," "our," or "us"). We operate toolandenginepro.com (the "Site"). We respect your privacy and are committed to protecting any personally identifiable information you may provide us through the Site. This Privacy Policy explains what information may be collected on our Site, how we use this information, and under what circumstances we may disclose the information to third parties.
+      </p>
+
+      <h2>2. Information We Collect</h2>
+      <p>
+        We collect information that your browser sends whenever you visit our Site ("Log Data"). This Log Data may include information such as your computer's Internet Protocol ("IP") address, browser type, browser version, the pages of our Site that you visit, the time and date of your visit, the time spent on those pages, and other statistics. If you use our Contact form, we collect your name, email address, and the contents of your message.
+      </p>
+
+      <h2>3. Cookies and Web Beacons</h2>
+      <p>
+        To enrich and perfect your online experience, Tool & Engine Pro uses "Cookies", similar technologies, and services provided by others to display personalized content, appropriate advertising, and store your preferences on your computer. A cookie is a string of information that a website stores on a visitor's computer, and that the visitor's browser provides to the website each time the visitor returns.
+      </p>
+
+      <h2>4. Google AdSense and DoubleClick Cookie (Crucial Compliance)</h2>
+      <p>
+        Google, as a third-party vendor, uses cookies to serve ads on our Site. Google's use of the DoubleClick cookie enables it and its partners to serve ads to our users based on their visit to our Site or other websites on the Internet.
+      </p>
+      <ul>
+        <li><strong>Personalized Advertising:</strong> Users may opt out of personalized advertising by visiting <a href="https://www.google.com/settings/ads" target="_blank" rel="noopener noreferrer">Google Ads Settings</a>.</li>
+        <li><strong>Third-Party Vendors:</strong> Third-party vendors and ad networks, including Google, use cookies to serve ads based on a user's prior visits to your website or other websites. You can opt out of a third-party vendor's use of cookies for personalized advertising by visiting the <a href="https://optout.networkadvertising.org/" target="_blank" rel="noopener noreferrer">Network Advertising Initiative opt-out page</a>.</li>
+      </ul>
+
+      <h2>5. Third-Party Links</h2>
+      <p>
+        Our Site may contain links to external sites that are not operated by us. If you click on a third-party link, you will be directed to that third party's site. We strongly advise you to review the Privacy Policy and terms and conditions of every site you visit. We have no control over, and assume no responsibility for the content, privacy policies, or practices of any third-party sites, products, or services.
+      </p>
+
+      <h2>6. Data Security</h2>
+      <p>
+        The security of your Personal Information is important to us, but remember that no method of transmission over the Internet, or method of electronic storage is 100% secure. While we strive to use commercially acceptable means to protect your Personal Information, we cannot guarantee its absolute security.
+      </p>
+
+      <h2>7. Changes to This Privacy Policy</h2>
+      <p>
+        Tool & Engine Pro may change its Privacy Policy from time to time, and in Tool & Engine Pro's sole discretion. We encourage visitors to frequently check this page for any changes to its Privacy Policy. Your continued use of this site after any change in this Privacy Policy will constitute your acceptance of such change.
+      </p>
+
+      <h2>8. Contact Information</h2>
+      <p>
+        If you have any questions about this Privacy Policy, please contact us via email at <a href="mailto:contact@yourdomain.com">contact@yourdomain.com</a> or through our <a href="#">Contact page</a>.
+      </p>
+    </article>
+  </main>
+
+  <!-- FOOTER (identical across site) -->
+  <footer class="site-footer">
+    <div class="container">
+      <p class="footer-copyright">© 2026 Tool & Engine Pro. All rights reserved.</p>
+      <ul class="footer-links">
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Contact Us</a></li>
+        <li><a href="#">Privacy Policy</a></li>
+        <li><a href="#">Terms of Service</a></li>
+      </ul>
+    </div>
+  </footer>
+</body>
+</html>
