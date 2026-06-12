@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+  <title>How to Clean a Clogged Lawnmower Carburetor (Step-by-Step Guide) | Tool & Engine Pro</title>
+  <meta name="description" content="Step-by-step guide to cleaning a clogged lawnmower carburetor. Diagnose symptoms, remove the carb, clean the main jet, and get your mower running like new.">
+  <style>
+    /* ----- Global Reset & Variables (identical to all site pages) ----- */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+      background-color: #FFFFFF;
+      color: #333333;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    :root {
+      --white: #FFFFFF;
+      --charcoal: #333333;
+      --accent: #2c3e50;
+      --light-gray: #f8f9fa;
+      --border-light: #e9ecef;
+      --text-muted: #4a5568;
+    }
+
+    a {
+      text-decoration: none;
+      color: var(--accent);
+      transition: opacity 0.2s ease, color 0.2s;
+    }
+
+    a:hover {
+      opacity: 0.8;
+      text-decoration: underline;
+    }
+
+    ul, ol {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0,0,0,0);
+      white-space: nowrap;
+      border-width: 0;
+    }
+
+    /* ----- Header & Navigation (identical structure) ----- */
+    .site-header {
+      background-color: var(--white);
+      border-bottom: 1px solid var(--border-light);
+      padding: 1rem 0;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    .header-inner {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .site-title {
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: var(--accent);
+      letter-spacing: -0.5px;
+      line-height: 1.2;
+    }
+
+    .nav-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.8rem;
+      align-items: center;
+    }
+
+    .nav-links a {
+      color: var(--charcoal);
+      font-weight: 500;
+      font-size: 1rem;
+      padding: 0.25rem 0;
+      border-bottom: 2px solid transparent;
+      transition: border-color 0.2s, color 0.2s;
+    }
+
+    .nav-links a:hover {
+      color: var(--accent);
+      border-bottom-color: var(--accent);
+      text-decoration: none;
+      opacity: 1;
+    }
+
+    @media (max-width: 700px) {
+      .header-inner {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.8rem;
+      }
+      .nav-links {
+        gap: 1.2rem;
+        flex-wrap: wrap;
+      }
+      .site-title {
+        font-size: 1.6rem;
+      }
+    }
+
+    /* ----- Article Readability Container (max-width 800px, centered) ----- */
+    .article-container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 2rem 1rem 2rem;
+    }
+
+    /* Breadcrumbs */
+    .breadcrumbs {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      margin-bottom: 1.5rem;
+    }
+    .breadcrumbs a {
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 500;
+    }
+    .breadcrumbs a:hover {
+      text-decoration: underline;
+    }
+    .breadcrumbs span {
+      color: var(--charcoal);
+    }
+
+    /* Typography (matching guidelines) */
+    .article-container h1 {
+      font-size: 2.4rem;
+      font-weight: 700;
+      color: var(--accent);
+      line-height: 1.3;
+      margin-bottom: 0.5rem;
+    }
+    .byline {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      margin-bottom: 2rem;
+      border-bottom: 1px solid var(--border-light);
+      padding-bottom: 1rem;
+      display: inline-block;
+    }
+    .article-container h2 {
+      font-size: 1.7rem;
+      font-weight: 700;
+      color: var(--accent);
+      margin: 2.2rem 0 1rem;
+      line-height: 1.35;
+    }
+    .article-container h3 {
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: var(--charcoal);
+      margin: 1.8rem 0 0.8rem;
+      line-height: 1.4;
+    }
+    .article-container p {
+      font-size: 1.05rem;
+      line-height: 1.7;
+      margin-bottom: 1.5rem;
+      color: var(--charcoal);
+    }
+    .article-container ul, 
+    .article-container ol {
+      margin-bottom: 1.5rem;
+      padding-left: 1.8rem;
+    }
+    .article-container ul li, 
+    .article-container ol li {
+      font-size: 1.05rem;
+      line-height: 1.7;
+      margin-bottom: 0.5rem;
+      color: var(--charcoal);
+    }
+    .article-container ul {
+      list-style: disc;
+    }
+    .article-container ol {
+      list-style: decimal;
+    }
+    .article-container strong {
+      color: var(--accent);
+      font-weight: 700;
+    }
+
+    /* Table styles: responsive, header #2c3e50, white text, light borders */
+    .responsive-table-wrapper {
+      overflow-x: auto;
+      margin: 2rem 0 1.8rem;
+    }
+    .diagnostic-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.95rem;
+      line-height: 1.5;
+      background-color: var(--white);
+    }
+    .diagnostic-table th {
+      background-color: var(--accent);
+      color: var(--white);
+      font-weight: 600;
+      padding: 12px 12px;
+      border: 1px solid #d4dce2;
+      text-align: left;
+    }
+    .diagnostic-table td {
+      border: 1px solid var(--border-light);
+      padding: 10px 12px;
+      color: var(--charcoal);
+      background-color: var(--white);
+    }
+    .diagnostic-table tr:nth-child(even) td {
+      background-color: #fdfdfd;
+    }
+    @media (max-width: 550px) {
+      .diagnostic-table th, .diagnostic-table td {
+        padding: 8px 6px;
+        font-size: 0.85rem;
+      }
+    }
+
+    /* Blockquote styling for safety notices */
+    .article-container blockquote {
+      margin: 1.8rem 0;
+      padding: 1.2rem 1.5rem;
+      background-color: var(--light-gray);
+      border-left: 4px solid var(--accent);
+      font-style: italic;
+      color: #2c3e50;
+      border-radius: 0 8px 8px 0;
+    }
+    .article-container blockquote p {
+      margin-bottom: 0;
+      font-style: italic;
+    }
+
+    /* E-E-A-T About the Author box */
+    .author-box {
+      margin: 3rem 0 1rem;
+      background-color: var(--light-gray);
+      border: 1px solid var(--border-light);
+      border-radius: 8px;
+      padding: 1.8rem 2rem;
+    }
+    .author-box h4 {
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: var(--accent);
+      margin-bottom: 0.75rem;
+    }
+    .author-box p {
+      font-size: 0.98rem;
+      line-height: 1.6;
+      color: var(--charcoal);
+      margin-bottom: 0;
+    }
+
+    /* Footer (identical to homepage) */
+    .site-footer {
+      background-color: var(--white);
+      padding: 2rem 1rem;
+      text-align: center;
+      border-top: 1px solid var(--border-light);
+      margin-top: 2rem;
+    }
+    .footer-copyright {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      margin-bottom: 1.2rem;
+    }
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+      list-style: none;
+    }
+    .footer-links a {
+      color: var(--charcoal);
+      font-weight: 500;
+      font-size: 0.95rem;
+    }
+    .footer-links a:hover {
+      color: var(--accent);
+      text-decoration: underline;
+    }
+    @media (max-width: 600px) {
+      .article-container {
+        padding: 1.5rem 1rem 2rem;
+      }
+      .article-container h1 {
+        font-size: 2rem;
+      }
+      .article-container h2 {
+        font-size: 1.5rem;
+      }
+      .footer-links {
+        gap: 1.2rem;
+        flex-direction: column;
+        align-items: center;
+      }
+      .author-box {
+        padding: 1.2rem 1.2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- HEADER & NAVIGATION (identical across site) -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="site-title">Tool & Engine Pro</div>
+      <nav aria-label="Main navigation">
+        <ul class="nav-links">
+          <li><a href="/">Home</a></li>
+          <li><a href="/small-engine-troubleshooting">Small Engine Troubleshooting</a></li>
+          <li><a href="/tool-maintenance">Tool Maintenance</a></li>
+          <li><a href="/contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- READABILITY CONTAINER (max-width 800px, centered) -->
+    <div class="article-container">
+      <!-- Breadcrumbs -->
+      <div class="breadcrumbs">
+        <a href="/">Home</a> &gt; 
+        <a href="/small-engine-troubleshooting">Small Engine Troubleshooting</a> &gt; 
+        <span>How to Clean a Clogged Lawnmower Carburetor (Step-by-Step Guide)</span>
+      </div>
+
+      <h1>How to Clean a Clogged Lawnmower Carburetor (Step-by-Step Guide)</h1>
+      <div class="byline">Written by: Tool & Engine Pro Team | Updated: June 2026</div>
+
+      <p>You walk out to the shed on a Saturday morning. The grass is finally dry. You yank the cord. Nothing. You yank it again, harder this time, maybe pulling a muscle in your shoulder. The engine sputters for half a second and dies. That smell of stale fuel hits your nose, and you know exactly what you're dealing with: a gummed-up carburetor.</p>
+      <p>It's the most common reason a small engine refuses to run after sitting. Modern fuel breaks down fast. It leaves behind a varnish-like residue that clogs the tiny internal passageways, starving the engine of the air-fuel mixture it needs. You can pay a shop $70 to fix it, or you can do it yourself in under an hour with a $5 can of cleaner. This guide assumes you're not a professional mechanic, but you aren't afraid to get your hands dirty. We're going to strip this down, clean the critical circuits, and get that mower roaring again.</p>
+
+      <h2>The Component Breakdown: What You're Actually Fixing</h2>
+      <p>You don't need a deep engineering degree, but you do need to know what you're looking at. A lawnmower carburetor isn't complex, but it relies on precise vacuum physics. The main body is usually aluminum or white metal, and it holds a small reservoir called the float bowl. This bowl acts as a miniature fuel tank on the side of the engine.</p>
+      <p>Inside the bowl sits a hollow plastic or metal float, connected to a tiny inlet needle valve. As the bowl fills with gas, the float rises and pushes the needle into a seat, shutting off the fuel flow so the engine doesn't flood. The real troublemaker is the main jet. This is a small brass screw with a precisely drilled hole in the center. It's ground zero for clogs. When ethanol-blended fuel evaporates, it leaves a crusty, greenish-white oxidation that blocks this hole. If you can't see daylight through that jet, the engine will never run right. Finally, there's the emulsion tube above the jet, which pre-mixes air and fuel before it hits the intake throat. If that tube is varnished, your mower will surge or hunt for RPMs.</p>
+
+      <h2>What You'll Need (Don't Start Without It)</h2>
+      <p>Gathering everything beforehand keeps you from making a panicked trip to the hardware store with greasy hands. Battery-powered tools speed things up, but hand tools give you better feel on small brass parts that strip easily.</p>
+      <ul>
+        <li><strong>Safety Gear:</strong> Chemical-resistant nitrile gloves. Safety glasses are mandatory—carb spray ricochets off tiny orifices right back into your face.</li>
+        <li><strong>Carburetor & Choke Cleaner:</strong> This is not standard brake cleaner. Brake cleaner melts rubber and plastic. Get a spray can with the little red straw attached for pinpoint blasting.</li>
+        <li><strong>Basic Hand Tools:</strong> A 1/4-inch or 3/8-inch socket set (usually 7mm, 8mm, or 10mm) and a matching nut driver. A flathead screwdriver with a thin tip for the idle mixture screw. Needle-nose pliers for fuel line clamps.</li>
+        <li><strong>A Thin Wire or Torch Tip Cleaner:</strong> A single strand from a wire brush works perfectly. Never use a wooden toothpick; the tip can snap off inside the jet, turning a small job into a nightmare.</li>
+        <li><strong>Compressed Air (Optional but Game-Changing):</strong> A can of keyboard duster will suffice if you don't have an air compressor. This physically ejects debris, rather than just dissolving it.</li>
+        <li><strong>Fresh Fuel:</strong> Empty the old gas out of the tank entirely. Don't pour it back in.</li>
+      </ul>
+
+      <h2>Critical Diagnostic Table: Stop Guessing, Start Fixing</h2>
+      <div class="responsive-table-wrapper">
+        <table class="diagnostic-table">
+          <thead>
+            <tr><th>Symptom</th><th>Potential Cause</th><th>Immediate Fix</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Engine starts on choke only, dies immediately when moved to "Run."</td>
+            <td>Main jet is completely blocked or the idle circuit is gummed up. The engine is starved for fuel.</td>
+            <td>Remove and clean the main jet and emulsion tube. Blow out the idle passages with compressed air.</td>
+          </tr>
+          <tr><td>Engine surges ("hunts") repeatedly up and down in RPMs.</td>
+            <td>Lean condition caused by a partially blocked main jet, water in the fuel bowl, or a stuck governor spring.</td>
+            <td>Inspect the bowl for a water droplet (looks like a clear jelly blob). Clean the jet and emulsion tube.</td>
+          </tr>
+          <tr><td>Fuel dripping from the air filter or muffler side.</td>
+            <td>Float needle valve is stuck open (debris in seat) or the float has sunk (punctured brass float).</td>
+            <td>Clean the needle and seat with a Q-tip and carb cleaner. If the float is brass, shake it—if you hear liquid, replace it.</td>
+          </tr>
+          <tr><td>Engine starts, runs for a few seconds, then dies.</td>
+            <td>Fuel delivery restriction. The bowl fills slowly due to a clogged screen, but can't keep up with engine demand.</td>
+            <td>Check the fuel tank screen filter. Also, check for a blocked vent in the gas cap that is causing a vacuum lock.</td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h2>Step 1: Isolate the Fuel Supply and Remove the Air Cleaner</h2>
+      <p>Don't skip a step because you think it's obvious. Safety first. If your mower has a fuel shut-off valve at the base of the tank, turn it to the "Off" position. If it doesn't, use a pair of needle-nose pliers with a gentle touch to pinch the rubber fuel line closed. If the rubber line is old and cracked, now is the time to notice it—pinching a brittle line can snap it.</p>
+      <p>Unclip or unscrew the air filter cover. Take the foam or paper filter element out. A filthy filter reduces suction and can mimic a rich carb problem. If the foam is crumbling, schedule a replacement. But don't run the engine without it for long; the carb is calibrated to the restriction that filter creates.</p>
+
+      <h2>Step 2: Drop the Float Bowl (Catch the Evidence)</h2>
+      <p>Position a small, cut-down yogurt container or an old margarine tub directly under the carb. Loosen the bowl nut—this is usually the large hex nut on the very bottom of the carb. It often holds the bowl in place. As you loosen it, the gas in the bowl will drain. Look at what comes out. If it's green sludge, you've got oxidized ethanol. If it's clear but smells like turpentine, the fuel is simply stale.</p>
+      <p>Carefully lower the bowl. Inside, you'll see the float swinging on a pin. Let it hang there. If the bowl gasket (an O-ring type seal) looks flattened or cracked, you must replace it. A deformed gasket won't seal against engine heat vibration, causing a constant drip that is a fire hazard.</p>
+
+      <h2>Step 3: The Jets – A Surgical Removal</h2>
+      <p>Look for the main jet. It's usually the brass slotted screw in the center of the carb body stem, the one that dips down into the bowl. Use a screwdriver that fits the slot perfectly. If you use a blade that's too narrow, you'll mangle the soft brass in seconds.</p>
+      <p>Unscrew it. Now, hold that jet up to a bright light and squint through it. You should see a perfectly round pinprick of light. If it's dark, or if the hole looks jagged like a starburst, it's blocked. Don't go poking wildly yet. The emulsion tube—often a thin brass cylinder—might need to be pushed out from the top of the carb throat. Remove the main jet first, then carefully tap the carb body against your workbench; the emulsion tube usually slides out downward.</p>
+
+      <h2>Step 4: The Deep Clean (Don't Miss the Air Bleeds)</h2>
+      <p>This is where the magic happens. Put on those safety glasses. Insert the red straw into your carb cleaner can. Blast the cleaner directly through the main jet, the emulsion tube cross-holes, and every brass passage you can see. The cleaner dissolves varnish chemically, but a stuck spec of dirt needs physical persuasion.</p>
+      <p>Strip a single strand from your wire brush. Gently run it through the main jet. Your goal is to pass it back and forth like a saw, breaking the crust free, not enlarging the hole. The spec tolerance on these jets is narrow. After poking, spray the jet again to flush the loosened debris.</p>
+      <p>Now, blast the carb cleaner up into the body's central stem. Spray through the tiny idle air bleed holes in the throat of the carb, usually found near the butterfly plate. If you have compressed air, follow every liquid spray with a blast of high-pressure air. Liquid evaporates, but air physically moves the crud out.</p>
+
+      <h2>Step 5: Inspecting the Needle and Seat</h2>
+      <p>While you have the cleaner out, check the inlet needle. It's the little pointy piston that the float pushes on. The rubber tip should be conical and smooth, not ringed with a deep groove. If it's grooved, it's shot—fuel leaks by and floods the engine.</p>
+      <p>Spray cleaner onto a cotton swab, not the float itself (aggressive spray chills and cracks old plastic floats), and clean out the brass seat where the needle sits. You want that surface polished clean.</p>
+
+      <h2>Step 6: Reassembly – The Art of the Gasket</h2>
+      <p>Put the emulsion tube back in gently; tap it into place with a screwdriver handle, never a metal hammer. Screw the main jet in until it "bottoms out" lightly, then just a nip tighter. This is a seat, not a lug nut. If you overtighten it, you'll snap the head off, and the jet is permanently stuck in the carb body.</p>
+      <p>Hang the float and the needle back in place, ensuring the needle's wire clip attaches properly to the float tang, or it will bind. Fit the bowl gasket into its groove—a dab of heavy grease can hold it in place while you wrestle the bowl up. Tighten the bowl nut until it's snug. Overtightening here warps the bowl flange.</p>
+
+      <h2>Step 7: Reconnect, Prime, and Fire</h2>
+      <p>Reconnect the fuel line. Open the shut-off valve. Before you yank the cord, look at the bottom of the bowl. No drips? Good. Move the throttle to the "Choke" or "Start" position.</p>
+      <p>It will likely take 3-4 extra pulls than usual, because the carb is bone dry. The engine needs to fill the bowl again. Once it catches, it will smoke for a minute from all the leftover carb cleaner burning off. That's normal. Let it warm up, then slowly move it to "Run." The RPMs should hold perfectly steady, without a hint of a surge.</p>
+
+      <h2>Frequently Asked Questions (FAQ)</h2>
+      <h3>Can I just run the mower dry instead of cleaning the carburetor?</h3>
+      <p>Running it dry helps prevent the next clog, but it won't fix a current one. The jets are often blocked by a lacquer-like film that doesn't dissolve just because the liquid fuel evaporates. You need the chemical solvent to strip the blockage that's already inside the passageway.</p>
+      
+      <h3>Why does my mower only run if I keep pressing the primer bulb?</h3>
+      <p>That's a textbook fuel delivery problem. When you press the primer, you're manually squirting raw gas into the intake to bypass the carb. This tells you the engine has spark and compression, but the carb's internal pump diaphragm (on a primer-style carb) is torn or the main circuit is bone dry from a clog. Rebuild the primer base gasket or clean the main jet.</p>
+      
+      <h3>How do I prevent this from happening next season?</h3>
+      <p>Use ethanol-free, high-octane recreational fuel for the last two mows of the season. Add a fuel stabilizer immediately when you buy a gas can; the fuel starts degrading in about 30 days. At the end of the season, don't just drain the tank—drain the float bowl manually via the bottom drain bolt. That tiny residual puddle in the bowl is what evaporates and creates the concrete-hard residue that ruins jets.</p>
+
+      <!-- Safety blockquote -->
+      <blockquote>
+        <p><strong>⚠️ Fuel Fire Hazard:</strong> Carburetor cleaner is extremely flammable. Work outdoors or in a well-ventilated area away from any ignition sources including pilot lights, furnaces, water heaters, or electrical sparks. Do not smoke anywhere near the work area. Wear chemical-resistant gloves and safety glasses at all times—carb cleaner spray ricochets unpredictably and can cause permanent eye damage.</p>
+      </blockquote>
+
+      <!-- E-E-A-T About the Author Box -->
+      <div class="author-box">
+        <h4>About the Author</h4>
+        <p>Tool & Engine Pro is dedicated to providing high-quality, practical small engine repair and tool maintenance guidance. Every article is written by our team of hands-on mechanical enthusiasts to help you troubleshoot your equipment safely and efficiently at home.</p>
+      </div>
+    </div>
+  </main>
+
+  <!-- FOOTER (identical to homepage) -->
+  <footer class="site-footer">
+    <div class="container">
+      <p class="footer-copyright">© 2026 Tool & Engine Pro. All rights reserved.</p>
+      <ul class="footer-links">
+        <li><a href="/about-us">About Us</a></li>
+        <li><a href="/contact">Contact Us</a></li>
+        <li><a href="/privacy-policy">Privacy Policy</a></li>
+        <li><a href="/term-of-service">Terms of Service</a></li>
+      </ul>
+    </div>
+  </footer>
+</body>
+</html>
