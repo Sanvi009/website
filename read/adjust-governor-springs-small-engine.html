@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+  <title>How to Adjust the Governor Springs on a Small Gas Engine | Tool & Engine Pro</title>
+  <meta name="description" content="Step-by-step guide to adjusting governor springs on small engines. Fix surging, stalling under load, and erratic RPMs with proper spring tension and static reset.">
+  <style>
+    /* ----- Global Reset & Variables (identical to all site pages) ----- */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+      background-color: #FFFFFF;
+      color: #333333;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    :root {
+      --white: #FFFFFF;
+      --charcoal: #333333;
+      --accent: #2c3e50;
+      --light-gray: #f8f9fa;
+      --border-light: #e9ecef;
+      --text-muted: #4a5568;
+    }
+
+    a {
+      text-decoration: none;
+      color: var(--accent);
+      transition: opacity 0.2s ease, color 0.2s;
+    }
+
+    a:hover {
+      opacity: 0.8;
+      text-decoration: underline;
+    }
+
+    ul, ol {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0,0,0,0);
+      white-space: nowrap;
+      border-width: 0;
+    }
+
+    /* ----- Header & Navigation (identical structure) ----- */
+    .site-header {
+      background-color: var(--white);
+      border-bottom: 1px solid var(--border-light);
+      padding: 1rem 0;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    .header-inner {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .site-title {
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: var(--accent);
+      letter-spacing: -0.5px;
+      line-height: 1.2;
+    }
+
+    .nav-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.8rem;
+      align-items: center;
+    }
+
+    .nav-links a {
+      color: var(--charcoal);
+      font-weight: 500;
+      font-size: 1rem;
+      padding: 0.25rem 0;
+      border-bottom: 2px solid transparent;
+      transition: border-color 0.2s, color 0.2s;
+    }
+
+    .nav-links a:hover {
+      color: var(--accent);
+      border-bottom-color: var(--accent);
+      text-decoration: none;
+      opacity: 1;
+    }
+
+    @media (max-width: 700px) {
+      .header-inner {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.8rem;
+      }
+      .nav-links {
+        gap: 1.2rem;
+        flex-wrap: wrap;
+      }
+      .site-title {
+        font-size: 1.6rem;
+      }
+    }
+
+    /* ----- Article Readability Container (max-width 800px, centered) ----- */
+    .article-container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 2rem 1rem 2rem;
+    }
+
+    /* Breadcrumbs */
+    .breadcrumbs {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      margin-bottom: 1.5rem;
+    }
+    .breadcrumbs a {
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 500;
+    }
+    .breadcrumbs a:hover {
+      text-decoration: underline;
+    }
+    .breadcrumbs span {
+      color: var(--charcoal);
+    }
+
+    /* Typography (matching guidelines) */
+    .article-container h1 {
+      font-size: 2.4rem;
+      font-weight: 700;
+      color: var(--accent);
+      line-height: 1.3;
+      margin-bottom: 0.5rem;
+    }
+    .byline {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      margin-bottom: 2rem;
+      border-bottom: 1px solid var(--border-light);
+      padding-bottom: 1rem;
+      display: inline-block;
+    }
+    .article-container h2 {
+      font-size: 1.7rem;
+      font-weight: 700;
+      color: var(--accent);
+      margin: 2.2rem 0 1rem;
+      line-height: 1.35;
+    }
+    .article-container h3 {
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: var(--charcoal);
+      margin: 1.8rem 0 0.8rem;
+      line-height: 1.4;
+    }
+    .article-container p {
+      font-size: 1.05rem;
+      line-height: 1.7;
+      margin-bottom: 1.5rem;
+      color: var(--charcoal);
+    }
+    .article-container ul, 
+    .article-container ol {
+      margin-bottom: 1.5rem;
+      padding-left: 1.8rem;
+    }
+    .article-container ul li, 
+    .article-container ol li {
+      font-size: 1.05rem;
+      line-height: 1.7;
+      margin-bottom: 0.5rem;
+      color: var(--charcoal);
+    }
+    .article-container ul {
+      list-style: disc;
+    }
+    .article-container ol {
+      list-style: decimal;
+    }
+    .article-container strong {
+      color: var(--accent);
+      font-weight: 700;
+    }
+
+    /* Table styles: responsive, header #2c3e50, white text, light borders */
+    .responsive-table-wrapper {
+      overflow-x: auto;
+      margin: 2rem 0 1.8rem;
+    }
+    .diagnostic-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.95rem;
+      line-height: 1.5;
+      background-color: var(--white);
+    }
+    .diagnostic-table th {
+      background-color: var(--accent);
+      color: var(--white);
+      font-weight: 600;
+      padding: 12px 12px;
+      border: 1px solid #d4dce2;
+      text-align: left;
+    }
+    .diagnostic-table td {
+      border: 1px solid var(--border-light);
+      padding: 10px 12px;
+      color: var(--charcoal);
+      background-color: var(--white);
+    }
+    .diagnostic-table tr:nth-child(even) td {
+      background-color: #fdfdfd;
+    }
+    @media (max-width: 550px) {
+      .diagnostic-table th, .diagnostic-table td {
+        padding: 8px 6px;
+        font-size: 0.85rem;
+      }
+    }
+
+    /* Blockquote styling for safety notices */
+    .article-container blockquote {
+      margin: 1.8rem 0;
+      padding: 1.2rem 1.5rem;
+      background-color: var(--light-gray);
+      border-left: 4px solid var(--accent);
+      font-style: italic;
+      color: #2c3e50;
+      border-radius: 0 8px 8px 0;
+    }
+    .article-container blockquote p {
+      margin-bottom: 0;
+      font-style: italic;
+    }
+
+    /* E-E-A-T About the Author box */
+    .author-box {
+      margin: 3rem 0 1rem;
+      background-color: var(--light-gray);
+      border: 1px solid var(--border-light);
+      border-radius: 8px;
+      padding: 1.8rem 2rem;
+    }
+    .author-box h4 {
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: var(--accent);
+      margin-bottom: 0.75rem;
+    }
+    .author-box p {
+      font-size: 0.98rem;
+      line-height: 1.6;
+      color: var(--charcoal);
+      margin-bottom: 0;
+    }
+
+    /* Footer (identical to homepage) */
+    .site-footer {
+      background-color: var(--white);
+      padding: 2rem 1rem;
+      text-align: center;
+      border-top: 1px solid var(--border-light);
+      margin-top: 2rem;
+    }
+    .footer-copyright {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      margin-bottom: 1.2rem;
+    }
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+      list-style: none;
+    }
+    .footer-links a {
+      color: var(--charcoal);
+      font-weight: 500;
+      font-size: 0.95rem;
+    }
+    .footer-links a:hover {
+      color: var(--accent);
+      text-decoration: underline;
+    }
+    @media (max-width: 600px) {
+      .article-container {
+        padding: 1.5rem 1rem 2rem;
+      }
+      .article-container h1 {
+        font-size: 2rem;
+      }
+      .article-container h2 {
+        font-size: 1.5rem;
+      }
+      .footer-links {
+        gap: 1.2rem;
+        flex-direction: column;
+        align-items: center;
+      }
+      .author-box {
+        padding: 1.2rem 1.2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- HEADER & NAVIGATION (identical across site) -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="site-title">Tool & Engine Pro</div>
+      <nav aria-label="Main navigation">
+        <ul class="nav-links">
+          <li><a href="/">Home</a></li>
+          <li><a href="/small-engine-troubleshooting">Small Engine Troubleshooting</a></li>
+          <li><a href="/tool-maintenance">Tool Maintenance</a></li>
+          <li><a href="/contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- READABILITY CONTAINER (max-width 800px, centered) -->
+    <div class="article-container">
+      <!-- Breadcrumbs -->
+      <div class="breadcrumbs">
+        <a href="/">Home</a> &gt; 
+        <a href="/small-engine-troubleshooting">Small Engine Troubleshooting</a> &gt; 
+        <span>How to Adjust the Governor Springs on a Small Gas Engine</span>
+      </div>
+
+      <h1>How to Adjust the Governor Springs on a Small Gas Engine</h1>
+      <div class="byline">Written by: Tool & Engine Pro Team | Updated: June 2026</div>
+
+      <p>You fire up your pressure washer on a Saturday morning, ready to blast mildew off the siding. You pull the cord, it catches, and then the engine screams like a banshee before bogging down to a choking stall. Frustrating, isn't it? Or maybe your generator lugs under a load that it used to handle without breaking a sweat. Nine times out of ten, when a small engine's RPMs are hunting, surging, or just plain weak, the carburetor gets the blame. You clean the jets, swap the gaskets, and it still runs like garbage. The real culprit often hides in plain sight: the governor springs and linkage.</p>
+      <p>This isn't about rebuilding an ECU-controlled machine. This is a purely mechanical relationship of tension, airflow, and centrifugal force. Getting the governor springs set correctly is the difference between an engine that lugs and dies, and one that eats through a thick patch of grass without flinching. By the time you finish this guide, you'll know exactly how to dial in those springs to restore crisp throttle response and steady running.</p>
+
+      <h2>The Component Overview</h2>
+      <p>Don't overthink the system. The governor assembly on a small gas engine is a balancing act. Inside the crankcase, a plastic or metal governor gear spins with the crankshaft. Attached to this gear are flyweights. As RPMs increase, centrifugal force throws these weights outward, pushing a spool against the governor shaft. This shaft exits the engine block and connects to the external governor arm.</p>
+      <p>Now, this is where the springs come in. They link that governor arm directly to the throttle control plate. When you move the throttle lever to "Fast" (rabbit symbol), you aren't directly opening the butterfly valve. You're stretching a spring. The spring tension pulls the governor arm, which opens the throttle plate. Once the engine starts and revs up, the internal flyweights fight back against that spring tension, trying to close the throttle. When the spring tension and the flyweight force equalize, you have a governed speed. If the springs are kinked, stretched, or hooked in the wrong hole, that equilibrium is destroyed. You get surging—a rhythmic hunting where the RPMs rise and fall because the mechanical feedback loop is out of sync.</p>
+
+      <h2>The Material/Tool Checklist</h2>
+      <p>Before you touch a single adjustment screw, have the right tools within arm's reach. Running back and forth to the toolbox halfway through a linkage setup is how you lose small clips in the grass.</p>
+      <ul>
+        <li><strong>Eye Protection:</strong> Always. Springs under tension love to fly.</li>
+        <li><strong>Needle-Nose Pliers:</strong> Hemostats work even better for gripping tiny spring loops without distorting them.</li>
+        <li><strong>Digital Tachometer (Non-Contact):</strong> Absolutely non-negotiable. You cannot set the governed speed by ear unless you want to ventilate the block.</li>
+        <li><strong>Screwdriver Set:</strong> Usually a flathead for the idle stop screw and a 10mm or 1/2" wrench for the governor arm lock nut (if applicable).</li>
+        <li><strong>Small Pick or Hook Tool:</strong> For manipulating springs into specific linkage holes without butchering your fingers.</li>
+        <li><strong>Cleaning Solvent & Rag:</strong> Look for varnished fuel gumming up the governor arm pivot. It happens more than you think.</li>
+        <li><strong>Service Manual:</strong> The spring holes are specific. Guessing is how you ruin the connecting rod.</li>
+        <li><strong>Zip Ties:</strong> For temporarily holding the throttle wide open during static adjustments.</li>
+      </ul>
+
+      <h2>The Step-by-Step Guide</h2>
+      <p>Before starting, ensure the engine is stone cold and the spark plug wire is disconnected. We want to adjust springs, not take a trip to the emergency room.</p>
+
+      <h3>Step 1: The Physical Audit</h3>
+      <p>Don't just start bending tabs. Go visual first. Look at the governor arm linkage and the spring directly attached to it. Is the spring perfectly straight? If it looks like a slinky that was pulled apart by a toddler, it's junk. Look for wear grooves on the wire where it hooks into the carburetor linkage. A shiny, flat spot on the spring loop means it's been rubbing, probably because it's hooked incorrectly. Manually move the governor arm. It should rotate smoothly from idle to full throttle without gritty resistance. If it feels like it's stuck in dried honey, you've got gummed up oil preventing the shaft from rotating freely.</p>
+
+      <h3>Step 2: Isolate the Springs (The Multi-Spring Setup)</h3>
+      <p>Most modern engines have two distinct springs, and confusing them is a classic rookie mistake.</p>
+      <ul>
+        <li><strong>The Primary (Governor) Spring:</strong> Usually a thicker coil wire, heavier tension. It connects directly from the governor arm to the throttle control bracket. This manages the high-speed running equilibrium.</li>
+        <li><strong>The Idle/Secondary Spring:</strong> Often a smaller, delicate-looking spring attached to a lower point on the arm or to a separate anti-diesel solenoid linkage. This prevents the throttle plate from slamming shut too quickly when you drop the load.</li>
+      </ul>
+      <p>Identify both. If your engine is surging at idle but runs smooth at full throttle, leave the primary spring alone—your idle spring is disconnected or broken.</p>
+
+      <h3>Step 3: The Static Reset (Critical Tolerances)</h3>
+      <p>This is the only way to ensure you're working from factory baseline.</p>
+      <ul>
+        <li>Loosen the nut or screw clamping the governor arm to the shaft coming out of the block. You need the arm to spin freely on the shaft, independent of the internal components.</li>
+        <li>Rotate the carburetor throttle plate butterfly to the wide open position by hand. Hold it there.</li>
+        <li>Now, rotate the governor arm by hand in the exact same direction (usually counter-clockwise for most Briggs/Honda clones) as far as it will go. You are forcing the internal flyweights to collapse, mimicking zero RPM.</li>
+        <li>While holding both fully open (throttle and governor arm), gently tighten the governor arm clamp nut. Do not let the shaft slip. What you've just done is synchronized the mechanical range of motion. The system now knows exactly where "full open" stops.</li>
+      </ul>
+
+      <h3>Step 4: Spring Anchoring and Hole Mapping</h3>
+      <p>Reach for your manual or look closely at the governor arm. You'll see a row of numbered holes. The throttle control plate usually has similar holes. Common configuration: the primary spring connects from hole 3 on the control plate to hole 3 on the governor arm.</p>
+      <ul>
+        <li><strong>Dropping Loads:</strong> If the engine stalls when the mower blade engages, move the spring to a hole closer to the pivot point on the governor arm. This shortens the leverage, making the governor less sensitive and slower to react—allowing a brief RPM dip without stalling.</li>
+        <li><strong>Surging at Speed:</strong> If the engine hunts constantly, you need more sensitivity. Move the spring to a hole farther from the pivot point. This increases the mechanical advantage, giving the governor faster reaction time to fluctuations.</li>
+      </ul>
+
+      <h3>Step 5: High-Speed Stop Screw Dance</h3>
+      <p>With springs connected, start the engine and let it warm up for three minutes. Stale, varnished fuel won't let you set accurate speeds, so ensure the gas is fresh. Attach your non-contact tachometer. Move the throttle lever to max (rabbit). Look at the top of the carb. You have a "High-Speed Stop Screw." Do not confuse this with the high-speed mixture screw. The stop screw limits how far the throttle plate can physically open. Use the screw to set your top no-load RPM. This spec is gospel. For a typical 190cc engine, this is usually 3,600 RPM (+/- 50). Exceeding this over-revs the engine, floating the valves and flirting with a rod failure.</p>
+
+      <h3>Step 6: Cross-Check the Idle Down</h3>
+      <p>Chop the throttle from rabbit to turtle. The engine should settle into a smooth, low idle (usually 1,750 RPM) without a dramatic dip or dying. If it dips heavily before recovering, the governor linkage is binding, or the secondary spring is too loose. The engine should return to idle smoothly.</p>
+
+      <h2>Troubleshooting and Spring Tension Matrix</h2>
+      <div class="responsive-table-wrapper">
+        <table class="diagnostic-table">
+          <thead>
+            <tr><th>Symptom</th><th>Potential Cause</th><th>Immediate Fix</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Engine surges/hunts at full throttle</td>
+            <td>Spring tension too weak or governor too sensitive.</td>
+            <td>Move spring to a hole further from the governor arm pivot; check for air leaks at the intake gasket.</td>
+            </tr>
+            <tr>
+            <td>Engine stalls instantly when load is applied</td>
+            <td>Governor reaction time too slow (leverage issue).</td>
+            <td>Move spring to a hole closer to the governor arm pivot; ensure a secondary load-compensating spring is present.</td>
+            </tr>
+            <tr>
+            <td>RPMs creep up high, then finally govern</td>
+            <td>Static governor arm setting is off; arm slipping.</td>
+            <td>Re-do the static reset (Step 3). Tighten the pinch bolt fully. A slipped arm acts like a delay pedal.</td>
+            </tr>
+            <tr>
+            <td>Throttle lever hard to move, spring snaps back violently</td>
+            <td>Binding in the throttle cable or control plate.</td>
+            <td>Lubricate the cable and the plastic throttle plate pivot. The return spring should not be working against friction.</td>
+            </tr>
+            <tr>
+            <td>Engine runs fine cold, surges when hot</td>
+            <td>Primary spring losing tension due to heat soak.</td>
+            <td>Replace the primary spring. Metal fatigue is real; heat expansion is exposing a stretched spec tolerance.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>Step 7: The "Snap" Test</h3>
+      <p>Here's an old mechanic's trick. With the engine idling, quickly snap the throttle plate linkage (on the carb) toward the closed position using a screwdriver, then release it. The governor arm should instantly push back with force. If it feels like a mushy, delayed nudge, your internal spool is worn, or the arm clamp is still loose. The response must be a crisp, immediate counter-push. A lazy governor can't save a high-revving engine from throwing a rod.</p>
+
+      <h2>Frequently Asked Questions (FAQ)</h2>
+      <h3>Can I just stretch an old governor spring to make it tighter?</h3>
+      <p>No, stretching introduces metal fatigue and unpredictable tension. A spring's rate is calibrated by its coil diameter and wire thickness; stretching it compromises the heat treatment and creates weak spots. You'll cause surging that you can't tune out. Replacement springs are too cheap to justify the risk of an over-rev.</p>
+      
+      <h3>My governor arm has multiple holes for the spring, and I don't have a manual. How do I know which one is right?</h3>
+      <p>Start in the middle hole. This provides a neutral sensitivity baseline. If the engine fails to maintain RPM under a load, move the spring one hole closer to the pivot shaft to make the governor less jumpy. If you experience surging, move the spring one hole farther from the pivot shaft to increase the correction speed.</p>
+      
+      <h3>Why does the engine race uncontrollably right after I start it, even at idle?</h3>
+      <p>That's a classic static reset failure. The governor arm was likely clamped down without first forcing the internal flyweights to the "closed" position. The system thinks the engine is always under load. Go back to Step 3, ensure the throttle is wide open and the shaft is rotated fully in the proper direction before tightening the arm.</p>
+
+      <!-- Safety blockquote -->
+      <blockquote>
+        <p><strong>⚠️ Over-Speed Hazard:</strong> An incorrectly adjusted governor spring can allow the engine to exceed its maximum safe RPM. Over-revving causes valve float, where the valves fail to close completely, leading to piston-to-valve contact. In extreme cases, the connecting rod stretches or breaks, sending metal fragments through the crankcase. Always verify your no-load governed speed with a tachometer before putting the engine under load.</p>
+      </blockquote>
+
+      <!-- E-E-A-T About the Author Box -->
+      <div class="author-box">
+        <h4>About the Author</h4>
+        <p>Tool & Engine Pro is dedicated to providing high-quality, practical small engine repair and tool maintenance guidance. Every article is written by our team of hands-on mechanical enthusiasts to help you troubleshoot your equipment safely and efficiently at home.</p>
+      </div>
+    </div>
+  </main>
+
+  <!-- FOOTER (identical to homepage) -->
+  <footer class="site-footer">
+    <div class="container">
+      <p class="footer-copyright">© 2026 Tool & Engine Pro. All rights reserved.</p>
+      <ul class="footer-links">
+        <li><a href="/about-us">About Us</a></li>
+        <li><a href="/contact">Contact Us</a></li>
+        <li><a href="/privacy-policy">Privacy Policy</a></li>
+        <li><a href="/term-of-service">Terms of Service</a></li>
+      </ul>
+    </div>
+  </footer>
+</body>
+</html>
