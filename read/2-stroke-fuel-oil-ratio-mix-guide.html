@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+  <title>The Correct Fuel-to-Oil Ratio Mix for 2-Stroke Engines | Tool & Engine Pro</title>
+  <meta name="description" content="Complete guide to 2-stroke fuel-oil ratios. Learn proper mixing ratios for chainsaws, trimmers, and leaf blowers. Includes detailed ratio table and step-by-step mixing instructions.">
+  <style>
+    /* ----- Global Reset & Variables (identical to all site pages) ----- */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+      background-color: #FFFFFF;
+      color: #333333;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    :root {
+      --white: #FFFFFF;
+      --charcoal: #333333;
+      --accent: #2c3e50;
+      --light-gray: #f8f9fa;
+      --border-light: #e9ecef;
+      --text-muted: #4a5568;
+    }
+
+    a {
+      text-decoration: none;
+      color: var(--accent);
+      transition: opacity 0.2s ease, color 0.2s;
+    }
+
+    a:hover {
+      opacity: 0.8;
+      text-decoration: underline;
+    }
+
+    ul, ol {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0,0,0,0);
+      white-space: nowrap;
+      border-width: 0;
+    }
+
+    /* ----- Header & Navigation (identical structure) ----- */
+    .site-header {
+      background-color: var(--white);
+      border-bottom: 1px solid var(--border-light);
+      padding: 1rem 0;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    .header-inner {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .site-title {
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: var(--accent);
+      letter-spacing: -0.5px;
+      line-height: 1.2;
+    }
+
+    .nav-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.8rem;
+      align-items: center;
+    }
+
+    .nav-links a {
+      color: var(--charcoal);
+      font-weight: 500;
+      font-size: 1rem;
+      padding: 0.25rem 0;
+      border-bottom: 2px solid transparent;
+      transition: border-color 0.2s, color 0.2s;
+    }
+
+    .nav-links a:hover {
+      color: var(--accent);
+      border-bottom-color: var(--accent);
+      text-decoration: none;
+      opacity: 1;
+    }
+
+    @media (max-width: 700px) {
+      .header-inner {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.8rem;
+      }
+      .nav-links {
+        gap: 1.2rem;
+        flex-wrap: wrap;
+      }
+      .site-title {
+        font-size: 1.6rem;
+      }
+    }
+
+    /* ----- Article Readability Container (max-width 800px, centered) ----- */
+    .article-container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 2rem 1rem 2rem;
+    }
+
+    /* Breadcrumbs */
+    .breadcrumbs {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      margin-bottom: 1.5rem;
+    }
+    .breadcrumbs a {
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 500;
+    }
+    .breadcrumbs a:hover {
+      text-decoration: underline;
+    }
+    .breadcrumbs span {
+      color: var(--charcoal);
+    }
+
+    /* Typography (matching guidelines) */
+    .article-container h1 {
+      font-size: 2.4rem;
+      font-weight: 700;
+      color: var(--accent);
+      line-height: 1.3;
+      margin-bottom: 0.5rem;
+    }
+    .byline {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      margin-bottom: 2rem;
+      border-bottom: 1px solid var(--border-light);
+      padding-bottom: 1rem;
+      display: inline-block;
+    }
+    .article-container h2 {
+      font-size: 1.7rem;
+      font-weight: 700;
+      color: var(--accent);
+      margin: 2.2rem 0 1rem;
+      line-height: 1.35;
+    }
+    .article-container h3 {
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: var(--charcoal);
+      margin: 1.8rem 0 0.8rem;
+      line-height: 1.4;
+    }
+    .article-container p {
+      font-size: 1.05rem;
+      line-height: 1.7;
+      margin-bottom: 1.5rem;
+      color: var(--charcoal);
+    }
+    .article-container ul, 
+    .article-container ol {
+      margin-bottom: 1.5rem;
+      padding-left: 1.8rem;
+    }
+    .article-container ul li, 
+    .article-container ol li {
+      font-size: 1.05rem;
+      line-height: 1.7;
+      margin-bottom: 0.5rem;
+      color: var(--charcoal);
+    }
+    .article-container ul {
+      list-style: disc;
+    }
+    .article-container ol {
+      list-style: decimal;
+    }
+    .article-container strong {
+      color: var(--accent);
+      font-weight: 700;
+    }
+
+    /* Table styles: responsive, header #2c3e50, white text, light borders */
+    .responsive-table-wrapper {
+      overflow-x: auto;
+      margin: 2rem 0 1.8rem;
+    }
+    .ratio-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.95rem;
+      line-height: 1.5;
+      background-color: var(--white);
+    }
+    .ratio-table th {
+      background-color: var(--accent);
+      color: var(--white);
+      font-weight: 600;
+      padding: 12px 12px;
+      border: 1px solid #d4dce2;
+      text-align: left;
+    }
+    .ratio-table td {
+      border: 1px solid var(--border-light);
+      padding: 10px 12px;
+      color: var(--charcoal);
+      background-color: var(--white);
+    }
+    .ratio-table tr:nth-child(even) td {
+      background-color: #fdfdfd;
+    }
+    @media (max-width: 550px) {
+      .ratio-table th, .ratio-table td {
+        padding: 8px 6px;
+        font-size: 0.85rem;
+      }
+    }
+
+    /* Blockquote styling for safety notices */
+    .article-container blockquote {
+      margin: 1.8rem 0;
+      padding: 1.2rem 1.5rem;
+      background-color: var(--light-gray);
+      border-left: 4px solid var(--accent);
+      font-style: italic;
+      color: #2c3e50;
+      border-radius: 0 8px 8px 0;
+    }
+    .article-container blockquote p {
+      margin-bottom: 0;
+      font-style: italic;
+    }
+
+    /* E-E-A-T About the Author box */
+    .author-box {
+      margin: 3rem 0 1rem;
+      background-color: var(--light-gray);
+      border: 1px solid var(--border-light);
+      border-radius: 8px;
+      padding: 1.8rem 2rem;
+    }
+    .author-box h4 {
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: var(--accent);
+      margin-bottom: 0.75rem;
+    }
+    .author-box p {
+      font-size: 0.98rem;
+      line-height: 1.6;
+      color: var(--charcoal);
+      margin-bottom: 0;
+    }
+
+    /* Footer (identical to homepage) */
+    .site-footer {
+      background-color: var(--white);
+      padding: 2rem 1rem;
+      text-align: center;
+      border-top: 1px solid var(--border-light);
+      margin-top: 2rem;
+    }
+    .footer-copyright {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      margin-bottom: 1.2rem;
+    }
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+      list-style: none;
+    }
+    .footer-links a {
+      color: var(--charcoal);
+      font-weight: 500;
+      font-size: 0.95rem;
+    }
+    .footer-links a:hover {
+      color: var(--accent);
+      text-decoration: underline;
+    }
+    @media (max-width: 600px) {
+      .article-container {
+        padding: 1.5rem 1rem 2rem;
+      }
+      .article-container h1 {
+        font-size: 2rem;
+      }
+      .article-container h2 {
+        font-size: 1.5rem;
+      }
+      .footer-links {
+        gap: 1.2rem;
+        flex-direction: column;
+        align-items: center;
+      }
+      .author-box {
+        padding: 1.2rem 1.2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- HEADER & NAVIGATION (identical across site) -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="site-title">Tool & Engine Pro</div>
+      <nav aria-label="Main navigation">
+        <ul class="nav-links">
+          <li><a href="/">Home</a></li>
+          <li><a href="/small-engine-troubleshooting">Small Engine Troubleshooting</a></li>
+          <li><a href="/tool-maintenance">Tool Maintenance</a></li>
+          <li><a href="/contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- READABILITY CONTAINER (max-width 800px, centered) -->
+    <div class="article-container">
+      <!-- Breadcrumbs -->
+      <div class="breadcrumbs">
+        <a href="/">Home</a> &gt; 
+        <a href="/small-engine-troubleshooting">Small Engine Troubleshooting</a> &gt; 
+        <span>The Correct Fuel-to-Oil Ratio Mix for 2-Stroke Engines</span>
+      </div>
+
+      <h1>The Correct Fuel-to-Oil Ratio Mix for 2-Stroke Engines</h1>
+      <div class="byline">Written by: Tool & Engine Pro Team | Updated: June 2026</div>
+
+      <p>Blue smoke billowing out of the exhaust isn't a sign of a healthy engine—it's a cry for help. We've all seen it. A neighbor fires up a string trimmer, and a thick, acrid cloud chokes the air. That's usually a botched fuel mix. Maybe they eyeballed it. Maybe they used old motor oil. Whatever the reason, they're killing their equipment. Conversely, if you hear a high-pitched, glassy metallic scream from a chainsaw at full throttle, that's the opposite sin: starvation. The piston is welding itself to the cylinder wall.</p>
+      <p>Getting the fuel-to-oil ratio right isn't guesswork. It's the single most critical maintenance task for 2-stroke engine longevity. A bad mix doesn't just ruin a weekend; it scores cylinders, melts piston rings, and seizes crankshaft bearings. This guide eliminates the voodoo. We'll walk through the exact science of mixing, the destructive consequences of shortcuts, and the specific ratios your equipment needs to survive.</p>
+
+      <h2>The Component Overview: Why Oil Burners Need a Cocktail</h2>
+      <p>Unlike a 4-stroke engine that has a dedicated oil sump and pump, a 2-stroke engine is a total-loss lubrication system. You mix the oil with the gasoline, and that mist travels through the crankcase, briefly lubricating the bearings, connecting rod, and piston skirt before entering the combustion chamber. Then, it burns. It's a sacrifice. The oil gives its life to keep metal from touching metal at 8,000 RPM.</p>
+      <p>This means the fuel isn't just a propellant—it's a coolant and a lubricant. The key components affected are the piston, cylinder bore, crankshaft roller bearings, and the delicate needle bearings in the connecting rod. If you cut the oil too thin, the high-speed needle bearing is usually the first thing to starve, seize, and shatter. If you dump too much oil in, you'll foul the spark plug with unburnt carbon, choke the exhaust port with "spooge" (that black, oily goo dripping from the muffler), and build heavy carbon deposits on the piston crown that create hot spots and pre-ignition. You need the goldilocks zone. Modern 2-stroke oils are designed to burn completely at specific, tight ratios like 50:1, but only if you use the right mixing procedure.</p>
+
+      <h2>The Material/Tool Checklist</h2>
+      <p>Don't just grab a gas can and splash some oil in. You need a specific setup to prevent contamination and ensure accuracy.</p>
+      <ul>
+        <li><strong>Fresh Gasoline:</strong> Minimum 87 octane, up to 10% ethanol maximum. Non-ethanol rec fuel is gold-standard but not always mandatory.</li>
+        <li><strong>High-Quality 2-Stroke Engine Oil:</strong> JASO-FD or ISO-L-EGD certified. This isn't boat oil or weed-eater "universal" blue bottle stuff from the 1980s. Synthetics withstand the heat of modern strato-charged engines.</li>
+        <li><strong>A Legitimate, EPA-Style Safety Fuel Can:</strong> One that actually pours without a frustrating spout failure.</li>
+        <li><strong>A Dedicated Mixing Bottle or Ratio Rite Cup:</strong> Translucent plastic with legible, embossed measurement marks in ounces and milliliters.</li>
+        <li><strong>A Small, Calibrated Pouring Funnel:</strong> Avoid funnels used for transmission fluid or diesel—cross-contamination clogs muffler screens.</li>
+        <li><strong>Mechanics Wire or a Clean Toothbrush.</strong></li>
+        <li><strong>Nitrile Gloves:</strong> Raw gasoline is a carcinogen that absorbs directly through your skin.</li>
+        <li><strong>A Permanent Marker:</strong> For labeling.</li>
+      </ul>
+
+      <h2>The Step-by-Step Guide to a Perfect Mix</h2>
+
+      <h3>Step 1: The Container Audit</h3>
+      <p>Water is the enemy. Ethanol in pump gas attracts atmospheric moisture, causing phase separation. Before you pour a single drop, swish your empty fuel can around. Do you hear sloshing? Is it leftover, stale, rotten gas from last season? If that old fuel smells like paint thinner or varnished fuel, get rid of it properly. Pour it into your car's nearly full tank if it's not chunky, or take it to a hazardous waste site. The can must be bone dry. A single teaspoon of water/ethanol sludge in a gallon of fresh mix will make a chainsaw fall flat on its face under load.</p>
+
+      <h3>Step 2: Bottle Logic (Mixing Order)</h3>
+      <p>This is a non-negotiable chemical sequence. Always add the oil to the can before you fill it with gasoline. Why? Because the agitation of the falling liquid does most of the mixing work for you. If you fill the can with gas first, then squirt oil into a completely full container, the dense oil sinks to the bottom and sits there in a concentrated blob. You'll burn a cylinder clean while that sludge hides at the fuel pickup. Pour the exact measured amount of 2-stroke oil into the empty can.</p>
+
+      <h3>Step 3: The Agitation Protocol</h3>
+      <p>Fill the can roughly halfway with gasoline. Cap it tightly. Now, you don't just gently swirl it. You need to shake it violently. Imagine you're trying to mix a vinaigrette that refuses to emulsify. Shake the can for a solid 30 seconds. Open the cap, fill the rest of the way with gas to the exact gallon/liter mark, and cap it again. Shake for another full minute. This is the difference between a homogenous blue tint and a streaky mess. I use a mechanics wire to clean the can's vent regularly to ensure no vacuum buildup stops the flow.</p>
+
+      <h3>Step 4: Decoding the Ratios (The Math)</h3>
+      <p>Landscapers argue about ratios like they argue about sports teams. Is 40:1 better than 50:1? The answer isn't "more oil is always safe." Too much oil effectively leans out the fuel mixture because you're displacing gasoline with a non-combustible liquid, raising combustion chamber temperatures dangerously. Stick to the manufacturer's spec. Always. If the spec simply says "mix 2-stroke oil," 50:1 is the modern default, but you must verify.</p>
+
+      <h2>2-Stroke Fuel-Oil Ratio Reference Table</h2>
+      <div class="responsive-table-wrapper">
+        <table class="ratio-table">
+          <thead>
+            <tr><th>Ratio</th><th>Gasoline (1 US Gallon)</th><th>Oil Required (US Fluid Ounces)</th><th>Common Usage & Notes</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>16:1</td><td>1 Gal</td><td>8.0 oz</td><td>Rare. Antique marine engines, pre-1960s McCulloch saws. Runny, dirty, smokes heavily.</td></tr>
+            <tr><td>32:1</td><td>1 Gal</td><td>4.0 oz</td><td>Old-school standard for bikes and early OPE. Still used by some vintage motocross riders.</td></tr>
+            <tr><td>40:1</td><td>1 Gal</td><td>3.2 oz</td><td>Common 'safety blanket' mix. Preferred by loggers running older Stihl saws or hot-rodded engines.</td></tr>
+            <tr><td><strong>50:1</strong></td><td>1 Gal</td><td><strong>2.6 oz</strong></td><td><strong>The modern standard.</strong> All current Stihl, Husqvarna, Echo, and RedMax equipment. Requires JASO-FD oil.</td></tr>
+            <tr><td>80:1 / 100:1</td><td>1 Gal</td><td>1.6 oz / 1.3 oz</td><td>Boutique/Opti-2 ratios ONLY. Do not attempt this with generic oil. You must use that specific brand's package.</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p><em>Note: For 5-liter cans of gasoline, 50:1 requires exactly 100ml of oil. The metric system makes mixing far easier. If your equipment is metric-stamped, use metric fluid measurements.</em></p>
+
+      <h3>Step 5: The Ethanol Factor</h3>
+      <p>If you're forced to use pump gas with 10% ethanol (E10), your storage life drops from six months to roughly 30 days. Ethanol is hydrophilic. It bonds to water molecules, and when the fuel cools overnight, those molecules separate. This phase-separated blob is a mix of water, ethanol, and zero oil. It's corrosion juice. It eats aluminum fuel lines and rubber diaphragms in the carburetor. If you can buy ethanol-free "REC" fuel, do it. It's $5 more a gallon, but it saves hundreds on carb gasket replacements. If you must use E10, add a specific fuel stabilizer for ethanol the moment you buy the pump gas.</p>
+
+      <h3>Step 6: The Pour and Purge</h3>
+      <p>After mixing, let the bottle sit for a minute. Look at the bottom. If you see wavy, clear bubbles or a distinct transparent layer, your oil isn't fully suspended. Shake it again. Hard. Before filling the machine, wipe the area around the fuel cap on the engine to remove sawdust or dirt. Use a fine-mesh filter funnel if you have one; one grain of sand kills a carb needle valve. Fill the tank, cap it tightly, and pull the starter rope slowly three times with the switch OFF. This "dry pulls" pushes the fresh, oily mixture into the crankcase and lubes the internal bearings before you even fire it up.</p>
+
+      <h3>Step 7: Storage and "Spooge" Reality</h3>
+      <p>Don't mix five gallons unless you'll burn it in a month. Small batches keep fuel fresh. At the end of the season, run the engine completely dry to avoid leaving varnished fuel in the tiny jet orifices. Don't dump the fuel out of the tank onto the ground—burn it or pour it back into the can. If your exhaust is dripping thick, black "spooge," your ratio isn't necessarily fat; you might simply be running too cold a spark plug or "putting around" at half-throttle. These engines need to scream at Wide Open Throttle (WOT) to burn the oil completely.</p>
+
+      <h2>Frequently Asked Questions (FAQ)</h2>
+      <h3>Can I use 4-stroke motor oil in my 2-stroke mix?</h3>
+      <p>Absolutely not. Standard motor oil contains friction modifiers and detergents that will not burn cleanly. They form massive ash deposits on the piston crown, glue the piston ring into its groove, and block the exhaust port with wet carbon sludge. You must use oil specifically designed to be ashless and mix with gasoline.</p>
+      
+      <h3>The manual says 40:1, but I bought a bottle of 50:1 pre-mix oil. Is that okay?</h3>
+      <p>No. The ratio printed on the bottle's mixing grid is just a guideline, not a declaration that the oil only works at that viscosity. You can use that premium oil to mix at 40:1 by simply adding more oil—3.2 ounces per gallon instead of 2.6. The oil is a lubricant; its volume protects the engine, not the marketing label on the bottle. Never trust the "one bottle per gallon" convenience packs unless you've verified the math.</p>
+      
+      <h3>Why does my equipment call for 50:1 but smoke excessively anyway?</h3>
+      <p>Blue smoke usually indicates a mechanical issue bypassing the mix ratio. Your carburetor's metering needle might be leaking, causing a rich fuel condition that washes the oil off the cylinder walls. It can also mean the engine is over-primed, or the exhaust muffler screen (spark arrestor) is completely clogged with carbon, forcing unburnt mixture back into the chamber. Fix the tune-up issue before blaming the ratio.</p>
+
+      <!-- Safety blockquote -->
+      <blockquote>
+        <p><strong>⚠️ 2-Stroke Safety Warning:</strong> Always mix fuel in a well-ventilated area away from any ignition sources. Gasoline vapors are highly explosive. Store mixed fuel in approved containers away from living spaces. Label every can with the date mixed and the ratio (e.g., "50:1 - June 2026"). Never use mixed fuel that is more than 60 days old unless stabilized. Dispose of old mixed fuel at a hazardous waste facility—do not pour it on the ground or into drains.</p>
+      </blockquote>
+
+      <!-- E-E-A-T About the Author Box -->
+      <div class="author-box">
+        <h4>About the Author</h4>
+        <p>Tool & Engine Pro is dedicated to providing high-quality, practical small engine repair and tool maintenance guidance. Every article is written by our team of hands-on mechanical enthusiasts to help you troubleshoot your equipment safely and efficiently at home.</p>
+      </div>
+    </div>
+  </main>
+
+  <!-- FOOTER (identical to homepage) -->
+  <footer class="site-footer">
+    <div class="container">
+      <p class="footer-copyright">© 2026 Tool & Engine Pro. All rights reserved.</p>
+      <ul class="footer-links">
+        <li><a href="/about-us">About Us</a></li>
+        <li><a href="/contact">Contact Us</a></li>
+        <li><a href="/privacy-policy">Privacy Policy</a></li>
+        <li><a href="/term-of-service">Terms of Service</a></li>
+      </ul>
+    </div>
+  </footer>
+</body>
+</html>
