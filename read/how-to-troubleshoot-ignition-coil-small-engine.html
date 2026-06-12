@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+  <title>How to Troubleshoot an Ignition Coil on a Small Engine | Tool & Engine Pro</title>
+  <meta name="description" content="Step-by-step ignition coil troubleshooting guide for small engines. Learn to test with a spark tester, multimeter, and diagnose kill wire or flywheel magnet failures.">
+  <style>
+    /* ----- Global Reset & Variables (identical to all site pages) ----- */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+      background-color: #FFFFFF;
+      color: #333333;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    :root {
+      --white: #FFFFFF;
+      --charcoal: #333333;
+      --accent: #2c3e50;
+      --light-gray: #f8f9fa;
+      --border-light: #e9ecef;
+      --text-muted: #4a5568;
+    }
+
+    a {
+      text-decoration: none;
+      color: var(--accent);
+      transition: opacity 0.2s ease, color 0.2s;
+    }
+
+    a:hover {
+      opacity: 0.8;
+      text-decoration: underline;
+    }
+
+    ul, ol {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0,0,0,0);
+      white-space: nowrap;
+      border-width: 0;
+    }
+
+    /* ----- Header & Navigation (identical structure) ----- */
+    .site-header {
+      background-color: var(--white);
+      border-bottom: 1px solid var(--border-light);
+      padding: 1rem 0;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    .header-inner {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .site-title {
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: var(--accent);
+      letter-spacing: -0.5px;
+      line-height: 1.2;
+    }
+
+    .nav-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.8rem;
+      align-items: center;
+    }
+
+    .nav-links a {
+      color: var(--charcoal);
+      font-weight: 500;
+      font-size: 1rem;
+      padding: 0.25rem 0;
+      border-bottom: 2px solid transparent;
+      transition: border-color 0.2s, color 0.2s;
+    }
+
+    .nav-links a:hover {
+      color: var(--accent);
+      border-bottom-color: var(--accent);
+      text-decoration: none;
+      opacity: 1;
+    }
+
+    @media (max-width: 700px) {
+      .header-inner {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.8rem;
+      }
+      .nav-links {
+        gap: 1.2rem;
+        flex-wrap: wrap;
+      }
+      .site-title {
+        font-size: 1.6rem;
+      }
+    }
+
+    /* ----- Article Readability Container (max-width 800px, centered) ----- */
+    .article-container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 2rem 1rem 2rem;
+    }
+
+    /* Breadcrumbs */
+    .breadcrumbs {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      margin-bottom: 1.5rem;
+    }
+    .breadcrumbs a {
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 500;
+    }
+    .breadcrumbs a:hover {
+      text-decoration: underline;
+    }
+    .breadcrumbs span {
+      color: var(--charcoal);
+    }
+
+    /* Typography (matching guidelines) */
+    .article-container h1 {
+      font-size: 2.4rem;
+      font-weight: 700;
+      color: var(--accent);
+      line-height: 1.3;
+      margin-bottom: 0.5rem;
+    }
+    .byline {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      margin-bottom: 2rem;
+      border-bottom: 1px solid var(--border-light);
+      padding-bottom: 1rem;
+      display: inline-block;
+    }
+    .article-container h2 {
+      font-size: 1.7rem;
+      font-weight: 700;
+      color: var(--accent);
+      margin: 2.2rem 0 1rem;
+      line-height: 1.35;
+    }
+    .article-container h3 {
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: var(--charcoal);
+      margin: 1.8rem 0 0.8rem;
+      line-height: 1.4;
+    }
+    .article-container p {
+      font-size: 1.05rem;
+      line-height: 1.7;
+      margin-bottom: 1.5rem;
+      color: var(--charcoal);
+    }
+    .article-container ul, 
+    .article-container ol {
+      margin-bottom: 1.5rem;
+      padding-left: 1.8rem;
+    }
+    .article-container ul li, 
+    .article-container ol li {
+      font-size: 1.05rem;
+      line-height: 1.7;
+      margin-bottom: 0.5rem;
+      color: var(--charcoal);
+    }
+    .article-container ul {
+      list-style: disc;
+    }
+    .article-container ol {
+      list-style: decimal;
+    }
+    .article-container strong {
+      color: var(--accent);
+      font-weight: 700;
+    }
+
+    /* Table styles: responsive, header #2c3e50, white text, light borders */
+    .responsive-table-wrapper {
+      overflow-x: auto;
+      margin: 2rem 0 1.8rem;
+    }
+    .diagnostic-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.95rem;
+      line-height: 1.5;
+      background-color: var(--white);
+    }
+    .diagnostic-table th {
+      background-color: var(--accent);
+      color: var(--white);
+      font-weight: 600;
+      padding: 12px 12px;
+      border: 1px solid #d4dce2;
+      text-align: left;
+    }
+    .diagnostic-table td {
+      border: 1px solid var(--border-light);
+      padding: 10px 12px;
+      color: var(--charcoal);
+      background-color: var(--white);
+    }
+    .diagnostic-table tr:nth-child(even) td {
+      background-color: #fdfdfd;
+    }
+    @media (max-width: 550px) {
+      .diagnostic-table th, .diagnostic-table td {
+        padding: 8px 6px;
+        font-size: 0.85rem;
+      }
+    }
+
+    /* Blockquote styling for safety notices */
+    .article-container blockquote {
+      margin: 1.8rem 0;
+      padding: 1.2rem 1.5rem;
+      background-color: var(--light-gray);
+      border-left: 4px solid var(--accent);
+      font-style: italic;
+      color: #2c3e50;
+      border-radius: 0 8px 8px 0;
+    }
+    .article-container blockquote p {
+      margin-bottom: 0;
+      font-style: italic;
+    }
+
+    /* E-E-A-T About the Author box */
+    .author-box {
+      margin: 3rem 0 1rem;
+      background-color: var(--light-gray);
+      border: 1px solid var(--border-light);
+      border-radius: 8px;
+      padding: 1.8rem 2rem;
+    }
+    .author-box h4 {
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: var(--accent);
+      margin-bottom: 0.75rem;
+    }
+    .author-box p {
+      font-size: 0.98rem;
+      line-height: 1.6;
+      color: var(--charcoal);
+      margin-bottom: 0;
+    }
+
+    /* Footer (identical to homepage) */
+    .site-footer {
+      background-color: var(--white);
+      padding: 2rem 1rem;
+      text-align: center;
+      border-top: 1px solid var(--border-light);
+      margin-top: 2rem;
+    }
+    .footer-copyright {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      margin-bottom: 1.2rem;
+    }
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+      list-style: none;
+    }
+    .footer-links a {
+      color: var(--charcoal);
+      font-weight: 500;
+      font-size: 0.95rem;
+    }
+    .footer-links a:hover {
+      color: var(--accent);
+      text-decoration: underline;
+    }
+    @media (max-width: 600px) {
+      .article-container {
+        padding: 1.5rem 1rem 2rem;
+      }
+      .article-container h1 {
+        font-size: 2rem;
+      }
+      .article-container h2 {
+        font-size: 1.5rem;
+      }
+      .footer-links {
+        gap: 1.2rem;
+        flex-direction: column;
+        align-items: center;
+      }
+      .author-box {
+        padding: 1.2rem 1.2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- HEADER & NAVIGATION (identical across site) -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="site-title">Tool & Engine Pro</div>
+      <nav aria-label="Main navigation">
+        <ul class="nav-links">
+          <li><a href="/">Home</a></li>
+          <li><a href="/small-engine-troubleshooting">Small Engine Troubleshooting</a></li>
+          <li><a href="/tool-maintenance">Tool Maintenance</a></li>
+          <li><a href="/contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- READABILITY CONTAINER (max-width 800px, centered) -->
+    <div class="article-container">
+      <!-- Breadcrumbs: Home > Small Engine Troubleshooting > Article Title -->
+      <div class="breadcrumbs">
+        <a href="/">Home</a> &gt; 
+        <a href="/small-engine-troubleshooting">Small Engine Troubleshooting</a> &gt; 
+        <span>How to Troubleshoot an Ignition Coil on a Small Engine</span>
+      </div>
+
+      <h1>How to Troubleshoot an Ignition Coil on a Small Engine</h1>
+      <div class="byline">Written by: Tool & Engine Pro Team | Updated: June 2026</div>
+
+      <!-- ARTICLE BODY (full content from brief) -->
+      <p>You've drained the fuel, cleaned the carb, and gapped a fresh spark plug. The engine still won't fire. Not even a cough. You pull the cord ten times and get nothing but a sore shoulder. Before you tear into the engine block or blame the compression, stop. There's one component that single-handedly decides whether your engine runs or sits dead: the ignition coil. And it's the most misdiagnosed part on a small engine.</p>
+      <p>People throw coils at machines hoping for a fix. That's an expensive parts-cannon approach. A genuine OEM coil costs $40 to $80, and aftermarket units are a gamble. This guide gives you a strict, methodical testing sequence. No guessing. You'll learn to test with a spark tester, diagnose with a multimeter, and isolate whether the failure is the coil, the kill wire, or the flywheel magnet. By the end, you'll know with certainty whether that coil belongs in the engine or the trash.</p>
+
+      <h2>The Component Overview</h2>
+      <p>The ignition coil isn't a single piece of copper. It's a precision-wound, step-up transformer potted in epoxy. It contains two separate wire windings. The primary winding is a few hundred turns of thick copper wire. The secondary winding is several thousand turns of hair-thin wire. When the flywheel magnet sweeps past the coil's laminated iron core, the collapsing magnetic field induces a voltage in the primary. Through electromagnetic induction, this is stepped up to a voltage high enough to jump the spark plug gap—often 15,000 to 20,000 volts.</p>
+      <p>On modern small engines, the coil is solid-state. There's no points or condenser. A Hall-effect trigger or a simple transistorized circuit inside the coil tells it exactly when to fire. A single spade terminal on the coil body accepts the kill wire. Ground that wire, and the primary circuit shorts to the engine block. No spark. Unground it, and the coil is live. Diagnosing the coil means testing both its internal resistance values and its real-world ability to generate a hot, blue spark under compression. A coil that benches fine but fails under heat is a liar. You need to catch it.</p>
+
+      <h2>The Material/Tool Checklist</h2>
+      <p>Stop cranking the engine and gather these tools. Testing blind leads to false conclusions.</p>
+      <ul>
+        <li><strong>Inline Ignition Spark Tester (Neon Bulb or Adjustable Gap Type):</strong> This is your truth-teller. It places a calibrated air gap in the circuit. If spark can't jump this gap, it won't fire the plug under cylinder pressure.</li>
+        <li><strong>Digital Multimeter (Auto-Ranging, With Ohms Setting):</strong> Must read resistance down to fractions of an ohm for primary testing and up to tens of thousands of ohms for the secondary.</li>
+        <li><strong>Feeler Gauge or Clean Business Card:</strong> For setting the coil-to-flywheel air gap precisely.</li>
+        <li><strong>Spark Plug Socket and Ratchet:</strong> Removing the plug is required for compression relief during spin testing.</li>
+        <li><strong>Known-Good Spark Plug:</strong> A brand new, correctly gapped plug. Testing with a suspect plug invalidates the whole procedure.</li>
+        <li><strong>Wire Terminal Tool or Small Pick:</strong> For detaching the kill wire spade connector without tearing the terminal off.</li>
+        <li><strong>Insulated Pliers and Gloves:</strong> Twenty thousand volts stings. Respect it.</li>
+        <li><strong>Shop Rag and Brake Cleaner:</strong> Clean mounting surfaces. Oil and rust distort air gaps.</li>
+      </ul>
+
+      <h2>The Step-by-Step Guide</h2>
+      <p>Follow this sequence exactly. It eliminates variables in order, from the simplest external faults to the definitive internal measurements.</p>
+
+      <h3>Step 1: Isolate the Kill Circuit</h3>
+      <p>The single most common "bad coil" diagnosis is actually a shorted kill wire. Disconnect the small wire attached to the coil's spade terminal. It pulls straight off. With that wire disconnected, the engine's ignition is on, regardless of throttle position, key switch, or safety bail handle. The engine cannot be stopped without reconnecting the wire or grounding the terminal manually. Test for spark now. If the engine suddenly has bright, snapping spark with the kill wire removed, the coil is innocent. The problem is a chafed kill wire grounding against the engine shroud, a stuck seat safety switch, or a faulty key switch. Reconnect the wire and trace it back to find the bare spot or failed switch. Do not run the engine for extended periods without a way to kill ignition.</p>
+
+      <h3>Step 2: Visual and Physical Inspection</h3>
+      <p>With the kill wire still removed, remove the recoil starter and engine shroud to expose the coil. Look at the coil body. A swollen, bulging, or cracked epoxy casing means the coil has internally arced and is scrap. Check the high-tension lead—the thick wire to the spark plug boot. Rodents love to chew these. A single bite mark can short high voltage directly to the block. Look at the coil mounting bosses. A cracked mounting ear allows the coil to shift, changing the air gap dynamically. Finally, inspect the flywheel magnets. Rusty, flaking magnets with chunks missing weaken the magnetic field. Clean surface rust with emery cloth. If the magnet has thrown a chunk, the flywheel must be replaced.</p>
+
+      <h3>Step 3: The Static Air Gap Set</h3>
+      <p>Before any electrical test, set the mechanical gap. The coil must be positioned correctly for the magnet to induce the proper field. Loosen the two coil mounting bolts just enough that the coil can move. Rotate the flywheel until the magnets are directly opposite the coil legs. Insert a clean business card or a 0.010-inch feeler gauge between the coil legs and the flywheel magnets. Push the coil firmly against the card, sandwiching it against the flywheel. Tighten the bolts evenly while maintaining pressure. Rotate the flywheel to pull the card out. The gap is now set to approximately 0.010 inches, the industry-standard spec for almost all Briggs, Honda, Kohler, and clone engines. Too wide, and the magnetic field is weak. Too tight, and a hot flywheel expands into the coil, shearing the legs off.</p>
+
+      <h3>Step 4: The Spark Tester (The Loaded Test)</h3>
+      <p>Remove the spark plug from the cylinder head. This relieves compression so the engine spins freely. Attach the inline spark tester to the plug wire boot. Clip the tester's ground clamp to a clean, bare metal spot on the engine block. Do not test spark by holding the plug against the block with your hand. You're testing the coil's ability to fire under pressure, and an open-air test doesn't load the coil sufficiently. An adjustable-gap tester set to 6mm (about 0.24 inches) is ideal. Pull the starter cord briskly. You are looking for a sharp, bright blue spark that snaps audibly. A weak, thin yellow or orange spark that silently arcs indicates a coil that's producing voltage but not enough current to ignite a compressed fuel-air mixture. No spark at all confirms the coil has failed or the primary is open.</p>
+
+      <h3>Step 5: Multimeter Resistance Testing (Cold)</h3>
+      <p>The spark tester tells you if the coil works. The multimeter tells you why it doesn't. Disconnect the kill wire terminal again. Set your meter to Ohms (Ω).</p>
+      <ul>
+        <li><strong>Primary Resistance:</strong> Place one probe on the coil's iron core (ground) and the other on the kill switch spade terminal. A typical reading is 0.5 to 2.0 ohms. A reading of "OL" (open loop) means the primary winding is broken internally. Zero ohms means the primary is shorted. Both conditions mean replace.</li>
+        <li><strong>Secondary Resistance:</strong> This is the high-voltage side. Place one probe on the iron core ground. Remove the spark plug boot by unscrewing it from the high-tension lead. Place the second probe on the bare wire inside the plug lead. Alternatively, probe deep inside the plug boot to contact the metal terminal. Expect a reading between 2,500 and 5,000 ohms for most transistorized coils. Some magneto-style coils read up to 15,000 ohms. OL means the hair-thin secondary winding is burned open. A reading significantly below spec means internal insulation breakdown.</li>
+        <li><strong>Document your readings.</strong> Compare them to OEM specifications. If no spec is available, compare to a known-good coil of the same part number. The exact number matters less than a complete open or a dead short.</li>
+      </ul>
+
+      <h3>Step 6: The Heat Gun Simulation (Catching Thermal Failures)</h3>
+      <p>Many coils fail only when hot. The engine runs twenty minutes, dies, and restarts an hour later. A cold bench test will show perfect resistance and a beautiful blue spark. You must test it hot. Use a heat gun to warm the coil body evenly to roughly 180–200 degrees Fahrenheit. This simulates a hot engine. Immediately repeat the spark tester check and the secondary resistance measurement. If spark disappears or the resistance shoots to OL when hot, the coil has an internal thermal expansion break. Replace it. This test catches the intermittent failures that drive people crazy.</p>
+
+      <h2>Ignition Coil Diagnostic Matrix</h2>
+      <div class="responsive-table-wrapper">
+        <table class="diagnostic-table">
+          <thead>
+            <tr><th>Spark Tester Result</th><th>Multimeter Reading (Cold)</th><th>Multimeter Reading (Hot)</th><th>Diagnosis</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>No spark</td>\n<td>Primary OL or Secondary OL</td>\n<td>—</td>\n<td>Coil winding open. Replace coil.</td>
+            <tr>
+            <tr><td>No spark</td>\n<td>Primary 0.0 Ω (shorted)</td>\n<td>—</td>\n<td>Coil primary shorted. Replace coil.</td>
+            </tr>
+            <tr><td>Weak yellow spark</td>\n<td>Resistance in spec</td>\n<td>Resistance in spec</td>\n<td>Suspect weak flywheel magnet, excessive air gap, or failing plug boot.</td>
+            </tr>
+            <tr><td>Good blue spark</td>\n<td>Resistance in spec</td>\n<td>—</td>\n<td>Coil is functional. Issue is fuel, compression, or timing.</td>
+            </tr>
+            <tr><td>Good spark cold, none hot</td>\n<td>In spec when cold</td>\n<td>OL when hot</td>\n<td>Thermal intermittent failure in secondary winding. Replace coil.</td>
+            </tr>
+            <tr><td>No spark, kill wire connected</td>\n<td>—</td>\n<td>—</td>\n<td>Kill circuit shorted to ground. Disconnect wire and retest.</td>
+            </tr>
+            <tr><td>Intermittent spark</td>\n<td>Fluctuating resistance when wiggling lead</td>\n<td>—</td>\n<td>Broken high-tension lead internally. Replace coil or splice a new plug boot onto clean lead.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>Step 7: Reassembly and Confirmation Run</h3>
+      <p>Once you've determined the coil is good or installed a verified replacement, reassemble in reverse order. The kill wire must be reconnected securely. The spade terminal should fit tightly. A loose connection here vibrates off and strands you mid-mow. Reinstall the spark plug and torque it to spec (typically 15–20 ft-lbs for most small engines). Start the engine. It should fire within one or two pulls. Let it warm up fully. If it stalls hot, revisit the thermal test. Coils fresh from the box can be defective out of the gate. Trust the spark tester over the packaging.</p>
+
+      <h2>Frequently Asked Questions (FAQ)</h2>
+      <h3>Can I test a coil by just holding the spark plug against the engine block?</h3>
+      <p>You can, but it's not conclusive. A plug firing in open air only requires about 1,000 volts. That same plug under compression inside the cylinder demands 10,000 volts or more. A weak coil can easily jump an open-air gap but fail completely under load. An adjustable spark tester forces the coil to prove it can bridge a loaded gap.</p>
+      
+      <h3>My coil has a good spark but the engine still won't start. What else?</h3>
+      <p>Check the flywheel key. If the flywheel key is partially sheared—even just slightly deformed—the flywheel's position on the crankshaft shifts. The magnets pass the coil at the wrong time. Spark occurs, but at the wrong point in the compression stroke. The engine may kick back, backfire, or never fire at all. Remove the flywheel nut and inspect the key. A sheared key is a paper-thin crescent of mangled aluminum rather than a perfect rectangle.</p>
+      
+      <h3>What's the difference between a points coil and a solid-state coil?</h3>
+      <p>A points coil relies on mechanical contact breakers and a condenser to time the spark. A solid-state (electronic) coil has the trigger circuit built in and works directly off the flywheel magnet. You cannot swap one for the other without converting the entire ignition system. If your engine has points under the flywheel and you install a solid-state coil, it won't fire correctly. Identify your engine's ignition type before ordering parts.</p>
+
+      <!-- Safety blockquote -->
+      <blockquote>
+        <p><strong>⚠️ High-Voltage Warning:</strong> The ignition system produces enough voltage to cause a painful shock or trigger a cardiac event in susceptible individuals. Always disconnect the spark plug wire before handling the coil or performing any mechanical work near the flywheel. Never hold a spark plug or tester with bare hands while cranking the engine. Use insulated pliers and keep your other hand away from the engine block to avoid creating a path to ground across your chest.</p>
+      </blockquote>
+
+      <!-- E-E-A-T About the Author Box -->
+      <div class="author-box">
+        <h4>About the Author</h4>
+        <p>Tool & Engine Pro is dedicated to providing high-quality, practical small engine repair and tool maintenance guidance. Every article is written by our team of hands-on mechanical enthusiasts to help you troubleshoot your equipment safely and efficiently at home.</p>
+      </div>
+    </div>
+  </main>
+
+  <!-- FOOTER (identical to homepage) -->
+  <footer class="site-footer">
+    <div class="container">
+      <p class="footer-copyright">© 2026 Tool & Engine Pro. All rights reserved.</p>
+      <ul class="footer-links">
+        <li><a href="/about-us">About Us</a></li>
+        <li><a href="/contact">Contact Us</a></li>
+        <li><a href="/privacy-policy">Privacy Policy</a></li>
+        <li><a href="/term-of-service">Terms of Service</a></li>
+      </ul>
+    </div>
+  </footer>
+</body>
+</html>
