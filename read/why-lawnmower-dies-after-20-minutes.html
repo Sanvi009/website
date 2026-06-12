@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+  <title>Why Your Lawnmower Dies After 20 Minutes of Mowing | Tool & Engine Pro</title>
+  <meta name="description" content="Diagnose why your lawnmower runs for 20 minutes then dies. Learn to test ignition coil thermal failure, fuel tank vent, and valve lash with step-by-step guidance.">
+  <style>
+    /* ----- Global Reset & Variables (identical to all site pages) ----- */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+      background-color: #FFFFFF;
+      color: #333333;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    :root {
+      --white: #FFFFFF;
+      --charcoal: #333333;
+      --accent: #2c3e50;
+      --light-gray: #f8f9fa;
+      --border-light: #e9ecef;
+      --text-muted: #4a5568;
+    }
+
+    a {
+      text-decoration: none;
+      color: var(--accent);
+      transition: opacity 0.2s ease, color 0.2s;
+    }
+
+    a:hover {
+      opacity: 0.8;
+      text-decoration: underline;
+    }
+
+    ul, ol {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0,0,0,0);
+      white-space: nowrap;
+      border-width: 0;
+    }
+
+    /* ----- Header & Navigation (identical structure) ----- */
+    .site-header {
+      background-color: var(--white);
+      border-bottom: 1px solid var(--border-light);
+      padding: 1rem 0;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    .header-inner {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .site-title {
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: var(--accent);
+      letter-spacing: -0.5px;
+      line-height: 1.2;
+    }
+
+    .nav-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.8rem;
+      align-items: center;
+    }
+
+    .nav-links a {
+      color: var(--charcoal);
+      font-weight: 500;
+      font-size: 1rem;
+      padding: 0.25rem 0;
+      border-bottom: 2px solid transparent;
+      transition: border-color 0.2s, color 0.2s;
+    }
+
+    .nav-links a:hover {
+      color: var(--accent);
+      border-bottom-color: var(--accent);
+      text-decoration: none;
+      opacity: 1;
+    }
+
+    @media (max-width: 700px) {
+      .header-inner {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.8rem;
+      }
+      .nav-links {
+        gap: 1.2rem;
+        flex-wrap: wrap;
+      }
+      .site-title {
+        font-size: 1.6rem;
+      }
+    }
+
+    /* ----- Article Readability Container (max-width 800px, centered) ----- */
+    .article-container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 2rem 1rem 2rem;
+    }
+
+    /* Breadcrumbs */
+    .breadcrumbs {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      margin-bottom: 1.5rem;
+    }
+    .breadcrumbs a {
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 500;
+    }
+    .breadcrumbs a:hover {
+      text-decoration: underline;
+    }
+    .breadcrumbs span {
+      color: var(--charcoal);
+    }
+
+    /* Typography (matching guidelines) */
+    .article-container h1 {
+      font-size: 2.4rem;
+      font-weight: 700;
+      color: var(--accent);
+      line-height: 1.3;
+      margin-bottom: 0.5rem;
+    }
+    .byline {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      margin-bottom: 2rem;
+      border-bottom: 1px solid var(--border-light);
+      padding-bottom: 1rem;
+      display: inline-block;
+    }
+    .article-container h2 {
+      font-size: 1.7rem;
+      font-weight: 700;
+      color: var(--accent);
+      margin: 2.2rem 0 1rem;
+      line-height: 1.35;
+    }
+    .article-container h3 {
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: var(--charcoal);
+      margin: 1.8rem 0 0.8rem;
+      line-height: 1.4;
+    }
+    .article-container p {
+      font-size: 1.05rem;
+      line-height: 1.7;
+      margin-bottom: 1.5rem;
+      color: var(--charcoal);
+    }
+    .article-container ul, 
+    .article-container ol {
+      margin-bottom: 1.5rem;
+      padding-left: 1.8rem;
+    }
+    .article-container ul li, 
+    .article-container ol li {
+      font-size: 1.05rem;
+      line-height: 1.7;
+      margin-bottom: 0.5rem;
+      color: var(--charcoal);
+    }
+    .article-container ul {
+      list-style: disc;
+    }
+    .article-container ol {
+      list-style: decimal;
+    }
+    .article-container strong {
+      color: var(--accent);
+      font-weight: 700;
+    }
+
+    /* Table styles: responsive, header #2c3e50, white text, light borders */
+    .responsive-table-wrapper {
+      overflow-x: auto;
+      margin: 2rem 0 1.8rem;
+    }
+    .diagnostic-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.95rem;
+      line-height: 1.5;
+      background-color: var(--white);
+    }
+    .diagnostic-table th {
+      background-color: var(--accent);
+      color: var(--white);
+      font-weight: 600;
+      padding: 12px 12px;
+      border: 1px solid #d4dce2;
+      text-align: left;
+    }
+    .diagnostic-table td {
+      border: 1px solid var(--border-light);
+      padding: 10px 12px;
+      color: var(--charcoal);
+      background-color: var(--white);
+    }
+    .diagnostic-table tr:nth-child(even) td {
+      background-color: #fdfdfd;
+    }
+    @media (max-width: 550px) {
+      .diagnostic-table th, .diagnostic-table td {
+        padding: 8px 6px;
+        font-size: 0.85rem;
+      }
+    }
+
+    /* Blockquote styling for safety notices */
+    .article-container blockquote {
+      margin: 1.8rem 0;
+      padding: 1.2rem 1.5rem;
+      background-color: var(--light-gray);
+      border-left: 4px solid var(--accent);
+      font-style: italic;
+      color: #2c3e50;
+      border-radius: 0 8px 8px 0;
+    }
+    .article-container blockquote p {
+      margin-bottom: 0;
+      font-style: italic;
+    }
+
+    /* E-E-A-T About the Author box */
+    .author-box {
+      margin: 3rem 0 1rem;
+      background-color: var(--light-gray);
+      border: 1px solid var(--border-light);
+      border-radius: 8px;
+      padding: 1.8rem 2rem;
+    }
+    .author-box h4 {
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: var(--accent);
+      margin-bottom: 0.75rem;
+    }
+    .author-box p {
+      font-size: 0.98rem;
+      line-height: 1.6;
+      color: var(--charcoal);
+      margin-bottom: 0;
+    }
+
+    /* Footer (identical to homepage) */
+    .site-footer {
+      background-color: var(--white);
+      padding: 2rem 1rem;
+      text-align: center;
+      border-top: 1px solid var(--border-light);
+      margin-top: 2rem;
+    }
+    .footer-copyright {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      margin-bottom: 1.2rem;
+    }
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+      list-style: none;
+    }
+    .footer-links a {
+      color: var(--charcoal);
+      font-weight: 500;
+      font-size: 0.95rem;
+    }
+    .footer-links a:hover {
+      color: var(--accent);
+      text-decoration: underline;
+    }
+    @media (max-width: 600px) {
+      .article-container {
+        padding: 1.5rem 1rem 2rem;
+      }
+      .article-container h1 {
+        font-size: 2rem;
+      }
+      .article-container h2 {
+        font-size: 1.5rem;
+      }
+      .footer-links {
+        gap: 1.2rem;
+        flex-direction: column;
+        align-items: center;
+      }
+      .author-box {
+        padding: 1.2rem 1.2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- HEADER & NAVIGATION (identical across site) -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="site-title">Tool & Engine Pro</div>
+      <nav aria-label="Main navigation">
+        <ul class="nav-links">
+          <li><a href="/">Home</a></li>
+          <li><a href="/small-engine-troubleshooting">Small Engine Troubleshooting</a></li>
+          <li><a href="/tool-maintenance">Tool Maintenance</a></li>
+          <li><a href="/contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- READABILITY CONTAINER (max-width 800px, centered) -->
+    <div class="article-container">
+      <!-- Breadcrumbs -->
+      <div class="breadcrumbs">
+        <a href="/">Home</a> &gt; 
+        <a href="/small-engine-troubleshooting">Small Engine Troubleshooting</a> &gt; 
+        <span>Why Your Lawnmower Dies After 20 Minutes of Mowing</span>
+      </div>
+
+      <h1>Why Your Lawnmower Dies After 20 Minutes of Mowing</h1>
+      <div class="byline">Written by: Tool & Engine Pro Team | Updated: June 2026</div>
+
+      <p>The mower fires up on the first pull. It runs smooth for five minutes. Ten minutes. You're making good progress across the lawn. Then, around the twenty-minute mark, the engine starts to sputter. It surges. It might recover briefly, but within thirty seconds, it stalls dead. You wait five minutes, pull the cord, and it starts right back up—only to die again twenty minutes later.</p>
+      <p>That precise timing isn't random. It's a thermal pattern. Something is failing when it gets hot, and the fact that it dies consistently after roughly the same interval points to a very short list of culprits. This is not a dirty carburetor in the classic sense. A perpetually clogged jet kills the engine in five minutes, not twenty. A twenty-minute death is almost always an ignition coil breaking down under heat, a vacuum forming in a sealed fuel tank, or a valve lash that closes up tight when the metal expands. This guide walks you through diagnosing that exact heat-induced failure so you stop chasing the wrong fixes.</p>
+
+      <h2>The Component Overview</h2>
+      <p>You're dealing with a temperature-dependent failure. That means we need to think about which components change behavior as the engine transitions from cold to sustained operating temperature. Three systems are suspect.</p>
+      <p>First, the ignition coil. Inside the coil, windings of thin copper wire are encapsulated in epoxy. Over years of heating and cooling cycles, microscopic cracks form in that insulation. When the coil is cold, the windings are contracted and make contact. When hot, expansion separates them just enough to break the circuit. The spark vanishes. The engine stalls. Fifteen minutes later, the coil cools, the gap closes, and spark returns. This is the classic "thermal intermittent" failure.</p>
+      <p>Second, the fuel tank vent. Most modern mowers have a one-way valve in the gas cap. It lets air in as fuel is consumed, preventing a vacuum. If that vent is plugged with grass debris or a swollen gasket, air cannot enter. Fuel stops flowing. It takes about 15 to 25 minutes of running for the vacuum to build strong enough to starve the carburetor. The engine leans out and dies. Crack the cap, hear a whoosh of air rushing in, and the problem vanishes—for the next twenty minutes.</p>
+      <p>Third, valve lash. Overhead valve engines run tight clearances. As the engine heats up, the valve stem lengthens. If the cold lash is already too tight, the valve hangs slightly open when hot, bleeding compression. The engine loses power, stumbles, and quits. This repeats with clockwork regularity.</p>
+
+      <h2>The Material/Tool Checklist</h2>
+      <p>Diagnosing a heat-stall requires testing components at temperature. Don't guess. Gather these.</p>
+      <ul>
+        <li><strong>Inline Spark Tester (Neon Bulb Type):</strong> This is non-negotiable. You must see if spark dies before the engine stalls.</li>
+        <li><strong>Non-Contact Infrared Thermometer:</strong> For identifying a cold cylinder or an overheating coil.</li>
+        <li><strong>Fuel Line Pliers with Soft Jaws:</strong> To pinch lines without cutting them.</li>
+        <li><strong>Spare Known-Good Spark Plug:</strong> For immediate swap testing.</li>
+        <li><strong>Feeler Gauge Set:</strong> For valve lash checks.</li>
+        <li><strong>Socket Set and Torx Drivers:</strong> Engine shroud removal and valve cover access.</li>
+        <li><strong>Small Funnel and Fresh Fuel:</strong> Contaminated fuel can mimic vent problems.</li>
+        <li><strong>Notepad and Pen:</strong> Record exact times. Data beats hunches.</li>
+      </ul>
+
+      <h2>The Step-by-Step Guide</h2>
+      <p>Diagnose in this order. The first three steps are external and quick. The last two require disassembly. Don't jump to the valve cover until you've ruled out spark and fuel.</p>
+
+      <h3>Step 1: The Gas Cap Crack Test (Timed Run)</h3>
+      <p>This is the fastest, most definitive test for a venting issue. Start the mower cold and begin mowing. Note the exact time on a clock. When the engine begins to stumble and loses power, immediately reach down and loosen the gas cap. Not remove it entirely—just crack it open to break the seal. Listen for a hiss of air entering. If the engine immediately smooths out and recovers RPMs within five seconds, your tank vent is clogged. Order a new gas cap or clean the pinhole vent in the existing one. Do not just run with the cap loose as a permanent fix—fuel sloshes out, and the open vent pulls in dust and grass clippings. This test takes one mowing session and is 100% conclusive.</p>
+
+      <h3>Step 2: Inline Spark Tester (Hot Condition)</h3>
+      <p>If cracking the cap does nothing, the problem is likely ignition or compression. Install an inline neon spark tester between the plug and the plug wire. Route it so the bulb is visible from the operator position. Start the engine and mow. Watch the bulb. For the first fifteen minutes, it should flash bright and steady. As the twenty-minute mark approaches and the engine starts to stumble, watch the bulb critically. Does it flicker? Does it go dim or out completely right as the engine dies? If yes, the ignition coil is failing under heat. A dead bulb confirms spark loss. No flickering? Spark is present during the stall. Move to fuel or compression.</p>
+
+      <h3>Step 3: Coil Temperature Check</h3>
+      <p>If the spark tester shows an intermittent failure, use the infrared thermometer immediately after the engine stalls. Aim it at the ignition coil body—the laminated metal core and the epoxy winding casing. A coil operating normally might be warm, 150 to 180 degrees Fahrenheit. A failing coil can spike well above 250 degrees right before it quits, as internal resistance climbs with heat. If the coil is scalding hot while the engine block is only normally warm, replace the coil. Also inspect the coil gap. A coil spaced too far from the flywheel magnet forces the magnetic field to jump a wider air gap, overworking the coil and generating excess heat. Set the gap with a clean business card: loosen the coil bolts, slide the card between coil and flywheel magnet, push the coil snug against it, tighten, and rotate the flywheel to remove the card.</p>
+
+      <h3>Step 4: Fuel Flow Volume Test</h3>
+      <p>A partially clogged fuel filter or a collapsing fuel line can cause a delayed stall. The engine consumes fuel slowly, and a slight restriction takes twenty minutes to drain the carb bowl faster than it refills. Here's the test. When the engine stalls hot, immediately clamp the fuel line between the tank and carb with soft-jaw pliers. Remove the fuel line from the carb inlet. Hold the line over a clean catch can and release the clamp. Fuel should flow in a steady, solid stream, not a dribble. A dribble indicates a restriction. Check the in-tank fuel filter screen, the external inline filter, and the condition of the rubber fuel line. Old fuel lines delaminate internally. The inner liner collapses when hot and restricts flow invisibly.</p>
+
+      <h3>Step 5: Hot Compression and Valve Lash</h3>
+      <p>If spark is strong and fuel flows freely, you're dealing with a compression leak through a valve. You need to check valve lash with the engine hot, replicating the stall condition. This is uncomfortable—work fast and wear gloves.</p>
+      <ul>
+        <li>Run the engine until it stalls from the heat-induced failure.</li>
+        <li>Immediately remove the spark plug. Thread in a compression tester.</li>
+        <li>Pull the cord rapidly and note the peak compression reading.</li>
+        <li>Compare to a cold compression test. A significant drop of 30 PSI or more when hot points directly to valves not seating.</li>
+        <li>Remove the valve cover. The rocker arms and valve stems are exposed. Slide a feeler gauge between the rocker arm and the valve stem tip. Most small engines specify a cold clearance of 0.004 to 0.006 inches for intake and 0.006 to 0.008 for exhaust. If the gauge won't slide in—if there's zero clearance or the valve stem is actually holding the rocker arm up—you've found the problem. The valve stem expands when hot and unseats itself.</li>
+        <li>Adjust the rocker arm nut or set screw to achieve the correct spec. This is a feel and patience job. Reassemble, run the engine hot again, and confirm the stall is eliminated.</li>
+      </ul>
+
+      <h2>Troubleshooting Matrix: 20-Minute Stall Pattern</h2>
+      <div class="responsive-table-wrapper">
+        <table class="diagnostic-table">
+          <thead>
+            <tr><th>Symptom</th><th>Timing Pattern</th><th>Root Cause</th><th>Immediate Action</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Stumbles, surges, dies. Restarts after cool-down.</td><td>15–25 minutes, consistent.</td><td>Ignition coil thermal failure.</td><td>Confirm with inline spark tester. Replace coil. Check air gap.</td></tr>
+            <tr><td>Engine loses power, sounds lean, like running out of gas.</td><td>20 minutes exactly, every time.</td><td>Fuel tank vent plugged.</td><td>Crack gas cap during stall. If recovers, clean or replace cap.</td></tr>
+            <tr><td>Starts hard, idles rough, dies under load.</td><td>Worsens gradually after 10–15 minutes.</td><td>Valve lash too tight (zero clearance).</td><td>Hot compression test. Adjust valve clearance to factory spec.</td></tr>
+            <tr><td>Engine sputters, then backfires and stops.</td><td>Random, but only when hot.</td><td>Coil failing intermittently; fuel mixture lean spike.</td><td>Inline spark tester. Suspect coil if spark cuts sharply before backfire.</td></tr>
+            <tr><td>Dies and won't restart until stone cold.</td><td>30+ minutes of cooling needed.</td><td>Severe coil breakdown or valve seat recession.</td><td>Coil replacement first. If persists, remove head and inspect valve seats.</td></tr>
+            <tr><td>Fuel filter looks empty or barely trickling.</td><td>Engine stumbles, filter dry.</td><td>Collapsed fuel line or clogged tank screen.</td><td>Replace fuel lines entirely. Ethanol eats them from the inside out.</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>Step 6: The Final Proof Run</h3>
+      <p>After addressing the identified cause—cap, coil, valve adjustment, or fuel line—do not declare victory yet. Mow the entire lawn. That twenty-minute window is your proving ground. Keep the inline spark tester installed or a wrench handy for the cap. A successful repair means the engine runs cleanly for the full duration with no hiccup. If the stall returns, you have a compound problem. Thermal failures sometimes stack. A weak coil might have masked a valve issue. Re-run the diagnostic steps in order. The sequence will catch overlapping faults.</p>
+
+      <h2>Frequently Asked Questions (FAQ)</h2>
+      <h3>Can old engine oil cause a twenty-minute stall pattern?</h3>
+      <p>Old, contaminated oil won't directly cause a timed stall, but oil that has been fuel-diluted loses viscosity dramatically when hot. If the crankcase smells like gasoline, the thinned oil can't lubricate properly, and the engine may seize slightly as it heats. Change the oil immediately and find the fuel leak source—usually a stuck carburetor float.</p>
+      
+      <h3>Why does my mower only die when the blades are engaged, also around twenty minutes?</h3>
+      <p>This still points to a heat-induced failure, but the extra load of the blades accelerates it. A coil on the verge of failing might spark adequately at no-load idle but collapse under the cylinder pressure of loaded operation. The increased compression resistance demands a stronger spark, which the failing coil can't provide once hot. Test spark under load conditions, not just free-revving.</p>
+      
+      <h3>I replaced the ignition coil and it still dies hot. What now?</h3>
+      <p>Check the flywheel key. A partially sheared flywheel key shifts the ignition timing. When the engine is cold, it might tolerate the altered timing. When hot, the combination of advanced or retarded spark and thermal expansion causes a stall. The flywheel nut must be torqued to specification—a loose flywheel shears keys repeatedly and mimics a bad coil.</p>
+
+      <!-- Safety blockquote -->
+      <blockquote>
+        <p><strong>⚠️ Hot Engine Safety:</strong> The engine and exhaust components reach temperatures that can cause severe burns. When performing hot compression tests or valve adjustments immediately after a stall, wear heavy-duty mechanic's gloves and use insulated tools. Let the engine cool briefly if you need to remove the spark plug or valve cover — a few minutes of cooling won't reset the thermal failure you're trying to diagnose.</p>
+      </blockquote>
+
+      <!-- E-E-A-T About the Author Box -->
+      <div class="author-box">
+        <h4>About the Author</h4>
+        <p>Tool & Engine Pro is dedicated to providing high-quality, practical small engine repair and tool maintenance guidance. Every article is written by our team of hands-on mechanical enthusiasts to help you troubleshoot your equipment safely and efficiently at home.</p>
+      </div>
+    </div>
+  </main>
+
+  <!-- FOOTER (identical to homepage) -->
+  <footer class="site-footer">
+    <div class="container">
+      <p class="footer-copyright">© 2026 Tool & Engine Pro. All rights reserved.</p>
+      <ul class="footer-links">
+        <li><a href="/about-us">About Us</a></li>
+        <li><a href="/contact">Contact Us</a></li>
+        <li><a href="/privacy-policy">Privacy Policy</a></li>
+        <li><a href="/term-of-service">Terms of Service</a></li>
+      </ul>
+    </div>
+  </footer>
+</body>
+</html>
