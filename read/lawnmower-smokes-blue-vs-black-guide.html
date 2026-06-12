@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+  <title>Why a Lawnmower Smokes Blue vs. Black (The Difference Explained) | Tool & Engine Pro</title>
+  <meta name="description" content="Learn to diagnose lawnmower exhaust smoke color. Blue smoke means burning oil; black smoke means too much fuel. Step-by-step guide to fix both problems.">
+  <style>
+    /* ----- Global Reset & Variables (identical to all site pages) ----- */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+      background-color: #FFFFFF;
+      color: #333333;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    :root {
+      --white: #FFFFFF;
+      --charcoal: #333333;
+      --accent: #2c3e50;
+      --light-gray: #f8f9fa;
+      --border-light: #e9ecef;
+      --text-muted: #4a5568;
+    }
+
+    a {
+      text-decoration: none;
+      color: var(--accent);
+      transition: opacity 0.2s ease, color 0.2s;
+    }
+
+    a:hover {
+      opacity: 0.8;
+      text-decoration: underline;
+    }
+
+    ul, ol {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0,0,0,0);
+      white-space: nowrap;
+      border-width: 0;
+    }
+
+    /* ----- Header & Navigation (identical structure) ----- */
+    .site-header {
+      background-color: var(--white);
+      border-bottom: 1px solid var(--border-light);
+      padding: 1rem 0;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    .header-inner {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .site-title {
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: var(--accent);
+      letter-spacing: -0.5px;
+      line-height: 1.2;
+    }
+
+    .nav-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.8rem;
+      align-items: center;
+    }
+
+    .nav-links a {
+      color: var(--charcoal);
+      font-weight: 500;
+      font-size: 1rem;
+      padding: 0.25rem 0;
+      border-bottom: 2px solid transparent;
+      transition: border-color 0.2s, color 0.2s;
+    }
+
+    .nav-links a:hover {
+      color: var(--accent);
+      border-bottom-color: var(--accent);
+      text-decoration: none;
+      opacity: 1;
+    }
+
+    @media (max-width: 700px) {
+      .header-inner {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.8rem;
+      }
+      .nav-links {
+        gap: 1.2rem;
+        flex-wrap: wrap;
+      }
+      .site-title {
+        font-size: 1.6rem;
+      }
+    }
+
+    /* ----- Article Readability Container (max-width 800px, centered) ----- */
+    .article-container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 2rem 1rem 2rem;
+    }
+
+    /* Breadcrumbs */
+    .breadcrumbs {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      margin-bottom: 1.5rem;
+    }
+    .breadcrumbs a {
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 500;
+    }
+    .breadcrumbs a:hover {
+      text-decoration: underline;
+    }
+    .breadcrumbs span {
+      color: var(--charcoal);
+    }
+
+    /* Typography (matching guidelines) */
+    .article-container h1 {
+      font-size: 2.4rem;
+      font-weight: 700;
+      color: var(--accent);
+      line-height: 1.3;
+      margin-bottom: 0.5rem;
+    }
+    .byline {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      margin-bottom: 2rem;
+      border-bottom: 1px solid var(--border-light);
+      padding-bottom: 1rem;
+      display: inline-block;
+    }
+    .article-container h2 {
+      font-size: 1.7rem;
+      font-weight: 700;
+      color: var(--accent);
+      margin: 2.2rem 0 1rem;
+      line-height: 1.35;
+    }
+    .article-container h3 {
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: var(--charcoal);
+      margin: 1.8rem 0 0.8rem;
+      line-height: 1.4;
+    }
+    .article-container p {
+      font-size: 1.05rem;
+      line-height: 1.7;
+      margin-bottom: 1.5rem;
+      color: var(--charcoal);
+    }
+    .article-container ul, 
+    .article-container ol {
+      margin-bottom: 1.5rem;
+      padding-left: 1.8rem;
+    }
+    .article-container ul li, 
+    .article-container ol li {
+      font-size: 1.05rem;
+      line-height: 1.7;
+      margin-bottom: 0.5rem;
+      color: var(--charcoal);
+    }
+    .article-container ul {
+      list-style: disc;
+    }
+    .article-container ol {
+      list-style: decimal;
+    }
+    .article-container strong {
+      color: var(--accent);
+      font-weight: 700;
+    }
+
+    /* Table styles: responsive, header #2c3e50, white text, light borders */
+    .responsive-table-wrapper {
+      overflow-x: auto;
+      margin: 2rem 0 1.8rem;
+    }
+    .diagnostic-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.95rem;
+      line-height: 1.5;
+      background-color: var(--white);
+    }
+    .diagnostic-table th {
+      background-color: var(--accent);
+      color: var(--white);
+      font-weight: 600;
+      padding: 12px 12px;
+      border: 1px solid #d4dce2;
+      text-align: left;
+    }
+    .diagnostic-table td {
+      border: 1px solid var(--border-light);
+      padding: 10px 12px;
+      color: var(--charcoal);
+      background-color: var(--white);
+    }
+    .diagnostic-table tr:nth-child(even) td {
+      background-color: #fdfdfd;
+    }
+    @media (max-width: 550px) {
+      .diagnostic-table th, .diagnostic-table td {
+        padding: 8px 6px;
+        font-size: 0.85rem;
+      }
+    }
+
+    /* Blockquote styling for safety notices */
+    .article-container blockquote {
+      margin: 1.8rem 0;
+      padding: 1.2rem 1.5rem;
+      background-color: var(--light-gray);
+      border-left: 4px solid var(--accent);
+      font-style: italic;
+      color: #2c3e50;
+      border-radius: 0 8px 8px 0;
+    }
+    .article-container blockquote p {
+      margin-bottom: 0;
+      font-style: italic;
+    }
+
+    /* E-E-A-T About the Author box */
+    .author-box {
+      margin: 3rem 0 1rem;
+      background-color: var(--light-gray);
+      border: 1px solid var(--border-light);
+      border-radius: 8px;
+      padding: 1.8rem 2rem;
+    }
+    .author-box h4 {
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: var(--accent);
+      margin-bottom: 0.75rem;
+    }
+    .author-box p {
+      font-size: 0.98rem;
+      line-height: 1.6;
+      color: var(--charcoal);
+      margin-bottom: 0;
+    }
+
+    /* Footer (identical to homepage) */
+    .site-footer {
+      background-color: var(--white);
+      padding: 2rem 1rem;
+      text-align: center;
+      border-top: 1px solid var(--border-light);
+      margin-top: 2rem;
+    }
+    .footer-copyright {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      margin-bottom: 1.2rem;
+    }
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+      list-style: none;
+    }
+    .footer-links a {
+      color: var(--charcoal);
+      font-weight: 500;
+      font-size: 0.95rem;
+    }
+    .footer-links a:hover {
+      color: var(--accent);
+      text-decoration: underline;
+    }
+    @media (max-width: 600px) {
+      .article-container {
+        padding: 1.5rem 1rem 2rem;
+      }
+      .article-container h1 {
+        font-size: 2rem;
+      }
+      .article-container h2 {
+        font-size: 1.5rem;
+      }
+      .footer-links {
+        gap: 1.2rem;
+        flex-direction: column;
+        align-items: center;
+      }
+      .author-box {
+        padding: 1.2rem 1.2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- HEADER & NAVIGATION (identical across site) -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="site-title">Tool & Engine Pro</div>
+      <nav aria-label="Main navigation">
+        <ul class="nav-links">
+          <li><a href="/">Home</a></li>
+          <li><a href="/small-engine-troubleshooting">Small Engine Troubleshooting</a></li>
+          <li><a href="/tool-maintenance">Tool Maintenance</a></li>
+          <li><a href="/contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- READABILITY CONTAINER (max-width 800px, centered) -->
+    <div class="article-container">
+      <!-- Breadcrumbs -->
+      <div class="breadcrumbs">
+        <a href="/">Home</a> &gt; 
+        <a href="/small-engine-troubleshooting">Small Engine Troubleshooting</a> &gt; 
+        <span>Why a Lawnmower Smokes Blue vs. Black (The Difference Explained)</span>
+      </div>
+
+      <h1>Why a Lawnmower Smokes Blue vs. Black (The Difference Explained)</h1>
+      <div class="byline">Written by: Tool & Engine Pro Team | Updated: June 2026</div>
+
+      <p>You pull the starter cord, and a plume of white smoke bellows from the muffler. A neighbor glances over. You're embarrassed. But then the cloud changes. It's thick. It stings your eyes. It's blue, or maybe black. At this point, you don't care about the color—you just want it to stop. But here's the cold, hard truth: the color of that exhaust smoke is the engine's native language. It's telling you exactly what's broken, what's leaking, and what it's burning that it shouldn't be.</p>
+      <p>Ignoring the specific hue and just hoping it clears up usually ends with a scored cylinder wall or a hydro-locked crankcase. A blue cloud and a black cloud are biologically different mechanical diseases. Treating one like the other wastes time and money. In this guide, we're cutting through the smoke screen. You'll learn to decode blue smoke (oil ingestion) versus black smoke (excessive fuel), diagnose the root cause without a teardown, and apply the precise fix that saves your Saturday and your engine block.</p>
+
+      <h2>The Root Visual Science: Why Color Matters</h2>
+      <p>Combustion in a small gas engine should be invisible. The byproduct is heat, carbon dioxide, and water vapor. When you see a solid color, you're witnessing a contaminant burning at a specific temperature.</p>
+      <p><strong>Blue smoke</strong> is fundamentally a lubrication problem. It signifies that engine oil—specifically non-synthetic or worn-out SAE 30—has breached the combustion chamber. Oil doesn't vaporize cleanly like gasoline. It burns with a distinct pale blue to gray-white tint, and it hangs in the air like fog because the oil particulates are heavy. It stinks like a burnt frying pan.</p>
+      <p><strong>Black smoke</strong> is a fuel system problem. It's raw, partially burnt gasoline. When the air-to-fuel ratio swings heavily rich, the engine can't consume all the hydrocarbons. The carbon molecules exit as fine soot. Black smoke is dark, often with a tinge of unburnt fuel that irritates the nostrils, and it leaves dry, powdery carbon deposits on the spark plug—not wet, oily sludge.</p>
+      <p>Knowing this difference isn't just academic. Overfilling the crankcase can blow a head gasket. Over-choking a carb can wash the oil off the cylinder wall. Both destroy engines. One kills through friction, the other through friction. The smoke tells you which path to take.</p>
+
+      <h2>The Material/Tool Checklist</h2>
+      <p>Don't start tearing the engine down blind. Gather these items to diagnose the smoke type accurately before you turn a single wrench.</p>
+      <ul>
+        <li><strong>Nitrile Gloves:</strong> Fuel and hot oil burns are nasty. Protect your hands.</li>
+        <li><strong>Spark Plug Socket & Ratchet:</strong> The spark plug's physical condition is the indisputable witness to the crime.</li>
+        <li><strong>Bright Flashlight or Bore Scope:</strong> You need to peek into the cylinder without removing the head.</li>
+        <li><strong>Compression Tester (Small Engine Kit):</strong> Critical for diagnosing ring failure versus a stuck breather.</li>
+        <li><strong>Clean White Rag or Paper Towel:</strong> For the "plug wipe test."</li>
+        <li><strong>Drip Pan:</strong> Oil changes are almost always part of the fix.</li>
+        <li><strong>Carburetor Cleaner and Compressed Air:</strong> For the black smoke fix.</li>
+        <li><strong>Flathead Screwdriver:</strong> For the inevitable carburetor mixture adjustments.</li>
+        <li><strong>OEM Service Manual:</strong> Torque specs and float height settings aren't guesses.</li>
+      </ul>
+
+      <h2>The Step-by-Step Diagnostic Guide</h2>
+      <p>We're going to follow a chronological "triage" protocol. Stop at the step that confirms your issue. Don't skip ahead.</p>
+
+      <h3>Step 1: The Wipe Test (Immediate Clue Gathering)</h3>
+      <p>The engine is hot, smelly, and smoking. Pop the dipstick but don't touch the oil yet. Smell the dipstick. If it reeks like raw gasoline, you've already found your black smoke source—a needle valve stuck open is flooding the sump. Now, pull the spark plug wire and remove the plug.</p>
+      <ul>
+        <li><strong>The Blue Smoke Plug:</strong> It's black, but the black is a wet, greasy, glazed carbon crust. It looks like burnt bacon grease. You can smear it with your finger.</li>
+        <li><strong>The Black Smoke Plug:</strong> The plug is black too, but it's a dry, sooty, velvety powder. It resembles chimney soot. That's fuel carbon, not oil carbon.</li>
+      </ul>
+
+      <h3>Step 2: The "Rolling Splash" Check (Blue Smoke Diagnosis)</h3>
+      <p>Blue smoke on a push mower often appears only when you hit a bump or tilt the machine to turn. That's a classic "splash lubrication" symptom. The piston rings aren't the issue; the angle is. When you tilt a mower with worn rings, oil rushes past the breather tube directly into the carburetor intake or the cylinder. Check your air filter. If the paper element is soaked in clean oil (not just dusty dirt), your engine is puking oil back through the breather assembly due to a clogged breather reed valve or simply worn rings. A dry filter with a wet plug means the oil is coming from below the piston.</p>
+
+      <h3>Step 3: Compression Check vs. Wet Test</h3>
+      <p>Let's quantify the ring health. Screw a compression tester into the spark plug hole. Hold the throttle wide open and pull the cord until the needle peaks.</p>
+      <ul>
+        <li><strong>Low Reading (Below 90 PSI):</strong> This confirms cylinder wall or ring damage.</li>
+        <li><strong>The "Wet" Variable:</strong> Squirt a tablespoon of clean SAE 30 oil into the plug hole. Crank it again. If the pressure jumps dramatically, the rings are shot. The oil is temporarily acting as a seal. If the pressure stays low even with the oil, your valves aren't seating, or you have a blown head gasket—which can also cause white-blue smoke by sucking oil right into the chamber on the intake stroke.</li>
+      </ul>
+
+      <h3>Step 4: The Float Bowl Autopsy (Black Smoke Diagnosis)</h3>
+      <p>Black smoke means the fire is being snuffed out by fuel. Remove the air filter to eliminate a simple restriction. If the smoke clears up, replace the filter. It's plugged. If it doesn't, drop the carburetor bowl. Look for ethanol residue or varnished fuel that looks like orange soda syrup. A sunk float or a needle valve with a tiny wear ring on the Viton tip will bypass the seat, flooding the engine constantly. Also, manually verify the choke plate. A stuck choke plate—even slightly closed—enriches the mixture to a sooty black mess instantly.</p>
+
+      <h3>Step 5: Head Gasket Leakage (The Hybrid Smoke)</h3>
+      <p>This is a sneaky one. If you have "gray" smoke that seems to flicker between white, blue, and black, suspect the head gasket. A breach between the cylinder bore and the pushrod galley allows oil to be pumped directly into the combustion chamber during the intake stroke. You'll also likely notice a "chirping" or compression leak sound when the engine spins, and maybe oil seepage down the side of the block. Torque the head bolts to spec; if they were loose, re-torquing might save you. If they're tight, the gasket has physically burnt through.</p>
+
+      <h2>Troubleshooting Matrix: Smoke Color, Cause, and Action</h2>
+      <div class="responsive-table-wrapper">
+        <table class="diagnostic-table">
+          <thead>
+            <tr><th>Smoke Color</th><th>Secondary Symptom</th><th>Definitive Cause</th><th>Immediate Fix</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Blue/Gray</td><td>Smoke at startup only, clears in 5 seconds.</td><td>Worn valve stem seals/guides. Oil seeps down overnight.</td><td>Replace valve seals. Not urgent, but monitor oil level closely.</td></tr>
+            <tr><td>Blue/Gray</td><td>Smoke constantly, worsens under heavy load.</td><td>Stuck or broken piston rings. Blow-by compression.</td><td>Engine teardown; hone cylinder, replace rings. Stop running immediately to save the crankshaft.</td></tr>
+            <tr><td>Blue/Gray</td><td>Smoke pours out when mower is tilted/on side.</td><td>Oil migration via breather tube.</td><td>Check oil level (likely overfilled). Clean breather assembly. Do not tilt mower with carburetor facing down.</td></tr>
+            <tr><td>Black/Dark</td><td>Dry, sooty plug; engine lugs and misfires.</td><td>Severely rich fuel mixture. Main jet unseated or float sunk.</td><td>Inspect needle and seat. Adjust float height. Do not run; fuel is washing cylinder oil away.</td></tr>
+            <tr><td>Black/Dark</td><td>Black liquid dripping from muffler joint.</td><td>Incomplete combustion; choke stuck or ignition weak.</td><td>Clear choke linkage. Check flywheel key (partially sheared). Weak spark ignites fuel late and poorly.</td></tr>
+            <tr><td>Heavy White</td><td>Thick cloud, smell of sweet antifreeze? (rare).</td><td>Not applicable to standard air-cooled engines.</td><td>If water-cooled, failed head gasket. If air-cooled and pure white, re-check your oil; it's severely overfilled or contaminated with water.</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>Step 6: The "Summit" Correction</h3>
+      <p><strong>If Blue:</strong> Change the oil immediately. Overfilled oil is the cheapest fix there is. Use the correct weight (10W-30 or SAE 30 depending on climate). If the problem persists, it's time for a breather assembly replacement. The breather is a one-way check valve. If it's stuck open, the pulse of the piston going down forces oil mist into the intake tract. This is a $5 part that mimics a $200 ring job. Replace it first.</p>
+      <p><strong>If Black:</strong> It's rarely the main jet adjustment screw on modern small engines because most are fixed-orifice EPA carbs. The culprit is almost always trash in the needle seat. Remove the float pin, float, and needle. Spray the seat with brake cleaner and blast with compressed air. Re-assemble. If the float has liquid inside it (shake it), it's sunk. Replace it. A heavy float never stops the fuel flow. The engine quite literally drowns in gas.</p>
+
+      <h3>Step 7: The "After-Fire" Decarbonization</h3>
+      <p>Once the mechanical fault is fixed, run the engine hard for 10 minutes. A fixed black smoke problem leaves heavy soot in the combustion chamber and muffler. That soot acts like a glow plug, causing pre-ignition. If you've corrected a severe blue smoke issue, the oil has coked up the exhaust port. Burn it out by running the engine at 3/4 throttle under load (actually mowing grass). Don't just let it idle. Heat is the final cleaning agent.</p>
+
+      <h2>Frequently Asked Questions (FAQ)</h2>
+      <h3>Can I keep mowing if my lawnmower is blowing faint blue smoke?</h3>
+      <p>You can, but you're playing with fire. Blue smoke means you're burning oil. If the oil level drops below the "add" mark during a mowing session, you'll starve the connecting rod of lubrication and throw a rod through the block. Check the dipstick every 15 minutes. A puff at startup is tolerable; a constant blue haze requires a mechanical fix before you destroy the engine.</p>
+      
+      <h3>My mower only smokes black when I engage the blades, is that still a carburetor issue?</h3>
+      <p>Yes, but it's likely a governor issue, not just dirt. When the blades engage, the governor springs are supposed to open the throttle to maintain RPMs. If the governor setting is overshooting, it's dumping in too much fuel right as the load hits. Check your static governor adjustment before tearing the carb apart.</p>
+      
+      <h3>Why did my mower start smoking after I changed the oil?</h3>
+      <p>You likely overfilled the crankcase. Even an extra 4 ounces can turn into a smoke screen because the counterweights on the crankshaft whip the oil into a frothy mist. The breathing system gets overwhelmed and pushes this liquid oil straight into the intake. Drain a little out until the level is exactly on the "Full" line, not above it. Let the engine run for 10 minutes to burn off the residual in the muffler—the smoke should clear.</p>
+
+      <!-- Safety blockquote -->
+      <blockquote>
+        <p><strong>⚠️ Carbon Monoxide Warning:</strong> Exhaust smoke of any color contains deadly carbon monoxide. Never run a lawnmower or any small engine indoors, in a garage, or near open windows. The thick smoke associated with blue or black exhaust also contains partially burned hydrocarbons and oil vapors that are hazardous to breathe. Always operate equipment outdoors in a well-ventilated area away from living spaces.</p>
+      </blockquote>
+
+      <!-- E-E-A-T About the Author Box -->
+      <div class="author-box">
+        <h4>About the Author</h4>
+        <p>Tool & Engine Pro is dedicated to providing high-quality, practical small engine repair and tool maintenance guidance. Every article is written by our team of hands-on mechanical enthusiasts to help you troubleshoot your equipment safely and efficiently at home.</p>
+      </div>
+    </div>
+  </main>
+
+  <!-- FOOTER (identical to homepage) -->
+  <footer class="site-footer">
+    <div class="container">
+      <p class="footer-copyright">© 2026 Tool & Engine Pro. All rights reserved.</p>
+      <ul class="footer-links">
+        <li><a href="/about-us">About Us</a></li>
+        <li><a href="/contact">Contact Us</a></li>
+        <li><a href="/privacy-policy">Privacy Policy</a></li>
+        <li><a href="/term-of-service">Terms of Service</a></li>
+      </ul>
+    </div>
+  </footer>
+</body>
+</html>
