@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+  <title>Symptoms of Bad Gas in a Lawnmower and How to Drain It | Tool & Engine Pro</title>
+  <meta name="description" content="Learn to diagnose bad gas in your lawnmower by smell, color, and performance. Step-by-step guide to drain old fuel, clean the carburetor bowl, and refill with fresh gas.">
+  <style>
+    /* ----- Global Reset & Variables (identical to all site pages) ----- */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+      background-color: #FFFFFF;
+      color: #333333;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    :root {
+      --white: #FFFFFF;
+      --charcoal: #333333;
+      --accent: #2c3e50;
+      --light-gray: #f8f9fa;
+      --border-light: #e9ecef;
+      --text-muted: #4a5568;
+    }
+
+    a {
+      text-decoration: none;
+      color: var(--accent);
+      transition: opacity 0.2s ease, color 0.2s;
+    }
+
+    a:hover {
+      opacity: 0.8;
+      text-decoration: underline;
+    }
+
+    ul, ol {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0,0,0,0);
+      white-space: nowrap;
+      border-width: 0;
+    }
+
+    /* ----- Header & Navigation (identical structure) ----- */
+    .site-header {
+      background-color: var(--white);
+      border-bottom: 1px solid var(--border-light);
+      padding: 1rem 0;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    .header-inner {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .site-title {
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: var(--accent);
+      letter-spacing: -0.5px;
+      line-height: 1.2;
+    }
+
+    .nav-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.8rem;
+      align-items: center;
+    }
+
+    .nav-links a {
+      color: var(--charcoal);
+      font-weight: 500;
+      font-size: 1rem;
+      padding: 0.25rem 0;
+      border-bottom: 2px solid transparent;
+      transition: border-color 0.2s, color 0.2s;
+    }
+
+    .nav-links a:hover {
+      color: var(--accent);
+      border-bottom-color: var(--accent);
+      text-decoration: none;
+      opacity: 1;
+    }
+
+    @media (max-width: 700px) {
+      .header-inner {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.8rem;
+      }
+      .nav-links {
+        gap: 1.2rem;
+        flex-wrap: wrap;
+      }
+      .site-title {
+        font-size: 1.6rem;
+      }
+    }
+
+    /* ----- Article Readability Container (max-width 800px, centered) ----- */
+    .article-container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 2rem 1rem 2rem;
+    }
+
+    /* Breadcrumbs */
+    .breadcrumbs {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      margin-bottom: 1.5rem;
+    }
+    .breadcrumbs a {
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 500;
+    }
+    .breadcrumbs a:hover {
+      text-decoration: underline;
+    }
+    .breadcrumbs span {
+      color: var(--charcoal);
+    }
+
+    /* Typography (matching guidelines) */
+    .article-container h1 {
+      font-size: 2.4rem;
+      font-weight: 700;
+      color: var(--accent);
+      line-height: 1.3;
+      margin-bottom: 0.5rem;
+    }
+    .byline {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      margin-bottom: 2rem;
+      border-bottom: 1px solid var(--border-light);
+      padding-bottom: 1rem;
+      display: inline-block;
+    }
+    .article-container h2 {
+      font-size: 1.7rem;
+      font-weight: 700;
+      color: var(--accent);
+      margin: 2.2rem 0 1rem;
+      line-height: 1.35;
+    }
+    .article-container h3 {
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: var(--charcoal);
+      margin: 1.8rem 0 0.8rem;
+      line-height: 1.4;
+    }
+    .article-container p {
+      font-size: 1.05rem;
+      line-height: 1.7;
+      margin-bottom: 1.5rem;
+      color: var(--charcoal);
+    }
+    .article-container ul, 
+    .article-container ol {
+      margin-bottom: 1.5rem;
+      padding-left: 1.8rem;
+    }
+    .article-container ul li, 
+    .article-container ol li {
+      font-size: 1.05rem;
+      line-height: 1.7;
+      margin-bottom: 0.5rem;
+      color: var(--charcoal);
+    }
+    .article-container ul {
+      list-style: disc;
+    }
+    .article-container ol {
+      list-style: decimal;
+    }
+    .article-container strong {
+      color: var(--accent);
+      font-weight: 700;
+    }
+
+    /* Table styles: responsive, header #2c3e50, white text, light borders */
+    .responsive-table-wrapper {
+      overflow-x: auto;
+      margin: 2rem 0 1.8rem;
+    }
+    .diagnostic-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.95rem;
+      line-height: 1.5;
+      background-color: var(--white);
+    }
+    .diagnostic-table th {
+      background-color: var(--accent);
+      color: var(--white);
+      font-weight: 600;
+      padding: 12px 12px;
+      border: 1px solid #d4dce2;
+      text-align: left;
+    }
+    .diagnostic-table td {
+      border: 1px solid var(--border-light);
+      padding: 10px 12px;
+      color: var(--charcoal);
+      background-color: var(--white);
+    }
+    .diagnostic-table tr:nth-child(even) td {
+      background-color: #fdfdfd;
+    }
+    @media (max-width: 550px) {
+      .diagnostic-table th, .diagnostic-table td {
+        padding: 8px 6px;
+        font-size: 0.85rem;
+      }
+    }
+
+    /* Blockquote styling for safety notices */
+    .article-container blockquote {
+      margin: 1.8rem 0;
+      padding: 1.2rem 1.5rem;
+      background-color: var(--light-gray);
+      border-left: 4px solid var(--accent);
+      font-style: italic;
+      color: #2c3e50;
+      border-radius: 0 8px 8px 0;
+    }
+    .article-container blockquote p {
+      margin-bottom: 0;
+      font-style: italic;
+    }
+
+    /* E-E-A-T About the Author box */
+    .author-box {
+      margin: 3rem 0 1rem;
+      background-color: var(--light-gray);
+      border: 1px solid var(--border-light);
+      border-radius: 8px;
+      padding: 1.8rem 2rem;
+    }
+    .author-box h4 {
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: var(--accent);
+      margin-bottom: 0.75rem;
+    }
+    .author-box p {
+      font-size: 0.98rem;
+      line-height: 1.6;
+      color: var(--charcoal);
+      margin-bottom: 0;
+    }
+
+    /* Footer (identical to homepage) */
+    .site-footer {
+      background-color: var(--white);
+      padding: 2rem 1rem;
+      text-align: center;
+      border-top: 1px solid var(--border-light);
+      margin-top: 2rem;
+    }
+    .footer-copyright {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      margin-bottom: 1.2rem;
+    }
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+      list-style: none;
+    }
+    .footer-links a {
+      color: var(--charcoal);
+      font-weight: 500;
+      font-size: 0.95rem;
+    }
+    .footer-links a:hover {
+      color: var(--accent);
+      text-decoration: underline;
+    }
+    @media (max-width: 600px) {
+      .article-container {
+        padding: 1.5rem 1rem 2rem;
+      }
+      .article-container h1 {
+        font-size: 2rem;
+      }
+      .article-container h2 {
+        font-size: 1.5rem;
+      }
+      .footer-links {
+        gap: 1.2rem;
+        flex-direction: column;
+        align-items: center;
+      }
+      .author-box {
+        padding: 1.2rem 1.2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- HEADER & NAVIGATION (identical across site) -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="site-title">Tool & Engine Pro</div>
+      <nav aria-label="Main navigation">
+        <ul class="nav-links">
+          <li><a href="/">Home</a></li>
+          <li><a href="/small-engine-troubleshooting">Small Engine Troubleshooting</a></li>
+          <li><a href="/tool-maintenance">Tool Maintenance</a></li>
+          <li><a href="/contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- READABILITY CONTAINER (max-width 800px, centered) -->
+    <div class="article-container">
+      <!-- Breadcrumbs -->
+      <div class="breadcrumbs">
+        <a href="/">Home</a> &gt; 
+        <a href="/small-engine-troubleshooting">Small Engine Troubleshooting</a> &gt; 
+        <span>Symptoms of Bad Gas in a Lawnmower and How to Drain It</span>
+      </div>
+
+      <h1>Symptoms of Bad Gas in a Lawnmower and How to Drain It</h1>
+      <div class="byline">Written by: Tool & Engine Pro Team | Updated: June 2026</div>
+
+      <p>There's a specific kind of frustration that hits you on a Saturday morning. The sun is barely up, the grass is wet with dew, and you're ready to knock out the yard work before the heat sets in. You pull the starter cord. The engine coughs, sputters, and dies. You pull again. Nothing. You check the spark plug, bang the air filter against the deck, and sweat through your shirt. The culprit isn't a mechanical failure. It's the fuel. Bad gas has turned your reliable mower into a stubborn paperweight. This guide cuts through the guesswork. You'll learn to diagnose degraded fuel quickly and get it out of your machine without damaging the carburetor or soaking your driveway.</p>
+
+      <h2>The Fuel System: A Quick Tour of the Damage Zone</h2>
+      <p>Before you turn a wrench, it helps to know the battlefield. Modern lawnmower engines are simple, but their fuel systems operate on tight spec tolerances. We're dealing with three critical components: the tank, the fuel lines, and the carburetor. Gasoline isn't just gasoline anymore. Pump gas contains ethanol, which attracts moisture. When that cocktail sits for more than 30 days, it begins a phase separation process. The volatile compounds evaporate, leaving behind a dense, gummy residue. Mechanics call this "varnished fuel."</p>
+      <p>This varnish clogs the tiny emulsion tube and main jet in the carburetor. It's sticky. It's stubborn. It restricts flow. Even if the gas in the tank smells questionable but not awful, the small amount left inside the carb bowl has likely already oxidized into a gel. Draining the tank solves only half the problem if you leave that sludge in the bottom of the carb. You have to attack both ends.</p>
+
+      <h2>The Pre-Drain Checklist: Tools and Supplies</h2>
+      <p>Safety first, speed second. Gasoline fumes are heavy and explosive. You're working with a volatile liquid, so gather everything before the fuel cap comes off. Here's exactly what you need:</p>
+      <ul>
+        <li><strong>Fresh Gas Can:</strong> Empty and approved for fuel. Do not use a milk jug.</li>
+        <li><strong>Hand-Siphon Pump or Fluid Extractor:</strong> A basic bulb-style transfer pump works wonders.</li>
+        <li><strong>Safety Glasses:</strong> Ethanol-laced gas in the eye is a trip to the ER.</li>
+        <li><strong>Nitrile Gloves:</strong> Fuel-resistant. Not latex.</li>
+        <li><strong>Screwdriver Set:</strong> Usually a flathead and a 10mm socket or nut driver for the carb bowl.</li>
+        <li><strong>Carburetor Cleaner Spray:</strong> The aerosol kind with the red straw.</li>
+        <li><strong>Rags or Shop Towels:</strong> The heavy blue paper ones hold up best.</li>
+        <li><strong>Drain Pan:</strong> A clean, dedicated oil drain pan so you can inspect what comes out.</li>
+        <li><strong>Fuel Stabilizer:</strong> For the fresh gas you'll be adding later.</li>
+      </ul>
+
+      <h2>The Step-by-Step Guide to Purging Bad Gas</h2>
+
+      <h3>Step 1: Verify the Contamination</h3>
+      <p>Don't dump fuel based on a hunch. Sniff the tank. Fresh gas has a sharp, familiar petroleum bite. Sour, varnished gas smells like turpentine or paint thinner. It's an unmistakable, musty, stale odor. Look at the color. Pump gas is clear with a yellowish tint. Bad gas is dark orange or brown. You might see floating debris. If the fuel looks like iced tea, it's done. If it passes the nose test but the mower won't start, check the oil dipstick for a fuel smell—a leaking carb can flood the crankcase, but that's a different repair.</p>
+
+      <h3>Step 2: Clamp or Pinch the Fuel Line</h3>
+      <p>If your mower has a fuel shutoff valve at the base of the tank, turn it to the "Off" position. Most push mowers don't. You'll need a small pair of needle-nose vise grips or a fuel line pinch-off clamp. Gently clamp the rubber line running from the tank to the carburetor. Don't use brute force on brittle plastic or old rubber; you're just stopping the flow so you can disconnect the line without taking a bath.</p>
+
+      <h3>Step 3: Drain the Tank Completely</h3>
+      <p>Position your drain pan under the fuel line connection at the carburetor. Release the spring clamp on the line and wiggle the hose free. Direct the end of the hose into your drain pan immediately. Now release your pinch clamp or open the shutoff valve. Let gravity do the work. Tilt the mower slightly, with the air filter pointing skyward and the carburetor side low, to get every last drop out of the tank seams. If the mower has a metal tank, leaving even an ounce can flash rust, which creates a whole new set of problems later.</p>
+
+      <h2>Bad Gas Symptom Matrix</h2>
+      <div class="responsive-table-wrapper">
+        <table class="diagnostic-table">
+          <thead>
+            <tr><th>Symptom</th><th>Potential Cause</th><th>Immediate Fix</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Engine starts, surges, then dies</td><td>Water in fuel bowl causing intermittent flow.</td><td>Drain bowl and tank. Add water-removing additive (isopropyl-based).</td></tr>
+            <tr><td>White smoke on startup</td><td>Phase-separated ethanol pulling water through combustion.</td><td>Full drain. Inspect oil for contamination. Do not use fuel dryers.</td></tr>
+            <tr><td>Black soot on spark plug</td><td>Incomplete burn from low volatility.</td><td>Drain old gas. Clean or replace plug. Fresh premium fuel (no ethanol).</td></tr>
+            <tr><td>Hard start, runs on choke only</td><td>Pilot jet gummed by varnish.</td><td>Drain bowl. Spray carb cleaner directly into pilot jet channel.</td></tr>
+            <tr><td>Thick, syrup-like varnish in tank</td><td>Gasoline left to dry completely over 6+ months.</td><td>Mechanical removal required. Scrape and flush with lacquer thinner.</td></tr>
+            <tr><td>Engine "knocks" under load</td><td>Octane rating dropped due to evaporation.</td><td>Shut down immediately. Drain tank and carburetor.</td></tr>
+            <tr><td>Strong, rotten odor from tank</td><td>Microbial growth in diesel/biodiesel (rare in gas).</td><td>Scrub tank with biocide, rinse thoroughly, replace fuel lines.</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>Step 4: Remove and Inspect the Carburetor Bowl</h3>
+      <p>Don't skip this. The tank can be perfectly clean, but the engine still won't run because the carb bowl is holding a thimble-full of toxic sludge. Slide the drain pan directly under the carburetor. There's a brass nut (often a 10mm or 1/2-inch) at the very bottom of the bowl. This is the bowl nut, and it usually holds the main jet. Crack it loose with a socket or wrench. As it backs out, the contents of the bowl—often a mix of rancid gas and crystalline white corrosion—will trickle out.</p>
+      <p>Once the bowl is off, you're looking at the float and the needle valve. If you see green crust or a sticky amber film, spray it aggressively with carb cleaner. Use the red straw to blast upward into the center brass emulsion tube. Wear those glasses; that spray loves to ricochet straight back.</p>
+
+      <h3>Step 5: Purge the Old Fuel from the Lines</h3>
+      <p>With the bowl off and the tank empty, you have an open passage. You can use a shot of compressed air—very gently—into the fuel line inlet on the carb to push any debris backward. Or, manually pump the siphon bulb at the tank end to pull any last stale gas through the line. The goal is a dry, clean line.</p>
+
+      <h3>Step 6: Reassembly and Refueling</h3>
+      <p>Replace the carb bowl. Snug the bowl nut firmly, but don't overtighten. It's brass, and it will strip. Reattach the fuel line and secure the clamp. Now for the critical move: fill the tank with fresh, ethanol-free fuel if you can source it. If not, use regular 87 octane treated with a high-quality fuel stabilizer immediately. Don't wait. The stabilizer needs to mix with the fresh fuel to protect the system right now. Add the precise ratio indicated on the bottle—dumping extra doesn't help.</p>
+
+      <h3>Step 7: The Restart Protocol</h3>
+      <p>Prime the engine 3 or 4 times if it has a primer bulb. Switch to full choke. Pull the cord. It will take a few more pulls than usual because the fuel pump (if equipped) needs to refill the dry bowl. It will likely sputter, threaten to die, and then catch. Let it run. Once it accepts throttle without backfiring, switch off the choke. Let the engine run at high idle for five minutes. This burns off the residual cleaner in the passages and circulates the new stabilized fuel.</p>
+
+      <h2>Frequently Asked Questions (FAQ)</h2>
+      <h3>How long does it take for gas to go bad in a lawn mower?</h3>
+      <p>Pump gas with ethanol can start degrading in as little as 30 days, especially in hot, humid conditions. Without a fuel stabilizer, the volatile compounds evaporate, leaving behind moisture and varnish. Untreated gas older than 90 days is the primary cause of most small engine no-starts.</p>
+      
+      <h3>Can I just add fresh gas to dilute the bad gas instead of draining it?</h3>
+      <p>You can, but it's a gamble that rarely pays off. If the old fuel is only slightly stale, topping off with fresh premium might get you through the season. However, if the fuel has already phase-separated or turned dark, dilution won't dissolve the existing sticky varnish already formed in the carburetor jets. A full drain is the safer repair.</p>
+      
+      <h3>Is it safe to dump old lawnmower gas on the ground or down a drain?</h3>
+      <p>Absolutely not. It's illegal and environmentally toxic. You must collect the contaminated fuel in a sealed container. Your local municipal waste facility or auto parts store will usually accept it for hazardous waste disposal. Never mix it with used oil unless specifically instructed, as it contaminates the recycling stream.</p>
+
+      <!-- Safety blockquote -->
+      <blockquote>
+        <p><strong>⚠️ Fuel Fire Hazard:</strong> Gasoline vapors are heavier than air and travel along the floor to ignition sources like water heater pilot lights, furnace burners, or electrical sparks. Perform all fuel draining and carburetor work outdoors, away from any potential flame or spark source. Have a fire extinguisher rated for flammable liquids (Class B) within reach. Do not smoke anywhere near the work area.</p>
+      </blockquote>
+
+      <!-- E-E-A-T About the Author Box -->
+      <div class="author-box">
+        <h4>About the Author</h4>
+        <p>Tool & Engine Pro is dedicated to providing high-quality, practical small engine repair and tool maintenance guidance. Every article is written by our team of hands-on mechanical enthusiasts to help you troubleshoot your equipment safely and efficiently at home.</p>
+      </div>
+    </div>
+  </main>
+
+  <!-- FOOTER (identical to homepage) -->
+  <footer class="site-footer">
+    <div class="container">
+      <p class="footer-copyright">© 2026 Tool & Engine Pro. All rights reserved.</p>
+      <ul class="footer-links">
+        <li><a href="/about-us">About Us</a></li>
+        <li><a href="/contact">Contact Us</a></li>
+        <li><a href="/privacy-policy">Privacy Policy</a></li>
+        <li><a href="/term-of-service">Terms of Service</a></li>
+      </ul>
+    </div>
+  </footer>
+</body>
+</html>
