@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+  <title>How to Replace a Worn Belt on a Riding Mower Deck | Tool & Engine Pro</title>
+  <meta name="description" content="Step-by-step guide to replacing a worn or broken belt on a riding mower deck. Includes belt routing, pulley cleaning, idler inspection, and tension deflection test.">
+  <style>
+    /* ----- Global Reset & Variables (identical to all site pages) ----- */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+      background-color: #FFFFFF;
+      color: #333333;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    :root {
+      --white: #FFFFFF;
+      --charcoal: #333333;
+      --accent: #2c3e50;
+      --accent-hover: #3e5a6b;
+      --light-gray: #f8f9fa;
+      --border-light: #e9ecef;
+      --text-muted: #4a5568;
+    }
+
+    a {
+      text-decoration: none;
+      color: var(--accent);
+      transition: opacity 0.2s ease, color 0.2s;
+    }
+
+    a:hover {
+      opacity: 0.8;
+      text-decoration: underline;
+    }
+
+    ul, ol {
+      padding-left: 1.8rem;
+      margin-bottom: 1.5rem;
+    }
+
+    ul li, ol li {
+      font-size: 1.05rem;
+      line-height: 1.7;
+      margin-bottom: 0.5rem;
+      color: var(--charcoal);
+    }
+
+    ul {
+      list-style: disc;
+    }
+
+    ol {
+      list-style: decimal;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0,0,0,0);
+      white-space: nowrap;
+      border-width: 0;
+    }
+
+    /* ----- Header & Navigation (identical structure) ----- */
+    .site-header {
+      background-color: var(--white);
+      border-bottom: 1px solid var(--border-light);
+      padding: 1rem 0;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    .header-inner {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .site-title {
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: var(--accent);
+      letter-spacing: -0.5px;
+      line-height: 1.2;
+    }
+
+    .nav-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.8rem;
+      align-items: center;
+    }
+
+    .nav-links a {
+      color: var(--charcoal);
+      font-weight: 500;
+      font-size: 1rem;
+      padding: 0.25rem 0;
+      border-bottom: 2px solid transparent;
+      transition: border-color 0.2s, color 0.2s;
+    }
+
+    .nav-links a:hover {
+      color: var(--accent);
+      border-bottom-color: var(--accent);
+      text-decoration: none;
+      opacity: 1;
+    }
+
+    @media (max-width: 700px) {
+      .header-inner {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.8rem;
+      }
+      .nav-links {
+        gap: 1.2rem;
+        flex-wrap: wrap;
+      }
+      .site-title {
+        font-size: 1.6rem;
+      }
+    }
+
+    /* ----- READABILITY CONTAINER (max-width: 800px) ----- */
+    .page-content {
+      padding: 2rem 1rem 3rem;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    /* Breadcrumbs */
+    .breadcrumb {
+      font-size: 0.85rem;
+      margin-bottom: 1.5rem;
+      color: var(--text-muted);
+    }
+
+    .breadcrumb a {
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .breadcrumb a:hover {
+      text-decoration: underline;
+    }
+
+    .breadcrumb span {
+      margin: 0 0.3rem;
+    }
+
+    /* H1 Title */
+    .page-content h1 {
+      font-size: 2.4rem;
+      font-weight: 700;
+      color: var(--accent);
+      margin-bottom: 0.75rem;
+      line-height: 1.3;
+    }
+
+    /* Author Byline */
+    .author-byline {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      margin-bottom: 2rem;
+      padding-bottom: 1rem;
+      border-bottom: 1px solid var(--border-light);
+    }
+
+    /* Paragraphs */
+    .page-content p {
+      font-size: 1.05rem;
+      line-height: 1.7;
+      margin-bottom: 1.5rem;
+      color: var(--charcoal);
+    }
+
+    /* Headings */
+    .page-content h2 {
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: var(--accent);
+      margin: 2.5rem 0 1rem;
+      line-height: 1.35;
+    }
+
+    .page-content h3 {
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: var(--accent);
+      margin: 2rem 0 0.75rem;
+      line-height: 1.4;
+    }
+
+    /* Blockquote (Safety/Pro Tips) */
+    .page-content blockquote {
+      margin: 1.8rem 0;
+      padding: 1.2rem 1.8rem;
+      background-color: var(--light-gray);
+      border-left: 4px solid var(--accent);
+      font-style: italic;
+      color: var(--charcoal);
+      border-radius: 0 6px 6px 0;
+    }
+
+    .page-content blockquote p {
+      margin-bottom: 0;
+    }
+
+    /* ----- Responsive HTML Table Styling ----- */
+    .responsive-table-wrapper {
+      overflow-x: auto;
+      margin: 1.8rem 0;
+    }
+
+    .diagnostic-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.95rem;
+      min-width: 500px;
+    }
+
+    .diagnostic-table th {
+      background-color: var(--accent);
+      color: var(--white);
+      font-weight: 600;
+      padding: 12px 16px;
+      text-align: left;
+      border: 1px solid #2c3e50;
+    }
+
+    .diagnostic-table td {
+      padding: 12px 16px;
+      border: 1px solid var(--border-light);
+      color: var(--charcoal);
+      vertical-align: top;
+    }
+
+    .diagnostic-table tr {
+      background-color: var(--white);
+    }
+
+    .diagnostic-table tr:nth-child(even) {
+      background-color: var(--light-gray);
+    }
+
+    /* Checklist Styling (Material/Tool Checklist) */
+    .checklist-list {
+      list-style: none;
+      padding-left: 0;
+    }
+    .checklist-list li {
+      padding-left: 1.5rem;
+      position: relative;
+      margin-bottom: 0.6rem;
+    }
+    .checklist-list li::before {
+      content: "▹";
+      color: var(--accent);
+      font-weight: bold;
+      position: absolute;
+      left: 0;
+    }
+
+    /* E-E-A-T Box */
+    .author-box {
+      margin-top: 3rem;
+      padding: 1.8rem 2rem;
+      background-color: var(--light-gray);
+      border: 1px solid var(--border-light);
+      border-radius: 8px;
+    }
+
+    .author-box h4 {
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: var(--accent);
+      margin-bottom: 0.75rem;
+    }
+
+    .author-box p {
+      font-size: 1rem;
+      line-height: 1.6;
+      margin-bottom: 0;
+      color: var(--charcoal);
+    }
+
+    /* Safety Note Styling */
+    .safety-note {
+      background-color: #fef8e7;
+      border-left: 4px solid #e67e22;
+      padding: 1rem 1.5rem;
+      margin: 1.5rem 0;
+      border-radius: 0 6px 6px 0;
+    }
+    .safety-note p {
+      margin-bottom: 0;
+      font-weight: 500;
+      color: #a04000;
+    }
+
+    /* Pro Tip styling */
+    .pro-tip {
+      background-color: #e8f4fd;
+      border-left: 4px solid #2c3e50;
+      padding: 1rem 1.5rem;
+      margin: 1.5rem 0;
+      border-radius: 0 6px 6px 0;
+    }
+    .pro-tip p {
+      margin-bottom: 0;
+    }
+
+    /* ----- Footer (identical across site) ----- */
+    .site-footer {
+      background-color: var(--white);
+      padding: 2rem 1rem;
+      text-align: center;
+      border-top: 1px solid var(--border-light);
+      margin-top: 1rem;
+    }
+
+    .footer-copyright {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      margin-bottom: 1.2rem;
+    }
+
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .footer-links a {
+      color: var(--charcoal);
+      font-weight: 500;
+      font-size: 0.95rem;
+      text-decoration: none;
+    }
+
+    .footer-links a:hover {
+      color: var(--accent);
+      text-decoration: underline;
+    }
+
+    @media (max-width: 600px) {
+      .page-content {
+        padding: 1.5rem 1rem 2.5rem;
+      }
+      .page-content h1 {
+        font-size: 2rem;
+      }
+      .page-content h2 {
+        font-size: 1.5rem;
+      }
+      .page-content h3 {
+        font-size: 1.25rem;
+      }
+      .author-box {
+        padding: 1.2rem;
+      }
+      .footer-links {
+        gap: 1.2rem;
+        flex-direction: column;
+        align-items: center;
+      }
+      .responsive-table-wrapper {
+        margin: 1rem 0;
+      }
+      .diagnostic-table th,
+      .diagnostic-table td {
+        padding: 8px 12px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- HEADER & NAVIGATION (identical across site) -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="site-title">Tool & Engine Pro</div>
+      <nav aria-label="Main navigation">
+        <ul class="nav-links">
+          <li><a href="/">Home</a></li>
+          <li><a href="/small-engine-troubleshooting">Small Engine Troubleshooting</a></li>
+          <li><a href="/tool-maintenance">Tool Maintenance</a></li>
+          <li><a href="/contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- READABILITY CONTAINER (max-width 800px) -->
+    <article class="page-content">
+      <!-- Breadcrumbs -->
+      <div class="breadcrumb">
+        <a href="/">Home</a> <span>›</span>
+        <a href="/tool-maintenance">Tool Maintenance & Repair</a> <span>›</span>
+        <span>How to Replace a Worn Belt on a Riding Mower Deck</span>
+      </div>
+
+      <!-- H1 Title -->
+      <h1>How to Replace a Worn Belt on a Riding Mower Deck</h1>
+      
+      <!-- Author Byline -->
+      <div class="author-byline">
+        Written by: Tool & Engine Pro Team | Updated: June 2026
+      </div>
+
+      <!-- Article Body -->
+      <p>
+        You engage the PTO lever, hear the engine lug down, and a puff of blue smoke rolls out from under the footboard. The smell hits you next—hot rubber, acrid and unmistakable. The blades aren't spinning. You've just smoked a deck belt. A worn, stretched, or glazed belt doesn't just quit quietly. It slips, overheats, and snaps at the worst possible moment, usually halfway through the first spring mow when the grass is thick and wet. Replacing it is a rite of passage for any riding mower owner, and the good news is this: you don't need a dealer service bay. You need the right belt, a systematic routing diagram, and the willingness to get underneath the chassis. This guide walks you through a full deck belt replacement with the mechanical precision it deserves—no shortcuts, no guesswork.
+      </p>
+
+      <div class="safety-note">
+        <p>⚠ CRITICAL SAFETY: Always remove the ignition key, disconnect the spark plug wire, and set the parking brake before working under a riding mower. Use jack stands—never rely on the mower's deck lift or a hydraulic jack alone to support the machine.</p>
+      </div>
+
+      <h2>The Component Overview</h2>
+      <p>
+        The deck belt is the critical power transfer link between the engine's PTO clutch pulley and the spindle pulleys that spin your cutting blades. On most consumer-grade riders—John Deere, Cub Cadet, Husqvarna, Troy-Bilt—this is a single, long serpentine belt that snakes around an idler pulley system. The idler arm is spring-loaded. It maintains constant tension on the belt to prevent slip under load. When the belt wears, two things happen: the V-shaped profile rounds over, and the internal cords stretch. A rounded belt rides deeper in the pulley groove, bottoming out instead of wedging against the sidewalls. That's when slip happens. The idler spring can only compensate so far. Once the belt stretches beyond the spring's travel, you lose tension and the belt glazes over from friction heat. You're not just replacing a rubber loop—you're restoring the designed friction coefficient and tension spec of the entire cutting drivetrain.
+      </p>
+
+      <h2>The Material/Tool Checklist</h2>
+      <p>
+        Before you crawl under the mower, gather everything. A mid-repair parts run means leaving the machine disassembled and losing your mental routing map.
+      </p>
+      <ul class="checklist-list">
+        <li><strong>OEM or Kevlar replacement belt:</strong> Do not guess. Cross-reference the part number off the old belt or the model/serial tag under the seat. A belt that's half an inch too long will slip from day one.</li>
+        <li><strong>1/2-inch breaker bar or ratchet with 6-point sockets:</strong> Typically 9/16" and 5/8". A deep well socket helps clear idler pulley bolts.</li>
+        <li><strong>Torque wrench:</strong> Re-tightening pulley bolts to spec is non-negotiable. Loose pulleys wobble and shred belts.</li>
+        <li><strong>Pry bar or long-handled 2x4:</strong> For easing the belt off the PTO pulley without gouging the aluminum.</li>
+        <li><strong>Impact wrench (optional but transformative):</strong> The PTO pulley bolt can be stubborn. Manual removal is doable, but an impact saves knuckles.</li>
+        <li><strong>Mechanic's gloves:</strong> Cut-resistant. The belt path is tight and the old belt may have embedded steel cords from wear.</li>
+        <li><strong>Stiff-bristled wire brush and compressed air:</strong> To clean out compacted grass from the pulley grooves.</li>
+        <li><strong>The mower deck routing diagram:</strong> Take a photo with your phone before you remove the old belt. Or print the diagram from the manual. Do not rely on memory.</li>
+        <li><strong>Lifting equipment:</strong> Floor jack, jack stands, or ramps. Never rely solely on the mower's deck lift to hold the deck up.</li>
+      </ul>
+
+      <h2>The Step-by-Step Guide</h2>
+      
+      <h3>Step 1: Chock, Lift, and Disable</h3>
+      <p>
+        Park the mower on a level concrete surface. Set the parking brake. Remove the ignition key and place it in your pocket. Disconnect the spark plug wire from the plug and tuck it away. Block the rear tires with wheel chocks in both directions. Raise the front of the mower using a floor jack under the frame crossmember—never under the mower deck itself—and set jack stands securely under the frame rails. The deck should be at its highest cutting height setting for maximum clearance. You'll be working underneath, so the machine must be absolutely immobile.
+      </p>
+
+      <h3>Step 2: Photograph the Routing Path</h3>
+      <p>
+        Grab your phone. Get down at deck level. Take three photos from different angles showing how the belt weaves around the pulleys. Note which side of the belt runs against the smooth idler pulleys (the flat back side) and which side rides in the V-grooves of the spindle pulleys (the ribbed inner side). A routing mistake here flips the belt inside out and destroys it in minutes. Look closely at the idler tension arm. Note the direction the spring pulls. If the spring is extended when the PTO is disengaged, it's a tension-idler system. Note the spring's anchor point.
+      </p>
+
+      <h3>Step 3: Release the Tension and Extract the Old Belt</h3>
+      <p>
+        Locate the idler pulley on the spring-loaded arm. Grab the arm—or use your pry bar—and rotate it against the spring tension to create slack in the belt. Hold it there. With your free hand, slip the belt off the nearest spindle pulley. Release the idler slowly. The belt is now loose. Work the belt off the remaining pulleys and down around the PTO clutch on the engine crankshaft. If the PTO pulley clearance is tight, you may need to drop the deck slightly by adjusting the deck lift linkage or removing the deck entirely on some models. Pull the belt free. Lay it flat on the floor. Hold the new belt next to it. They should match exactly. A worn belt can stretch up to an inch longer—don't mistake that elongation for the correct size.
+      </p>
+
+      <h3>Step 4: Pulley Groove Reconditioning</h3>
+      <p>
+        This step is skipped constantly. It's why new belts squeal and die young. Every pulley groove on the deck—the spindle pulleys, the idler flat pulleys, and the PTO drive pulley—is packed with a hard, glossy layer of rubber transfer. This is melted belt residue from the previous failure. Use your wire brush to scrape it out. Be thorough. The V-grooves must be clean, bare metal. A shiny, glazed surface has a low friction coefficient and will polish a new belt to glass in under ten hours. For stubborn deposits, a flat-blade screwdriver used carefully as a scraper works, but don't gouge the aluminum. Blow the pulleys clean with compressed air. Spray with brake cleaner and wipe dry if you want surgical cleanliness.
+      </p>
+
+      <div class="pro-tip">
+        <p>💡 PRO TIP: After cleaning the pulleys, rub your fingertip around the inside of each V-groove. A smooth, polished feel means you need more aggressive brushing. You want a slightly "drag" sensation—that's the raw metal surface that grips the belt.</p>
+      </div>
+
+      <h3>Step 5: Inspect the Idler Assembly</h3>
+      <p>
+        Before you route a new belt, test the idler arm. It should pivot freely with no side-to-side wobble. If the arm is loose on its mounting bolt, the bushing is worn out. A wobbly idler throws the belt alignment off and rubs the belt edge against the arm. Also, spin the idler pulley itself by hand. It should be silent and smooth. A rough, grinding bearing is about to seize. Replace the idler pulley now while the belt is off. It's a cheap insurance part that takes out a new belt when it locks up. Check the tension spring, too. If it's stretched out with gaps between the coils or shows rust pitting at the hooks, replace it. Weak springs create weak tension.
+      </p>
+
+      <!-- RESPONSIVE HTML TABLE (Diagnostic Matrix) -->
+      <h3>Riding Mower Deck Belt Symptom Matrix</h3>
+      <div class="responsive-table-wrapper">
+        <table class="diagnostic-table">
+          <thead>
+            <tr>
+              <th>Symptom</th>
+              <th>Potential Cause</th>
+              <th>Immediate Fix</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Belt chirps or squeals constantly while engaged</td>
+              <td>Glazed pulley grooves or wrong belt profile</td>
+              <td>Clean pulleys aggressively with a wire brush. Verify belt is the correct OEM cross-section.</td>
+            </tr>
+            <tr>
+              <td>Belt flips over or jumps off within minutes of installation</td>
+              <td>Incorrect routing; belt is running on the wrong side of a keeper or pulley</td>
+              <td>Stop immediately. Compare routing to the deck diagram. A flipped belt delaminates rapidly.</td>
+            </tr>
+            <tr>
+              <td>Deck vibrates heavily after belt replacement</td>
+              <td>Bent spindle pulley or separated belt cord</td>
+              <td>Check all pulleys for runout by spinning them by hand. A wobbling pulley must be replaced.</td>
+            </tr>
+            <tr>
+              <td>Belt smokes and slips only in heavy grass</td>
+              <td>Weak idler tension spring or stretched belt seating too deep in grooves</td>
+              <td>Replace the tension spring. Verify the belt sits proud of the pulley rim, not flush with it.</td>
+            </tr>
+            <tr>
+              <td>New belt shreds an edge within the first 5 mows</td>
+              <td>Sharp burr on a pulley stamping or misaligned belt keeper</td>
+              <td>Inspect all pulley edges and keeper brackets for nicks. File smooth. Check alignment with a straightedge.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>Step 6: Route the New Belt</h3>
+      <p>
+        Follow your photo. Route the belt around the PTO drive pulley first. Then work it around the deck pulleys in sequence. The ribbed V-side of the belt always contacts the V-groove pulleys. The flat back of the belt rides against the flat idler pulleys. Pull the tension arm back, hold it, and slip the belt over the last pulley. Release the tensioner slowly. The belt should sit squarely in every groove. Walk around the deck and visually confirm the belt is centered on each pulley. A belt riding cocked to one side is misrouted or the wrong profile.
+      </p>
+
+      <h3>Step 7: Tension Verification and the Deflection Test</h3>
+      <p>
+        Engage the PTO (with the engine still off and key removed). This locks the belt into the tensioned position. Now, press down firmly with your thumb on the longest span between two pulleys. The belt should deflect no more than 1/2 inch under moderate thumb pressure. If it deflects more, the belt is too long, the spring is weak, or the routing is wrong. If it's guitar-string tight with zero deflection, the belt is too short or binding on a keeper. Disengage the PTO and recheck the routing path. Do not start the engine until this deflection check passes.
+      </p>
+
+      <h3>Step 8: Reassembly and Load Test</h3>
+      <p>
+        Lower the mower deck back to your preferred cutting height. Reconnect the spark plug wire. Start the engine and let it idle. Engage the PTO slowly and listen. A healthy belt system makes a brief scuffing sound as the belt seats, then goes quiet. Let it run for 30 seconds. Disengage. Engage again. Check for the smell of hot rubber. Cut a test strip of grass under load. Disengage the PTO, kill the engine, and feel the belt immediately. It should be warm, not hot. A belt you can't hold comfortably needs a tension or pulley alignment diagnosis.
+      </p>
+
+      <h3>Step 9: Post-Installation Re-Tension</h3>
+      <p>
+        A new belt stretches slightly during its first hour of use. After the first mowing session, re-check the deflection. If the belt now deflects more than 1/2 inch, adjust the tension if your deck has an adjustable idler stop. Most consumer decks don't—they rely on spring tension alone. If the spring is healthy, it will automatically take up the initial stretch. If the spring is borderline, this is when the belt starts slipping. A follow-up check after the first mow catches this before it glazes the belt.
+      </p>
+
+      <h2>Frequently Asked Questions (FAQ)</h2>
+      
+      <p><strong>Can I use a generic Kevlar belt from the auto parts store instead of the OEM part?</strong><br>
+      Only if the belt has the exact same cross-section profile, not just the same length. Mower deck belts are often a deeper "B" or "C" section V-belt profile with specific inside-edge geometry. Automotive belts are typically "A" section. The wrong profile rides too high or too low in the groove, overheating and failing rapidly. Cross-reference the OEM part number to an equivalent industrial belt specification.</p>
+
+      <p><strong>Why did my new belt snap after only three mows?</strong><br>
+      Something seized. The most common culprit is a failing spindle bearing that tightened up under heat and load, jerking the belt to a stop. Check every blade spindle for free rotation and any roughness. A seized spindle pulley stops instantly; the PTO pulley keeps spinning, and the belt becomes the fuse. Also check for a cracked idler pulley bracket flexing under tension.</p>
+
+      <p><strong>Do I have to remove the entire mower deck to change the belt?</strong><br>
+      On most modern riding mowers, no—but it depends on the model. Many decks have a belt replacement access port or enough clearance above the deck to snake the belt around the PTO pulley with the deck fully raised. However, on some zero-turn models or older tractors, dropping the deck completely is faster and prevents cross-threading the belt through multiple keeper loops. Check your manual. If you're fighting the belt for more than 15 minutes, dropping the deck is the smarter path.</p>
+
+      <!-- E-E-A-T Trust Box -->
+      <div class="author-box">
+        <h4>About the Author</h4>
+        <p>Tool & Engine Pro is dedicated to providing high-quality, practical small engine repair and tool maintenance guidance. Every article is written by our team of hands-on mechanical enthusiasts to help you troubleshoot your equipment safely and efficiently at home.</p>
+      </div>
+    </article>
+  </main>
+
+  <!-- FOOTER (identical to homepage) -->
+  <footer class="site-footer">
+    <div class="container">
+      <p class="footer-copyright">© 2026 Tool & Engine Pro. All rights reserved.</p>
+      <ul class="footer-links">
+        <li><a href="/about-us">About Us</a></li>
+        <li><a href="/contact">Contact Us</a></li>
+        <li><a href="/privacy-policy">Privacy Policy</a></li>
+        <li><a href="/term-of-service">Terms of Service</a></li>
+      </ul>
+    </div>
+  </footer>
+</body>
+</html>
