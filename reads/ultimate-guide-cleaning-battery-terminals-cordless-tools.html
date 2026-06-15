@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+  <title>Ultimate Guide to Cleaning Battery Terminals on Cordless Tools | Tool & Engine Pro</title>
+  <meta name="description" content="Step-by-step guide to cleaning cordless tool battery terminals. Remove oxidation, carbon tracking, and grime to restore power transfer and fix intermittent connection problems.">
+  <style>
+    /* ----- Global Reset & Variables (identical to all site pages) ----- */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+      background-color: #FFFFFF;
+      color: #333333;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    :root {
+      --white: #FFFFFF;
+      --charcoal: #333333;
+      --accent: #2c3e50;
+      --accent-hover: #3e5a6b;
+      --light-gray: #f8f9fa;
+      --border-light: #e9ecef;
+      --text-muted: #4a5568;
+    }
+
+    a {
+      text-decoration: none;
+      color: var(--accent);
+      transition: opacity 0.2s ease, color 0.2s;
+    }
+
+    a:hover {
+      opacity: 0.8;
+      text-decoration: underline;
+    }
+
+    ul, ol {
+      padding-left: 1.8rem;
+      margin-bottom: 1.5rem;
+    }
+
+    ul li, ol li {
+      font-size: 1.05rem;
+      line-height: 1.7;
+      margin-bottom: 0.5rem;
+      color: var(--charcoal);
+    }
+
+    ul {
+      list-style: disc;
+    }
+
+    ol {
+      list-style: decimal;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0,0,0,0);
+      white-space: nowrap;
+      border-width: 0;
+    }
+
+    /* ----- Header & Navigation (identical structure) ----- */
+    .site-header {
+      background-color: var(--white);
+      border-bottom: 1px solid var(--border-light);
+      padding: 1rem 0;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    .header-inner {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .site-title {
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: var(--accent);
+      letter-spacing: -0.5px;
+      line-height: 1.2;
+    }
+
+    .nav-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.8rem;
+      align-items: center;
+    }
+
+    .nav-links a {
+      color: var(--charcoal);
+      font-weight: 500;
+      font-size: 1rem;
+      padding: 0.25rem 0;
+      border-bottom: 2px solid transparent;
+      transition: border-color 0.2s, color 0.2s;
+    }
+
+    .nav-links a:hover {
+      color: var(--accent);
+      border-bottom-color: var(--accent);
+      text-decoration: none;
+      opacity: 1;
+    }
+
+    @media (max-width: 700px) {
+      .header-inner {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.8rem;
+      }
+      .nav-links {
+        gap: 1.2rem;
+        flex-wrap: wrap;
+      }
+      .site-title {
+        font-size: 1.6rem;
+      }
+    }
+
+    /* ----- READABILITY CONTAINER (max-width: 800px) ----- */
+    .page-content {
+      padding: 2rem 1rem 3rem;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    /* Breadcrumbs */
+    .breadcrumb {
+      font-size: 0.85rem;
+      margin-bottom: 1.5rem;
+      color: var(--text-muted);
+    }
+
+    .breadcrumb a {
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .breadcrumb a:hover {
+      text-decoration: underline;
+    }
+
+    .breadcrumb span {
+      margin: 0 0.3rem;
+    }
+
+    /* H1 Title */
+    .page-content h1 {
+      font-size: 2.4rem;
+      font-weight: 700;
+      color: var(--accent);
+      margin-bottom: 0.75rem;
+      line-height: 1.3;
+    }
+
+    /* Author Byline */
+    .author-byline {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      margin-bottom: 2rem;
+      padding-bottom: 1rem;
+      border-bottom: 1px solid var(--border-light);
+    }
+
+    /* Paragraphs */
+    .page-content p {
+      font-size: 1.05rem;
+      line-height: 1.7;
+      margin-bottom: 1.5rem;
+      color: var(--charcoal);
+    }
+
+    /* Headings */
+    .page-content h2 {
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: var(--accent);
+      margin: 2.5rem 0 1rem;
+      line-height: 1.35;
+    }
+
+    .page-content h3 {
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: var(--accent);
+      margin: 2rem 0 0.75rem;
+      line-height: 1.4;
+    }
+
+    /* Blockquote (Safety/Pro Tips) */
+    .page-content blockquote {
+      margin: 1.8rem 0;
+      padding: 1.2rem 1.8rem;
+      background-color: var(--light-gray);
+      border-left: 4px solid var(--accent);
+      font-style: italic;
+      color: var(--charcoal);
+      border-radius: 0 6px 6px 0;
+    }
+
+    .page-content blockquote p {
+      margin-bottom: 0;
+    }
+
+    /* ----- Responsive HTML Table Styling ----- */
+    .responsive-table-wrapper {
+      overflow-x: auto;
+      margin: 1.8rem 0;
+    }
+
+    .diagnostic-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.95rem;
+      min-width: 500px;
+    }
+
+    .diagnostic-table th {
+      background-color: var(--accent);
+      color: var(--white);
+      font-weight: 600;
+      padding: 12px 16px;
+      text-align: left;
+      border: 1px solid #2c3e50;
+    }
+
+    .diagnostic-table td {
+      padding: 12px 16px;
+      border: 1px solid var(--border-light);
+      color: var(--charcoal);
+      vertical-align: top;
+    }
+
+    .diagnostic-table tr {
+      background-color: var(--white);
+    }
+
+    .diagnostic-table tr:nth-child(even) {
+      background-color: var(--light-gray);
+    }
+
+    /* Checklist Styling (Material/Tool Checklist) */
+    .checklist-list {
+      list-style: none;
+      padding-left: 0;
+    }
+    .checklist-list li {
+      padding-left: 1.5rem;
+      position: relative;
+      margin-bottom: 0.6rem;
+    }
+    .checklist-list li::before {
+      content: "▹";
+      color: var(--accent);
+      font-weight: bold;
+      position: absolute;
+      left: 0;
+    }
+
+    /* E-E-A-T Box */
+    .author-box {
+      margin-top: 3rem;
+      padding: 1.8rem 2rem;
+      background-color: var(--light-gray);
+      border: 1px solid var(--border-light);
+      border-radius: 8px;
+    }
+
+    .author-box h4 {
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: var(--accent);
+      margin-bottom: 0.75rem;
+    }
+
+    .author-box p {
+      font-size: 1rem;
+      line-height: 1.6;
+      margin-bottom: 0;
+      color: var(--charcoal);
+    }
+
+    /* Warning Note Styling */
+    .warning-note {
+      background-color: #fef8e7;
+      border-left: 4px solid #e67e22;
+      padding: 1rem 1.5rem;
+      margin: 1.5rem 0;
+      border-radius: 0 6px 6px 0;
+    }
+    .warning-note p {
+      margin-bottom: 0;
+      font-weight: 500;
+      color: #a04000;
+    }
+
+    /* Pro Tip styling */
+    .pro-tip {
+      background-color: #e8f4fd;
+      border-left: 4px solid #2c3e50;
+      padding: 1rem 1.5rem;
+      margin: 1.5rem 0;
+      border-radius: 0 6px 6px 0;
+    }
+    .pro-tip p {
+      margin-bottom: 0;
+    }
+
+    /* ----- Footer (identical across site) ----- */
+    .site-footer {
+      background-color: var(--white);
+      padding: 2rem 1rem;
+      text-align: center;
+      border-top: 1px solid var(--border-light);
+      margin-top: 1rem;
+    }
+
+    .footer-copyright {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      margin-bottom: 1.2rem;
+    }
+
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .footer-links a {
+      color: var(--charcoal);
+      font-weight: 500;
+      font-size: 0.95rem;
+      text-decoration: none;
+    }
+
+    .footer-links a:hover {
+      color: var(--accent);
+      text-decoration: underline;
+    }
+
+    @media (max-width: 600px) {
+      .page-content {
+        padding: 1.5rem 1rem 2.5rem;
+      }
+      .page-content h1 {
+        font-size: 2rem;
+      }
+      .page-content h2 {
+        font-size: 1.5rem;
+      }
+      .page-content h3 {
+        font-size: 1.25rem;
+      }
+      .author-box {
+        padding: 1.2rem;
+      }
+      .footer-links {
+        gap: 1.2rem;
+        flex-direction: column;
+        align-items: center;
+      }
+      .responsive-table-wrapper {
+        margin: 1rem 0;
+      }
+      .diagnostic-table th,
+      .diagnostic-table td {
+        padding: 8px 12px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- HEADER & NAVIGATION (identical across site) -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="site-title">Tool & Engine Pro</div>
+      <nav aria-label="Main navigation">
+        <ul class="nav-links">
+          <li><a href="/">Home</a></li>
+          <li><a href="/small-engine-troubleshooting">Small Engine Troubleshooting</a></li>
+          <li><a href="/tool-maintenance">Tool Maintenance</a></li>
+          <li><a href="/contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- READABILITY CONTAINER (max-width 800px) -->
+    <article class="page-content">
+      <!-- Breadcrumbs -->
+      <div class="breadcrumb">
+        <a href="/">Home</a> <span>›</span>
+        <a href="/tool-maintenance">Tool Maintenance & Repair</a> <span>›</span>
+        <span>The Ultimate Guide to Cleaning Battery Terminals on Cordless Tools</span>
+      </div>
+
+      <!-- H1 Title -->
+      <h1>The Ultimate Guide to Cleaning Battery Terminals on Cordless Tools</h1>
+      
+      <!-- Author Byline -->
+      <div class="author-byline">
+        Written by: Tool & Engine Pro Team | Updated: June 2026
+      </div>
+
+      <!-- Article Body -->
+      <p>
+        You slide a fully charged 5Ah pack into your impact driver, squeeze the trigger, and get a pathetic half-turn before the LED light flickers and dies. No power. No fault lights on the battery—just silence. You pull the pack, reseat it with a firm smack, try again. Same result. The frustration is instant and visceral. Before you condemn an expensive lithium-ion pack to the recycling bin, look at the interface where the battery meets the tool. Those small, silver-plated terminals are the entire electrical pathway. When they oxidize, arc, or accumulate a micro-layer of resistive grime, the Battery Management System (BMS) can't read the cell voltages accurately, and the tool either starves for current or refuses to run entirely. This is a contact resistance problem. Fixing it requires no expensive parts—just a disciplined cleaning methodology and an understanding of what you're scraping off.
+      </p>
+
+      <h2>The Component Overview</h2>
+      <p>
+        Cordless tool battery connections rely on a multi-pin sliding contact system. On a typical slide-pack battery, you'll see five to seven flat-blade or leaf-spring terminals. Two are the heavy-gauge power terminals (positive and negative) carrying high discharge current—sometimes over 60 amps in modern brushless tools. The remaining terminals are logic-level sense leads: a thermistor connection for temperature monitoring, a single-wire communication line, and individual cell-balancing taps. The tool's electronics don't just demand power; they interrogate the battery. The BMS checks cell balance, pack temperature, and state-of-charge before it authorizes the MOSFETs to release current. A thin layer of oxide or carbon tracking across these sense terminals corrupts that handshake. The tool doesn't see a dead battery—it sees nonsense data and locks out. Corrosion is rare on lithium-ion because there's no acid outgassing like a car battery, but fretting wear (micro-motion abrasion from vibration) and arc pitting from hot-swapping high-demand tools create black, resistive carbon deposits. Cleaning these restores the low-resistance pathway and the data integrity.
+      </p>
+
+      <div class="warning-note">
+        <p>⚠ ELECTRICAL SAFETY: Before cleaning any battery terminals, remove the battery from the tool and charger. Press and hold the battery's fuel gauge button for 5 seconds to discharge residual capacitor voltage. Shorting sense terminals while the BMS is active can destroy the microcontroller.</p>
+      </div>
+
+      <h2>The Material/Tool Checklist</h2>
+      <p>
+        Don't reach for sandpaper first. Abrasive grit embeds in the silver or gold plating, creating deep scratches that accelerate future fouling. We work from gentle to aggressive. Here's the kit:
+      </p>
+      <ul class="checklist-list">
+        <li><strong>Isopropyl alcohol (90% or higher):</strong> The primary cleaning solvent. It degreases, evaporates completely, and leaves zero residue. Avoid 70% rubbing alcohol—it's 30% water and promotes flash rust on steel spring contacts.</li>
+        <li><strong>Fiberglass scratch brush pen:</strong> A retractable pencil-style brush. The glass fibers scrape off oxide without digging into the base metal like sandpaper does.</li>
+        <li><strong>DeoxIT D5 or D100L contact cleaner and conditioner:</strong> D5 is a 5% solution for general cleaning. D100L is the pure concentrate for severe oxidation. This isn't just a solvent—it chemically reduces the oxide layer and leaves a protective film that prevents re-oxidation.</li>
+        <li><strong>Cotton swabs and lint-free foam swabs:</strong> Lint from cotton balls or paper towels snags on connector pins and creates a bridge for arcing.</li>
+        <li><strong>A soft brass wire brush:</strong> Small, toothbrush-sized. Brass is softer than the nickel or silver plating and won't strip it.</li>
+        <li><strong>Compressed air canister:</strong> For blowing out debris. Canned air only—shop air can contain oil mist.</li>
+        <li><strong>Dielectric silicone grease (optional, sparingly):</strong> A pinhead-sized dab on each terminal after cleaning prevents future oxidation without blocking conductivity.</li>
+        <li><strong>LED headlamp or bright inspection light:</strong> You're looking for microscopic pits and hairline cracks on solder joints.</li>
+        <li><strong>Zip-ties or small pick set:</strong> For extracting impacted debris from the tool's battery receiver cavity.</li>
+      </ul>
+
+      <h2>The Step-by-Step Guide</h2>
+      
+      <h3>Step 1: Complete System De-Energization</h3>
+      <p>
+        Disconnect the battery from the tool. Disconnect the battery from the charger. Place the battery on a non-conductive, clean work surface. Press and hold the battery's fuel gauge button for 5 seconds to bleed any residual capacitive charge from the BMS board. This is a safety step: shorting the power and sense terminals with a conductive brush while the BMS is active can destroy the microcontroller. Respect the electronics.
+      </p>
+
+      <h3>Step 2: Visual Triage Under Magnification</h3>
+      <p>
+        Get your light right in there. Examine each blade terminal on the battery pack. You're looking for three distinct failure patterns. First, black carbon tracking—small black lines or pits near the edges where micro-arcing has occurred during insertion under load. Second, green or white powdery oxide—this is rare on lithium packs but appears if the tool has been stored in high humidity or subjected to condensation. Third, mechanical wear—grooves worn into the plating by the tool's spring contacts. If you see copper showing through the silver plating, the plating is breached. The terminal will still work after cleaning, but it will re-oxidize faster. Note the location of every damaged spot.
+      </p>
+
+      <h3>Step 3: Dry Mechanical Cleaning</h3>
+      <p>
+        Start dry. Take the fiberglass scratch brush and gently burnish only the blackened or oxidized spots. Stroke parallel to the length of the terminal blade, not across it. Cross-grain scratches create high-resistance micro-grooves. The goal is to flake off the brittle oxide crust without removing the underlying nickel or silver plate. Blow the loose dust away immediately with canned air. Do not use your mouth—breath moisture accelerates oxidation. For the tool side, inspect the spring-loaded receiver contacts. They're harder to access. Use a wooden toothpick or a plastic spudger to depress the spring contact, then slide a folded strip of paper soaked in alcohol between the contact and the toothpick. Release gently and pull the paper out. It'll come out gray with conductive crud.
+      </p>
+
+      <h3>Step 4: The Chemical Oxide Reduction</h3>
+      <p>
+        Here's where the DeoxIT earns its reputation. Apply a single drop of DeoxIT D5 to the battery terminal. Scrub lightly with a clean foam swab. You'll see the liquid darken as it dissolves the oxide film. DeoxIT is a true contact conditioner—it chemically lifts the oxidation layer and binds to the base metal at a molecular level. Don't flood the terminal. You don't want cleaner wicking down the blade into the battery case. That carries dissolved contaminants into the BMS board. Work it with the swab for 20 seconds, then wipe it away with a dry, clean swab. Repeat on every terminal—power, sense, thermistor, all of them. A single dirty sense pin will immobilize a pack just as surely as a failed power pin.
+      </p>
+
+      <!-- RESPONSIVE HTML TABLE (Diagnostic Matrix) -->
+      <h3>Battery Terminal Symptom Matrix</h3>
+      <div class="responsive-table-wrapper">
+        <table class="diagnostic-table">
+          <thead>
+            <tr>
+              <th>Symptom</th>
+              <th>Potential Cause</th>
+              <th>Immediate Fix</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Tool cuts out under load, battery gauge shows full</td>
+              <td>High-resistance power terminal arc pits; voltage sag triggers BMS cutoff</td>
+              <td>Clean power terminals aggressively with fiberglass brush. Apply DeoxIT D100L. Replace battery if pits are deeper than plating.</td>
+            </tr>
+            <tr>
+              <td>Charger refuses to recognize battery (no lights)</td>
+              <td>Corrupted thermistor reading from dirty sense pin</td>
+              <td>Clean the center small terminal cluster. The thermistor pin is usually marked "T" or "ID". Scrub until bright.</td>
+            </tr>
+            <tr>
+              <td>Intermittent connection; works when battery is wiggled</td>
+              <td>Worn tool-side spring contacts losing tension</td>
+              <td>Remove tool housing. Re-tension the spring clips with a small pick. Do not bend them excessively—they fatigue and snap.</td>
+            </tr>
+            <tr>
+              <td>White chalky residue on terminals</td>
+              <td>Galvanic corrosion from moisture bridging dissimilar metals</td>
+              <td>Clean with white vinegar on a swab (mild acid), rinse with alcohol, protect with DeoxIT. Store tools in a dry environment.</td>
+            </tr>
+            <tr>
+              <td>Battery terminals are melted or deformed</td>
+              <td>Overcurrent event; arcing from inserting into a tool with a stuck trigger switch</td>
+              <td>Replace the battery pack. Melted housing compromises terminal alignment and insulation. Do not attempt repair.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>Step 5: The Tool Receiver Cavity Deep Clean</h3>
+      <p>
+        The battery receiver on the tool is a crud magnet. Dust, wood chips, drywall mud, and metal shavings pack into the bottom of the slide channel. These prevent the battery from fully seating, increasing contact resistance and arcing. Blast the cavity with canned air. Then use a plastic pick—never metal—to dislodge impacted debris from the corners. Look at the bottom of the cavity. There's usually a small drain slot or weep hole. If it's plugged, moisture pools there. Clear it. Wipe the tool's terminal blades with a swab dipped in alcohol. Apply DeoxIT if you see any discoloration.
+      </p>
+
+      <div class="pro-tip">
+        <p>💡 PRO TIP: Take a photo of your battery terminals before cleaning, then compare with the photo after you finish. The difference is dramatic—dull, oxidized terminals become bright and reflective. If they still look dull after cleaning, you haven't removed all the oxide.</p>
+      </div>
+
+      <h3>Step 6: The Dielectric Grease Debate (Applied Correctly)</h3>
+      <p>
+        Dielectric grease is an insulator. Used incorrectly, it creates a barrier that forces the contacts to punch through the grease film. That causes arcing pits. But a microscopic film—a smear so thin you can barely see it—protects the freshly cleaned terminals from oxygen and moisture without impeding metal-to-metal contact. Here's the correct method: apply a half-pea-sized dot of dielectric grease to a clean swab. Rub it into the swab fibers until it's nearly invisible. Now wipe that nearly-dry swab across the terminal blades. This leaves a monomolecular protective layer. Do not glob it on. Do not pack it into the receiver cavity. Too much grease captures grit and forms a sticky, resistive paste over time.
+      </p>
+
+      <h3>Step 7: Reassembly and the Resistance Test</h3>
+      <p>
+        Slide the battery onto the tool. Do it slowly. It should seat with a smooth, positive click—no wobble, no hesitation. Run the tool under load. A variable-speed trigger drill is ideal. Pull the trigger slowly from zero to full speed. If the motor stutters or cuts out during the ramp, you still have a contact issue. Remove the battery and inspect the terminals. You should see two bright scratch lines on each blade where the tool contacts bit through the protective film. That's a perfect connection signature. If you see a single, off-center scratch line, the receiver contacts are misaligned and need realignment or replacement.
+      </p>
+
+      <h3>Step 8: Maintenance Interval and Follow-Up</h3>
+      <p>
+        This isn't a once-a-decade job. Battery terminals abrade every time you swap packs. For a pro using tools daily, clean the terminals every 60 days. For a weekend warrior, twice a year is sufficient. Mark it on the calendar—spring and fall. Whenever you clean the terminals, cycle through all your batteries and tools at once. The tool side contaminates the battery side and vice versa. Half-cleaning a system just re-infects the clean components.
+      </p>
+
+      <h2>Frequently Asked Questions (FAQ)</h2>
+      
+      <p><strong>Can I use sandpaper or a Dremel wire wheel to clean battery terminals?</strong><br>
+      No. Sandpaper leaves abrasive aluminum oxide or silicon carbide grit embedded in the plating, which creates high-resistance hot spots and accelerates arc pitting. A Dremel wire wheel is far too aggressive and will strip the plating down to bare copper in a fraction of a second. Stick to fiberglass brushes and chemical cleaners—they remove oxide without removing the protective plating.</p>
+
+      <p><strong>My battery terminals look clean and shiny but the tool still doesn't work. What else could it be?</strong><br>
+      Look at the solder joints where the terminal blades attach to the BMS circuit board inside the pack. A hairline crack in a solder joint from a drop impact creates an open circuit that looks perfectly solid to the naked eye. You'll need to open the battery case (voids warranty, be careful) and reflow the suspect joint with a soldering iron. Also check the tool's trigger switch—a burned contact there mimics a dead battery terminal.</p>
+
+      <p><strong>Is it safe to spray WD-40 on the terminals for protection?</strong><br>
+      Absolutely not. WD-40 is a penetrating solvent and water displacer, not a contact conditioner. It leaves a sticky, non-conductive residue that attracts every bit of sawdust and metal particulate in the air. Over weeks, this forms an insulating sludge on the terminals that mimics oxidation. If you want a spray protectant, use DeoxIT Shield (S5) or a dedicated contact lubricant designed for sliding electrical connections.</p>
+
+      <!-- E-E-A-T Trust Box -->
+      <div class="author-box">
+        <h4>About the Author</h4>
+        <p>Tool & Engine Pro is dedicated to providing high-quality, practical small engine repair and tool maintenance guidance. Every article is written by our team of hands-on mechanical enthusiasts to help you troubleshoot your equipment safely and efficiently at home.</p>
+      </div>
+    </article>
+  </main>
+
+  <!-- FOOTER (identical to homepage) -->
+  <footer class="site-footer">
+    <div class="container">
+      <p class="footer-copyright">© 2026 Tool & Engine Pro. All rights reserved.</p>
+      <ul class="footer-links">
+        <li><a href="/about-us">About Us</a></li>
+        <li><a href="/contact">Contact Us</a></li>
+        <li><a href="/privacy-policy">Privacy Policy</a></li>
+        <li><a href="/term-of-service">Terms of Service</a></li>
+      </ul>
+    </div>
+  </footer>
+</body>
+</html>
