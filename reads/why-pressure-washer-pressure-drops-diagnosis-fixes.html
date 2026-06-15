@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+  <title>Why Your Pressure Washer Pressure Drops: Diagnosis and Fixes | Tool & Engine Pro</title>
+  <meta name="description" content="Step-by-step diagnosis for pressure washer pressure loss. Learn to test nozzles, unloader valves, check valves, and high-pressure hoses to restore cleaning power.">
+  <style>
+    /* ----- Global Reset & Variables (identical to all site pages) ----- */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+      background-color: #FFFFFF;
+      color: #333333;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    :root {
+      --white: #FFFFFF;
+      --charcoal: #333333;
+      --accent: #2c3e50;
+      --accent-hover: #3e5a6b;
+      --light-gray: #f8f9fa;
+      --border-light: #e9ecef;
+      --text-muted: #4a5568;
+    }
+
+    a {
+      text-decoration: none;
+      color: var(--accent);
+      transition: opacity 0.2s ease, color 0.2s;
+    }
+
+    a:hover {
+      opacity: 0.8;
+      text-decoration: underline;
+    }
+
+    ul, ol {
+      padding-left: 1.8rem;
+      margin-bottom: 1.5rem;
+    }
+
+    ul li, ol li {
+      font-size: 1.05rem;
+      line-height: 1.7;
+      margin-bottom: 0.5rem;
+      color: var(--charcoal);
+    }
+
+    ul {
+      list-style: disc;
+    }
+
+    ol {
+      list-style: decimal;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0,0,0,0);
+      white-space: nowrap;
+      border-width: 0;
+    }
+
+    /* ----- Header & Navigation (identical structure) ----- */
+    .site-header {
+      background-color: var(--white);
+      border-bottom: 1px solid var(--border-light);
+      padding: 1rem 0;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    .header-inner {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .site-title {
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: var(--accent);
+      letter-spacing: -0.5px;
+      line-height: 1.2;
+    }
+
+    .nav-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.8rem;
+      align-items: center;
+    }
+
+    .nav-links a {
+      color: var(--charcoal);
+      font-weight: 500;
+      font-size: 1rem;
+      padding: 0.25rem 0;
+      border-bottom: 2px solid transparent;
+      transition: border-color 0.2s, color 0.2s;
+    }
+
+    .nav-links a:hover {
+      color: var(--accent);
+      border-bottom-color: var(--accent);
+      text-decoration: none;
+      opacity: 1;
+    }
+
+    @media (max-width: 700px) {
+      .header-inner {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.8rem;
+      }
+      .nav-links {
+        gap: 1.2rem;
+        flex-wrap: wrap;
+      }
+      .site-title {
+        font-size: 1.6rem;
+      }
+    }
+
+    /* ----- READABILITY CONTAINER (max-width: 800px) ----- */
+    .page-content {
+      padding: 2rem 1rem 3rem;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    /* Breadcrumbs */
+    .breadcrumb {
+      font-size: 0.85rem;
+      margin-bottom: 1.5rem;
+      color: var(--text-muted);
+    }
+
+    .breadcrumb a {
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .breadcrumb a:hover {
+      text-decoration: underline;
+    }
+
+    .breadcrumb span {
+      margin: 0 0.3rem;
+    }
+
+    /* H1 Title */
+    .page-content h1 {
+      font-size: 2.4rem;
+      font-weight: 700;
+      color: var(--accent);
+      margin-bottom: 0.75rem;
+      line-height: 1.3;
+    }
+
+    /* Author Byline */
+    .author-byline {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      margin-bottom: 2rem;
+      padding-bottom: 1rem;
+      border-bottom: 1px solid var(--border-light);
+    }
+
+    /* Paragraphs */
+    .page-content p {
+      font-size: 1.05rem;
+      line-height: 1.7;
+      margin-bottom: 1.5rem;
+      color: var(--charcoal);
+    }
+
+    /* Headings */
+    .page-content h2 {
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: var(--accent);
+      margin: 2.5rem 0 1rem;
+      line-height: 1.35;
+    }
+
+    .page-content h3 {
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: var(--accent);
+      margin: 2rem 0 0.75rem;
+      line-height: 1.4;
+    }
+
+    /* Blockquote (Safety/Pro Tips) */
+    .page-content blockquote {
+      margin: 1.8rem 0;
+      padding: 1.2rem 1.8rem;
+      background-color: var(--light-gray);
+      border-left: 4px solid var(--accent);
+      font-style: italic;
+      color: var(--charcoal);
+      border-radius: 0 6px 6px 0;
+    }
+
+    .page-content blockquote p {
+      margin-bottom: 0;
+    }
+
+    /* ----- Responsive HTML Table Styling ----- */
+    .responsive-table-wrapper {
+      overflow-x: auto;
+      margin: 1.8rem 0;
+    }
+
+    .diagnostic-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.95rem;
+      min-width: 500px;
+    }
+
+    .diagnostic-table th {
+      background-color: var(--accent);
+      color: var(--white);
+      font-weight: 600;
+      padding: 12px 16px;
+      text-align: left;
+      border: 1px solid #2c3e50;
+    }
+
+    .diagnostic-table td {
+      padding: 12px 16px;
+      border: 1px solid var(--border-light);
+      color: var(--charcoal);
+      vertical-align: top;
+    }
+
+    .diagnostic-table tr {
+      background-color: var(--white);
+    }
+
+    .diagnostic-table tr:nth-child(even) {
+      background-color: var(--light-gray);
+    }
+
+    /* Checklist Styling (Material/Tool Checklist) */
+    .checklist-list {
+      list-style: none;
+      padding-left: 0;
+    }
+    .checklist-list li {
+      padding-left: 1.5rem;
+      position: relative;
+      margin-bottom: 0.6rem;
+    }
+    .checklist-list li::before {
+      content: "▹";
+      color: var(--accent);
+      font-weight: bold;
+      position: absolute;
+      left: 0;
+    }
+
+    /* E-E-A-T Box */
+    .author-box {
+      margin-top: 3rem;
+      padding: 1.8rem 2rem;
+      background-color: var(--light-gray);
+      border: 1px solid var(--border-light);
+      border-radius: 8px;
+    }
+
+    .author-box h4 {
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: var(--accent);
+      margin-bottom: 0.75rem;
+    }
+
+    .author-box p {
+      font-size: 1rem;
+      line-height: 1.6;
+      margin-bottom: 0;
+      color: var(--charcoal);
+    }
+
+    /* Warning Note Styling */
+    .warning-note {
+      background-color: #fef8e7;
+      border-left: 4px solid #e67e22;
+      padding: 1rem 1.5rem;
+      margin: 1.5rem 0;
+      border-radius: 0 6px 6px 0;
+    }
+    .warning-note p {
+      margin-bottom: 0;
+      font-weight: 500;
+      color: #a04000;
+    }
+
+    /* Pro Tip styling */
+    .pro-tip {
+      background-color: #e8f4fd;
+      border-left: 4px solid #2c3e50;
+      padding: 1rem 1.5rem;
+      margin: 1.5rem 0;
+      border-radius: 0 6px 6px 0;
+    }
+    .pro-tip p {
+      margin-bottom: 0;
+    }
+
+    /* ----- Footer (identical across site) ----- */
+    .site-footer {
+      background-color: var(--white);
+      padding: 2rem 1rem;
+      text-align: center;
+      border-top: 1px solid var(--border-light);
+      margin-top: 1rem;
+    }
+
+    .footer-copyright {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      margin-bottom: 1.2rem;
+    }
+
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .footer-links a {
+      color: var(--charcoal);
+      font-weight: 500;
+      font-size: 0.95rem;
+      text-decoration: none;
+    }
+
+    .footer-links a:hover {
+      color: var(--accent);
+      text-decoration: underline;
+    }
+
+    @media (max-width: 600px) {
+      .page-content {
+        padding: 1.5rem 1rem 2.5rem;
+      }
+      .page-content h1 {
+        font-size: 2rem;
+      }
+      .page-content h2 {
+        font-size: 1.5rem;
+      }
+      .page-content h3 {
+        font-size: 1.25rem;
+      }
+      .author-box {
+        padding: 1.2rem;
+      }
+      .footer-links {
+        gap: 1.2rem;
+        flex-direction: column;
+        align-items: center;
+      }
+      .responsive-table-wrapper {
+        margin: 1rem 0;
+      }
+      .diagnostic-table th,
+      .diagnostic-table td {
+        padding: 8px 12px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- HEADER & NAVIGATION (identical across site) -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="site-title">Tool & Engine Pro</div>
+      <nav aria-label="Main navigation">
+        <ul class="nav-links">
+          <li><a href="/">Home</a></li>
+          <li><a href="/small-engine-troubleshooting">Small Engine Troubleshooting</a></li>
+          <li><a href="/tool-maintenance">Tool Maintenance</a></li>
+          <li><a href="/contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- READABILITY CONTAINER (max-width 800px) -->
+    <article class="page-content">
+      <!-- Breadcrumbs -->
+      <div class="breadcrumb">
+        <a href="/">Home</a> <span>›</span>
+        <a href="/tool-maintenance">Tool Maintenance & Repair</a> <span>›</span>
+        <span>Why Your Pressure Washer Pressure Drops: Diagnosis and Fixes</span>
+      </div>
+
+      <!-- H1 Title -->
+      <h1>Why Your Pressure Washer Pressure Drops: Diagnosis and Fixes</h1>
+      
+      <!-- Author Byline -->
+      <div class="author-byline">
+        Written by: Tool & Engine Pro Team | Updated: June 2026
+      </div>
+
+      <!-- Article Body -->
+      <p>
+        You pull the trigger, the engine surges, and a pathetic fan of mist dribbles out. No punch. No stripping power. The concrete stays dirty. A pressure washer that's lost its bite turns a two-hour cleaning job into an all-day exercise in frustration, burning fuel and water without doing the work. The frustration is real—you're standing there with a machine that's making all the right noises but delivering none of the force. Here's the hard truth: the pump doesn't create pressure. The nozzle does. The pump creates flow, and the restriction of the orifice converts that flow into pressure. A drop in pressure means the pump isn't moving enough water volume, or there's a leak in the pressurized column somewhere between the pump head and the nozzle tip. We're going to trace that column, component by component, and restore the hit.
+      </p>
+
+      <div class="warning-note">
+        <p>⚠ CRITICAL SAFETY: Pressure washer systems operate at 2000-4000 PSI. Never put your hand or body in front of the nozzle. Always relieve system pressure by pulling the trigger after shutting off the engine before disconnecting any component. High-pressure water can inject into skin—that's a medical emergency requiring amputation.</p>
+      </div>
+
+      <h2>The Component Overview</h2>
+      <p>
+        You can't fix a pressure drop by throwing parts at it. You have to think like water. The system is a simple positive-displacement loop. It starts at the garden hose spigot, flows through the inlet screen, into the pump head's check valves, gets compressed by the reciprocating pistons, and is forced out through the unloader valve, the high-pressure hose, the trigger gun, and finally the nozzle orifice. Each of those stations can bottleneck flow. The unloader valve is the most misunderstood component here. It's a pressure-sensing diverter. When you release the trigger, it sends water back to the pump inlet (bypass mode) instead of dead-heading the pump. When you pull the trigger, it snaps closed and sends the full volume downstream. A sticking unloader or a cracked check valve starves the pressure side instantly. Diagnosing this is a process of isolation and elimination.
+      </p>
+
+      <h2>The Material/Tool Checklist</h2>
+      <p>
+        Don't start disassembling the pump head without the right diagnostic tools and sealants. Guessing leads to stripped threads and cross-threaded brass.
+      </p>
+      <ul class="checklist-list">
+        <li><strong>Pressure gauge:</strong> A liquid-filled 0-3000 PSI gauge with a quick-connect fitting. This is your diagnostic truth-teller.</li>
+        <li><strong>Inline filter screen pick:</strong> A bent paperclip or a carburetor cleaning wire set to pull debris out of the garden hose inlet screen.</li>
+        <li><strong>Set of Allen wrenches and deep sockets:</strong> Most axial cam pumps use 4mm, 5mm hex bolts. Gun and unloader fittings are typically 14mm or 9/16".</li>
+        <li><strong>PTFE thread sealant tape (the yellow gas-rated variety):</strong> It's denser than white tape and holds up to vibration.</li>
+        <li><strong>Vinegar or pump descaler (Scale-X):</strong> Hard water scale is the silent killer of check valves.</li>
+        <li><strong>Replacement O-ring kit:</strong> HNBR (green) O-rings are standard for pressure washer pumps. Viton for chemical resistance.</li>
+        <li><strong>Torque wrench:</strong> Inch-pound range. Over-torquing the brass check valve caps strips the aluminum head threads immediately.</li>
+        <li><strong>Small mirror and flashlight:</strong> You'll be hunting for hairline cracks in the pump manifold.</li>
+      </ul>
+
+      <h2>The Step-by-Step Guide</h2>
+      
+      <h3>Step 1: The Bucket Test (Inlet Starvation Diagnosis)</h3>
+      <p>
+        Don't touch the machine yet. Go to the spigot. Disconnect the garden hose, drop it in a 5-gallon bucket, and turn the water on full blast. If the hose fills the bucket in under a minute, you have decent flow. If it trickles, your problem isn't the washer—it's the house supply, a kinked hose, or a collapsed rubber liner inside an old hose that looks fine from the outside. A pump starved for inlet water cavitates. Cavitation is destructive. It sounds like marbles rattling in the head and it pits the aluminum manifold from the inside out. Always use a 3/4-inch diameter hose, not a skinny 1/2-inch one. Keep it under 50 feet.
+      </p>
+
+      <h3>Step 2: The Pressure Gauge Truth Test</h3>
+      <p>
+        Connect your pressure gauge directly to the pump's outlet port—before the unloader if possible, or directly to the unloader's outlet. Start the machine and pull the trigger. Read the spike. If the gauge jumps to the rated spec (e.g., 2800 PSI), the pump is good. The problem is downstream (hose, gun, nozzle). If the pressure is low at the pump head with a known good nozzle in the gauge assembly, the problem is internal to the pump or unloader. Now you've split the system in half. This single step saves hours of frustration.
+      </p>
+
+      <div class="pro-tip">
+        <p>💡 PRO TIP: A pressure gauge is non-negotiable for accurate diagnosis. Without it, you're just swapping parts randomly. A $30 gauge pays for itself on the first correct diagnosis.</p>
+      </div>
+
+      <h3>Step 3: Nozzle Orifice Erosion</h3>
+      <p>
+        The nozzle wears out from the inside. High-pressure water acts like a waterjet cutter, slowly enlarging the hole. A nozzle rated for 2500 PSI at 2.5 GPM might erode to a larger diameter in just 20 hours of use, especially if you're drawing from a sandy well. A worn nozzle drops pressure dramatically. Replace it. Don't try to "clean" an eroded tip. A ceramic insert nozzle resists this erosion far better than hardened steel. If you hold the nozzle up to the light and the orifice looks oblong or frosty-edged, it's garbage.
+      </p>
+
+      <h3>Step 4: Unloader Valve Inspection and Cleaning</h3>
+      <p>
+        The unloader is a spring-and-ball mechanism. Remove it from the pump head. Look for a stuck piston. Water and soap residue dry into a sticky, varnished glue that locks the valve stem in the "bypass" position. This sends full flow back to the inlet, leaving nothing but a trickle at the nozzle. Disassemble the unloader carefully—count the turns on the adjustment knob first so you can return to the factory baseline. Slide the stem out. Use 0000 steel wool to polish the stem and remove varnish. If the O-rings on the stem are flattened or torn, water is leaking past internally. Install new HNBR O-rings, lubricate them with silicone grease, and reassemble.
+      </p>
+
+      <h3>Step 5: The Check Valve Dive</h3>
+      <p>
+        Here's where it gets surgical. The pump head contains a series of check valves—spring-loaded poppets or flat discs that open and close with each piston stroke. If one sticks open, the pump loses a full third of its volume on a triplex pump. Drain the pump oil first, because water will drip into the crankcase if you crack the head open. Remove the brass plugs on the pump head. Underneath, you'll find a small spring and a plastic or stainless steel poppet. Use the pick. Pull them straight out. Scale and debris often wedge between the poppet and the seat. Soak the parts in white vinegar for an hour to dissolve calcium. Rinse. Reinstall with the spring facing the correct orientation.
+      </p>
+
+      <!-- RESPONSIVE HTML TABLE (Diagnostic Matrix) -->
+      <h3>Pressure Washer Symptom Matrix</h3>
+      <div class="responsive-table-wrapper">
+        <table class="diagnostic-table">
+          <thead>
+            <tr>
+              <th>Symptom</th>
+              <th>Potential Cause</th>
+              <th>Immediate Fix</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Pressure good, then drops sharply to zero after 5 seconds</td>
+              <td>Unloader valve chatter; O-ring bypassing internally</td>
+              <td>Rebuild unloader valve with new O-rings. Polish the piston stem.</td>
+            </tr>
+            <tr>
+              <td>Pulsation (pressure surges rapidly)</td>
+              <td>Faulty check valve; one cylinder not contributing flow</td>
+              <td>Open head, clean or replace the sticky check valve poppet and spring.</td>
+            </tr>
+            <tr>
+              <td>Water in the pump crankcase oil (milky oil)</td>
+              <td>Blown water seal on the plunger</td>
+              <td>Stop immediately. Replace the plunger seals and ceramic plungers. Flush crankcase twice.</td>
+            </tr>
+            <tr>
+              <td>Engine bogs down and dies when trigger pulled</td>
+              <td>Nozzle too small for pump output; hydraulically overloading the engine</td>
+              <td>Increase nozzle size. Match the nozzle orifice to the pump's rated GPM and PSI.</td>
+            </tr>
+            <tr>
+              <td>Bypass water running hot, pump head sizzling</td>
+              <td>Trigger released for too long in bypass mode (>3 minutes)</td>
+              <td>Don't do that. Thermal relief valve should pop. If it doesn't, install one. Hot water cooks the seals.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>Step 6: The Plunger Seal Inspection</h3>
+      <p>
+        If you have water in the oil, the water seals are shot. These wrap around the ceramic plungers. You'll need to remove the pump head from the crankcase. As you separate the head, the plungers will slide out of the bores. Look at the ceramic surfaces. If they're scored or cracked, replace them. A scored plunger tears a new seal in minutes. Lubricate the new seals with a generous smear of silicone grease, then press the head back on, tightening the bolts in a star pattern to the manufacturer's inch-pound spec.
+      </p>
+
+      <h3>Step 7: The Gun and Wand Leak Check</h3>
+      <p>
+        Trigger guns fail. The internal stem seal can tear, sending a high-pressure leak right out through the trigger handle. If you feel water spraying on your hand near the trigger pivot, the gun needs a rebuild kit. Similarly, the quick-connect coupler at the end of the wand has a small O-ring that gets cut by dirt every time you change nozzles. A sliced coupler O-ring leaks pressure silently. Replace these quarterly. They're a $0.10 fix for a $300 headache.
+      </p>
+
+      <h3>Step 8: Final System Prime and Load Test</h3>
+      <p>
+        Reconnect everything. Turn the water on first—always start with water flowing to the pump, never dry. Squeeze the trigger to bleed air before starting the engine. An air pocket in the pump head causes cavitation on the first stroke. Start the engine. Let it stabilize. Now hit a test surface. The cleaning power should be immediate and sharp-edged. If the pressure gauge holds steady at the rated spec, you've isolated and fixed the bottleneck successfully.
+      </p>
+
+      <h2>Frequently Asked Questions (FAQ)</h2>
+      
+      <p><strong>Can I leave the pressure washer idling without pulling the trigger?</strong><br>
+      No, not for more than three minutes. In bypass mode, the water recirculates in a closed loop inside the pump head and heats up rapidly. If the water reaches 140°F, it softens the seals and they blow out catastrophically. If you need to pause, shut the engine off.</p>
+
+      <p><strong>Why does my pressure drop only when I'm using the soap injector?</strong><br>
+      The soap injector is a venturi. It creates a low-pressure zone to draw chemical. If the injector ball and spring are corroded, it sticks open, bleeding pressure even when the soap siphon hose is disconnected. Bypass the injector to test—if pressure returns, replace the injector with a downstream chemical injector.</p>
+
+      <p><strong>My pump is building pressure at the head, but not at the wand tip. What's the single most likely cause?</strong><br>
+      Your high-pressure hose has an internal blister. The inner liner separates from the braid, creating a one-way flap. Water flows, but the restriction drops the pressure. Visually, the hose will look fine, but you'll feel a soft, squishy spot. Replace the hose. It's the most overlooked failure in the whole system.</p>
+
+      <!-- E-E-A-T Trust Box -->
+      <div class="author-box">
+        <h4>About the Author</h4>
+        <p>Tool & Engine Pro is dedicated to providing high-quality, practical small engine repair and tool maintenance guidance. Every article is written by our team of hands-on mechanical enthusiasts to help you troubleshoot your equipment safely and efficiently at home.</p>
+      </div>
+    </article>
+  </main>
+
+  <!-- FOOTER (identical to homepage) -->
+  <footer class="site-footer">
+    <div class="container">
+      <p class="footer-copyright">© 2026 Tool & Engine Pro. All rights reserved.</p>
+      <ul class="footer-links">
+        <li><a href="/about-us">About Us</a></li>
+        <li><a href="/contact">Contact Us</a></li>
+        <li><a href="/privacy-policy">Privacy Policy</a></li>
+        <li><a href="/term-of-service">Terms of Service</a></li>
+      </ul>
+    </div>
+  </footer>
+</body>
+</html>
