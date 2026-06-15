@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+  <title>Why Your Cordless Tool Battery Won't Hold a Charge | Tool & Engine Pro</title>
+  <meta name="description" content="Troubleshoot cordless tool batteries that won't hold a charge. Learn to test cell groups, clean terminals, diagnose BMS lockouts, and decide when to repair vs replace lithium-ion packs.">
+  <style>
+    /* ----- Global Reset & Variables (identical to all site pages) ----- */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+      background-color: #FFFFFF;
+      color: #333333;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    :root {
+      --white: #FFFFFF;
+      --charcoal: #333333;
+      --accent: #2c3e50;
+      --accent-hover: #3e5a6b;
+      --light-gray: #f8f9fa;
+      --border-light: #e9ecef;
+      --text-muted: #4a5568;
+    }
+
+    a {
+      text-decoration: none;
+      color: var(--accent);
+      transition: opacity 0.2s ease, color 0.2s;
+    }
+
+    a:hover {
+      opacity: 0.8;
+      text-decoration: underline;
+    }
+
+    ul, ol {
+      padding-left: 1.8rem;
+      margin-bottom: 1.5rem;
+    }
+
+    ul li, ol li {
+      font-size: 1.05rem;
+      line-height: 1.7;
+      margin-bottom: 0.5rem;
+      color: var(--charcoal);
+    }
+
+    ul {
+      list-style: disc;
+    }
+
+    ol {
+      list-style: decimal;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0,0,0,0);
+      white-space: nowrap;
+      border-width: 0;
+    }
+
+    /* ----- Header & Navigation (identical structure) ----- */
+    .site-header {
+      background-color: var(--white);
+      border-bottom: 1px solid var(--border-light);
+      padding: 1rem 0;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    .header-inner {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .site-title {
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: var(--accent);
+      letter-spacing: -0.5px;
+      line-height: 1.2;
+    }
+
+    .nav-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.8rem;
+      align-items: center;
+    }
+
+    .nav-links a {
+      color: var(--charcoal);
+      font-weight: 500;
+      font-size: 1rem;
+      padding: 0.25rem 0;
+      border-bottom: 2px solid transparent;
+      transition: border-color 0.2s, color 0.2s;
+    }
+
+    .nav-links a:hover {
+      color: var(--accent);
+      border-bottom-color: var(--accent);
+      text-decoration: none;
+      opacity: 1;
+    }
+
+    @media (max-width: 700px) {
+      .header-inner {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.8rem;
+      }
+      .nav-links {
+        gap: 1.2rem;
+        flex-wrap: wrap;
+      }
+      .site-title {
+        font-size: 1.6rem;
+      }
+    }
+
+    /* ----- READABILITY CONTAINER (max-width: 800px) ----- */
+    .page-content {
+      padding: 2rem 1rem 3rem;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    /* Breadcrumbs */
+    .breadcrumb {
+      font-size: 0.85rem;
+      margin-bottom: 1.5rem;
+      color: var(--text-muted);
+    }
+
+    .breadcrumb a {
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .breadcrumb a:hover {
+      text-decoration: underline;
+    }
+
+    .breadcrumb span {
+      margin: 0 0.3rem;
+    }
+
+    /* H1 Title */
+    .page-content h1 {
+      font-size: 2.4rem;
+      font-weight: 700;
+      color: var(--accent);
+      margin-bottom: 0.75rem;
+      line-height: 1.3;
+    }
+
+    /* Author Byline */
+    .author-byline {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      margin-bottom: 2rem;
+      padding-bottom: 1rem;
+      border-bottom: 1px solid var(--border-light);
+    }
+
+    /* Paragraphs */
+    .page-content p {
+      font-size: 1.05rem;
+      line-height: 1.7;
+      margin-bottom: 1.5rem;
+      color: var(--charcoal);
+    }
+
+    /* Headings */
+    .page-content h2 {
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: var(--accent);
+      margin: 2.5rem 0 1rem;
+      line-height: 1.35;
+    }
+
+    .page-content h3 {
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: var(--accent);
+      margin: 2rem 0 0.75rem;
+      line-height: 1.4;
+    }
+
+    /* Blockquote (Safety/Pro Tips) */
+    .page-content blockquote {
+      margin: 1.8rem 0;
+      padding: 1.2rem 1.8rem;
+      background-color: var(--light-gray);
+      border-left: 4px solid var(--accent);
+      font-style: italic;
+      color: var(--charcoal);
+      border-radius: 0 6px 6px 0;
+    }
+
+    .page-content blockquote p {
+      margin-bottom: 0;
+    }
+
+    /* ----- Responsive HTML Table Styling ----- */
+    .responsive-table-wrapper {
+      overflow-x: auto;
+      margin: 1.8rem 0;
+    }
+
+    .diagnostic-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.95rem;
+      min-width: 500px;
+    }
+
+    .diagnostic-table th {
+      background-color: var(--accent);
+      color: var(--white);
+      font-weight: 600;
+      padding: 12px 16px;
+      text-align: left;
+      border: 1px solid #2c3e50;
+    }
+
+    .diagnostic-table td {
+      padding: 12px 16px;
+      border: 1px solid var(--border-light);
+      color: var(--charcoal);
+      vertical-align: top;
+    }
+
+    .diagnostic-table tr {
+      background-color: var(--white);
+    }
+
+    .diagnostic-table tr:nth-child(even) {
+      background-color: var(--light-gray);
+    }
+
+    /* Checklist Styling (Material/Tool Checklist) */
+    .checklist-list {
+      list-style: none;
+      padding-left: 0;
+    }
+    .checklist-list li {
+      padding-left: 1.5rem;
+      position: relative;
+      margin-bottom: 0.6rem;
+    }
+    .checklist-list li::before {
+      content: "▹";
+      color: var(--accent);
+      font-weight: bold;
+      position: absolute;
+      left: 0;
+    }
+
+    /* E-E-A-T Box */
+    .author-box {
+      margin-top: 3rem;
+      padding: 1.8rem 2rem;
+      background-color: var(--light-gray);
+      border: 1px solid var(--border-light);
+      border-radius: 8px;
+    }
+
+    .author-box h4 {
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: var(--accent);
+      margin-bottom: 0.75rem;
+    }
+
+    .author-box p {
+      font-size: 1rem;
+      line-height: 1.6;
+      margin-bottom: 0;
+      color: var(--charcoal);
+    }
+
+    /* Danger/Warning Note Styling */
+    .danger-note {
+      background-color: #fce8e6;
+      border-left: 4px solid #c5221f;
+      padding: 1rem 1.5rem;
+      margin: 1.5rem 0;
+      border-radius: 0 6px 6px 0;
+    }
+    .danger-note p {
+      margin-bottom: 0;
+      font-weight: 500;
+      color: #8b1e1a;
+    }
+
+    .warning-note {
+      background-color: #fef8e7;
+      border-left: 4px solid #e67e22;
+      padding: 1rem 1.5rem;
+      margin: 1.5rem 0;
+      border-radius: 0 6px 6px 0;
+    }
+    .warning-note p {
+      margin-bottom: 0;
+      font-weight: 500;
+      color: #a04000;
+    }
+
+    /* ----- Footer (identical across site) ----- */
+    .site-footer {
+      background-color: var(--white);
+      padding: 2rem 1rem;
+      text-align: center;
+      border-top: 1px solid var(--border-light);
+      margin-top: 1rem;
+    }
+
+    .footer-copyright {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      margin-bottom: 1.2rem;
+    }
+
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .footer-links a {
+      color: var(--charcoal);
+      font-weight: 500;
+      font-size: 0.95rem;
+      text-decoration: none;
+    }
+
+    .footer-links a:hover {
+      color: var(--accent);
+      text-decoration: underline;
+    }
+
+    @media (max-width: 600px) {
+      .page-content {
+        padding: 1.5rem 1rem 2.5rem;
+      }
+      .page-content h1 {
+        font-size: 2rem;
+      }
+      .page-content h2 {
+        font-size: 1.5rem;
+      }
+      .page-content h3 {
+        font-size: 1.25rem;
+      }
+      .author-box {
+        padding: 1.2rem;
+      }
+      .footer-links {
+        gap: 1.2rem;
+        flex-direction: column;
+        align-items: center;
+      }
+      .responsive-table-wrapper {
+        margin: 1rem 0;
+      }
+      .diagnostic-table th,
+      .diagnostic-table td {
+        padding: 8px 12px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- HEADER & NAVIGATION (identical across site) -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="site-title">Tool & Engine Pro</div>
+      <nav aria-label="Main navigation">
+        <ul class="nav-links">
+          <li><a href="/">Home</a></li>
+          <li><a href="/small-engine-troubleshooting">Small Engine Troubleshooting</a></li>
+          <li><a href="/tool-maintenance">Tool Maintenance</a></li>
+          <li><a href="/contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- READABILITY CONTAINER (max-width 800px) -->
+    <article class="page-content">
+      <!-- Breadcrumbs -->
+      <div class="breadcrumb">
+        <a href="/">Home</a> <span>›</span>
+        <a href="/tool-maintenance">Tool Maintenance & Repair</a> <span>›</span>
+        <span>Why Your Cordless Tool Battery Won't Hold a Charge</span>
+      </div>
+
+      <!-- H1 Title -->
+      <h1>Why Your Cordless Tool Battery Won't Hold a Charge</h1>
+      
+      <!-- Author Byline -->
+      <div class="author-byline">
+        Written by: Tool & Engine Pro Team | Updated: June 2026
+      </div>
+
+      <!-- Article Body -->
+      <p>
+        You slap a freshly charged battery into your drill, pull the trigger, and within three drywall screws the motor wheezes to a halt. The fuel gauge blinks one bar. Anger rises. You just pulled that pack off the charger an hour ago. It showed full. Now it's dead. This is the slow, maddening death spiral of a lithium-ion pack that's lost its capacity. But "won't hold a charge" isn't a single diagnosis—it's a symptom with at least five distinct root causes, ranging from a dirty contact terminal to a catastrophic cell group failure deep inside the sealed housing. Before you drop $120 on a new battery, we're going to systematically eliminate the easy fixes, then dive into the internal diagnostics that separate a salvageable pack from a brick. The goal is to know exactly what failed and why, so you don't repeat the pattern on the replacement.
+      </p>
+
+      <div class="danger-note">
+        <p>⚠ FIRE HAZARD: Lithium-ion battery repair involves significant risk of fire, burns, and toxic fumes. Work on a concrete surface away from combustibles. Keep a bucket of dry sand nearby—water makes lithium fires worse. If you are uncertain at any step, recycle the battery and purchase a new one.</p>
+      </div>
+
+      <h2>The Component Overview</h2>
+      <p>
+        A cordless tool battery isn't a simple bucket of energy. It's a tightly engineered assembly of three subsystems: the cell array, the Battery Management System (BMS) circuit board, and the physical interface terminals. The cells are 18650 or 21700 cylindrical lithium-ion units, wired in series-parallel groups to achieve the rated voltage and amp-hour capacity. A typical 18V/20V max pack has five cell groups in series (5S), with each group containing multiple parallel cells for capacity. The BMS is the silicon brain soldered to the top of the cell array. It monitors individual cell group voltages through thin nickel balance leads, measures temperature via a thermistor, counts charge/discharge cycles, and acts as a gatekeeper. When the BMS detects an unsafe condition—over-discharge, over-current, short circuit, cell imbalance beyond 0.2 volts, or extreme temperature—it shuts the pack down and often permanently locks itself. The BMS is also a parasitic drain. It slowly consumes power even when the pack sits idle. The physical terminals are the sliding blade contacts that carry 60+ amps to the tool. Every joint, every solder connection, every nickel strip is a potential failure point. Understanding this architecture is critical: you can have perfect cells and a dead BMS, or a functional BMS and a single failed cell dragging the whole array down.
+      </p>
+
+      <h2>The Material/Tool Checklist</h2>
+      <p>
+        Troubleshooting a lithium pack requires precision measurement, not guesswork. Here's the diagnostic load-out:
+      </p>
+      <ul class="checklist-list">
+        <li><strong>Digital multimeter (true RMS, auto-ranging):</strong> Must read DC voltage to 0.01V resolution. Fluke or equivalent preferred. Cheap meters can't resolve the small voltage drops we're hunting.</li>
+        <li><strong>Inline battery terminal cleaner:</strong> DeoxIT D5 contact cleaner and a fiberglass scratch brush pen.</li>
+        <li><strong>Charger from the same brand and voltage platform:</strong> A known-good, working charger to rule out charger faults.</li>
+        <li><strong>A second known-good battery:</strong> Cross-swapping isolates tool-side versus battery-side problems.</li>
+        <li><strong>Security Torx bit set (T10, T15, T20):</strong> Most battery housings use tamper-proof Torx screws with a center pin.</li>
+        <li><strong>Plastic spudgers and pry tools:</strong> Opening a clamshell battery case without gouging the plastic or puncturing a cell requires gentle, patient prying.</li>
+        <li><strong>Spot welder (optional, for repairs):</strong> Do not solder directly to lithium cells. The heat damages the internal separator. Cell replacement requires a capacitive-discharge spot welder and pure nickel strip.</li>
+        <li><strong>Kapton tape and fish paper insulator sheets:</strong> For re-insulating connections after repair.</li>
+        <li><strong>Bench power supply (variable, 0-30V, 3A):</strong> For manually reviving a cell group that fell below the BMS lockout threshold.</li>
+        <li><strong>Safety glasses and a fireproof workspace:</strong> A punctured lithium cell produces a 900°F jet of toxic gas. Work on a concrete surface, not a wooden bench. Have a bucket of sand nearby—water makes lithium fires worse.</li>
+      </ul>
+
+      <h2>The Step-by-Step Guide</h2>
+      
+      <h3>Step 1: The Terminal Integrity Sweep</h3>
+      <p>
+        Start simple. Don't open the pack. Take the fiberglass brush pen and burnish every blade contact on the battery pack and the matching spring contacts inside the tool receiver. Black carbon tracking and micro-arcing pits create a high-resistance barrier. The charger sees this voltage drop and either refuses to charge or terminates early. The tool sees it and hits low-voltage cutoff under minimal load. This step fixes more "dead" packs than any internal surgery. Blow out the debris. Apply a single drop of DeoxIT D5 to each terminal, wipe dry. Now test the battery in the tool. Still dead? Move to the charger.
+      </p>
+
+      <h3>Step 2: The Charger Swap Test</h3>
+      <p>
+        Place the battery on a second, known-good charger. If it charges fully and runs the tool normally, your original charger is bad. Specifically, the charger's sense circuit is failing to detect the pack and initiating a charge cycle, or the charger's output MOSFETs are blown. Charger failure is less common than battery failure but trivial to rule out. If the battery still won't charge or charges but drains instantly, the problem is inside the battery itself.
+      </p>
+
+      <h3>Step 3: The Multimeter Voltage Snapshot</h3>
+      <p>
+        Set your meter to DC volts. Touch the probes to the battery's main positive and negative power terminals—consult the battery's molded markings or your tool's manual if terminal identification is ambiguous. Write down the open-circuit voltage.
+      </p>
+      <ul>
+        <li>A fully charged 18V (5S) pack reads 20.0 to 20.5 volts.</li>
+        <li>A healthy pack at nominal storage charge reads 18.0 to 18.5 volts.</li>
+        <li>A deeply discharged pack reads 15.0 volts or lower.</li>
+        <li>A pack reading 0 volts or a few fluctuating millivolts has a tripped BMS, a blown internal fuse link, or a broken main power lead inside the housing.</li>
+      </ul>
+      <p>
+        If you measure zero volts, the BMS has likely disconnected the output to protect the cells. This can happen from a single deep discharge event. The cells may still have voltage, but the BMS is blocking the terminals.
+      </p>
+
+      <h3>Step 4: Opening the Clamshell (Non-Destructive)</h3>
+      <p>
+        If the terminal voltage is low or zero and the charger refuses to initiate, you need to see inside. Remove every screw. Most are hidden under the label, the rubber overmold, or small plastic caps. Use a heat gun on low to soften the label adhesive, peel it back carefully with a razor blade. Find the security Torx screws. Use the correct bit—these screws are tight and strip easily. Once screws are out, the clamshell halves are held together by snap-tabs along the seam. Work a plastic spudger into the seam, gently release each tab. Do not pry against the cells. Work slowly. The goal is to open the case without cracking it, so it can be reassembled securely.
+      </p>
+
+      <h3>Step 5: The Cell Group Voltage Map</h3>
+      <p>
+        This is the definitive diagnostic. Inside the pack, you'll see the cell array with the BMS board spot-welded to the tops via nickel strips. Locate the balance connector—a multi-wire harness running from the cell junctions to the BMS board. Each wire represents a cell group. With the meter, measure the voltage of each cell group by probing the points where the nickel strips connect adjacent cell groups in series. Write down every reading.
+      </p>
+      <ul>
+        <li><strong>Healthy, matched cells:</strong> 3.6V to 4.1V per group, all within 0.1V of each other.</li>
+        <li><strong>One group significantly lower (e.g., 1.8V while others are 3.7V):</strong> This is a weak or self-discharging cell group. It's dragging the whole pack down and the BMS is correctly shutting down to prevent reverse-charging that dead group.</li>
+        <li><strong>One group at 0V:</strong> The nickel tab has fractured, or the cell has internally shorted and is dead.</li>
+        <li><strong>All groups balanced but pack still won't output:</strong> The BMS board is faulty—likely a fried MOSFET.</li>
+      </ul>
+
+      <!-- RESPONSIVE HTML TABLE (Diagnostic Matrix) -->
+      <h3>Lithium Battery Symptom Matrix</h3>
+      <div class="responsive-table-wrapper">
+        <table class="diagnostic-table">
+          <thead>
+            <tr>
+              <th>Symptom</th>
+              <th>Potential Cause</th>
+              <th>Immediate Fix</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Charger shows full charge, battery dies in seconds</td>
+              <td>High internal resistance; cells can hold voltage but not deliver current under load</td>
+              <td>Cell replacement required. The electrolyte has dried out. No recovery possible.</td>
+            </tr>
+            <tr>
+              <td>Battery won't charge; terminal voltage is 0V</td>
+              <td>BMS lockout due to cell group dropping below 2.5V threshold</td>
+              <td>Manually charge the low cell group through the balance leads to 3.0V+. BMS may reset.</td>
+            </tr>
+            <tr>
+              <td>Battery charges, works, but runtime is 50% of new</td>
+              <td>One parallel cell in a group has failed open; group capacity is halved</td>
+              <td>Replace the affected cell group. The BMS sees correct voltage but capacity is gone.</td>
+            </tr>
+            <tr>
+              <td>Battery works intermittently when squeezed or twisted</td>
+              <td>Fractured spot weld or cold solder joint on a sense lead</td>
+              <td>Reflow the solder joint on the BMS or re-weld the loose nickel tab.</td>
+            </tr>
+            <tr>
+              <td>Pack gets hot during charging, charger shuts off early</td>
+              <td>High-resistance connection or failing cell absorbing energy as heat</td>
+              <td>Measure cell group temperatures with an IR thermometer. Replace hot cell group.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>Step 6: Manual Cell Group Recovery (The Jump)</h3>
+      <p>
+        If you have a cell group at 1.5V to 2.5V while others are above 3.5V, the BMS has locked you out. Connect your bench power supply to the low cell group via the balance lead. Set the voltage to 3.6V and the current limit to 0.5A (500mA). Slowly bring that group up until it matches the others within 0.1V. Monitor constantly. If the cell heats up rapidly or won't rise above a certain voltage, it's internally shorted and must be replaced. If it accepts charge and stabilizes, reassemble the pack and try the original charger. The BMS may reset and allow normal operation. However, this cell group is now suspect. It will drift again. This is a diagnostic step, not a permanent fix.
+      </p>
+
+      <div class="warning-note">
+        <p>⚠ CAUTION: Manual cell group recovery bypasses BMS safety protections. Monitor the cell temperature continuously. If it exceeds 50°C (122°F), stop immediately. Do not leave a recovering battery unattended.</p>
+      </div>
+
+      <h3>Step 7: Cell Replacement or Pack Retirement</h3>
+      <p>
+        If one cell group is dead or shows high self-discharge, you can theoretically replace those cells. This requires a spot welder, matching cells (same brand, model, capacity, and internal resistance—not just "some 18650s"), and careful reassembly of the nickel strip architecture. The new cells must be charged or discharged to match the existing cell groups exactly before welding into the array. Mismatched internal resistance creates a perpetual imbalance that the BMS constantly fights, shortening life. For most homeowners, a failed cell group means the pack has reached end of life. Recycle it properly—lithium packs do not go in household trash. Big box home centers and battery specialty stores have drop-off bins.
+      </p>
+
+      <h3>Step 8: Reassembly and Charge Cycle Monitoring</h3>
+      <p>
+        If you've revived a low cell group or cleaned terminals, reassemble the clamshell carefully. Route the BMS wires so they won't be pinched. Snap the case together and reinstall all screws. Place the battery on the charger in a location you can observe. The first charge after a deep discharge is the highest-risk moment for thermal runaway. Stay present. Feel the pack temperature every 10 minutes. It should get warm, not hot. If the charger completes a full cycle and the tool runs normally, you've bought some time. Mark the battery with a date code. Use it in a low-demand tool for a few cycles before trusting it in a high-draw impact wrench or saw.
+      </p>
+
+      <h2>Frequently Asked Questions (FAQ)</h2>
+      
+      <p><strong>Can I use a generic aftermarket charger to revive my dead pack?</strong><br>
+      No, and this is dangerous. Aftermarket chargers lack the proprietary communication protocol between the BMS and the charger. The tool brand chargers perform a handshake with the BMS before applying current. A generic "universal" charger blindly applies voltage, bypassing the safety checks. It can overheat a damaged cell and cause a fire. Stick to the OEM charger.</p>
+
+      <p><strong>Does storing my battery in the freezer help restore capacity?</strong><br>
+      This is a persistent myth with no basis in lithium-ion chemistry. Cold storage at roughly 40°F can slow the self-discharge rate for long-term storage, but freezing temperatures cause condensation inside the cell and can permanently damage the separator when the battery is rapidly warmed and put under load. Do not freeze your batteries.</p>
+
+      <p><strong>My battery charges fully and works fine in the drill but dies instantly in the circular saw. Is the battery bad?</strong><br>
+      Not necessarily. The circular saw draws significantly more current than a drill. A battery with high internal resistance from age can maintain voltage under a light load (drill) but collapses under the heavy amp draw of a saw. The BMS sees the voltage sag and cuts off to prevent cell damage. The battery is nearing end of life—it may still serve light-duty needs but can't feed hungry tools anymore.</p>
+
+      <!-- E-E-A-T Trust Box -->
+      <div class="author-box">
+        <h4>About the Author</h4>
+        <p>Tool & Engine Pro is dedicated to providing high-quality, practical small engine repair and tool maintenance guidance. Every article is written by our team of hands-on mechanical enthusiasts to help you troubleshoot your equipment safely and efficiently at home.</p>
+      </div>
+    </article>
+  </main>
+
+  <!-- FOOTER (identical to homepage) -->
+  <footer class="site-footer">
+    <div class="container">
+      <p class="footer-copyright">© 2026 Tool & Engine Pro. All rights reserved.</p>
+      <ul class="footer-links">
+        <li><a href="/about-us">About Us</a></li>
+        <li><a href="/contact">Contact Us</a></li>
+        <li><a href="/privacy-policy">Privacy Policy</a></li>
+        <li><a href="/term-of-service">Terms of Service</a></li>
+      </ul>
+    </div>
+  </footer>
+</body>
+</html>
